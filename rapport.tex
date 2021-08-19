@@ -1,0 +1,420 @@
+%% @Author: Ines Abdeljaoued Tej
+%  @Date:   2018-06
+%% @Class:  PFE de l'ESSAI - Universite de Carthage, Tunisie.
+
+\documentclass[a4paper, oneside, 12pt, final]{extreport}
+\usepackage{graphicx}
+
+\parindent 0cm
+\usepackage{makeidx}
+\makeindex
+
+\usepackage[lined,boxed,commentsnumbered, french, ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{exemple}{Example}[chapter]
+
+
+%\usepackage[nottoc]{tocbibind}
+%\addcontentsline{toc}{section}{References}
+
+\providecommand{\keywords}[1]{\textbf{\textit{Mots clés---}} #1}
+\providecommand{\keywordss}[1]{\textbf{\textit{Keywords---}} #1}
+
+\usepackage{etoolbox}
+%\makeatletter
+%\patchcmd{\thebibliography}{%
+%  \chapter*{\bibname}\@mkboth{\MakeUppercase\bibname}%{\MakeUppercase\bibname}}{%
+%  \section{References}}{}{}
+%\makeatother
+
+
+
+\usepackage[nottoc]{tocbibind}
+
+\textwidth 18cm
+\textheight 24cm
+\topmargin -0.5cm
+\oddsidemargin -1cm
+
+% set font encoding for PDFLaTeX or XeLaTeX
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
+%\usepackage{sagetex}
+
+
+\newcommand{\reportTitle} {%
+  %\textsc{Graduation Project Report}
+  \textsc{Projet de Fin d'\'etudes}
+}
+
+\newcommand{\reportAuthor} {%
+  FirstName \textsc{LastName}%
+}
+
+\newcommand{\reportSubject} {%
+  My very attractive \\ Title%
+}
+
+\newcommand{\dateSoutenance} {%
+  12/06/2018%
+}
+
+\newcommand{\studyDepartment} {%
+  Entreprise d'accueil %Statistique
+}
+
+\newcommand{\ESSAI} {%
+  %Higher School of Statistics and Information Analysis
+  Ecole Sup\'erieure de la Statistique et de l'Analyse de l'Information
+}
+
+%\newcommand{\codePFE} {% Reference
+%  Code PFE%
+%}
+
+\newcommand{\juryPresident} {%
+  Mr Ben Foulen \textsc{Foulenia}%
+}
+\newcommand{\juryPresidentDesc} {%
+  President%
+}
+
+\newcommand{\juryMemberOne} {%
+  Ms Ben Foulena \textsc{Foulen}%
+}
+\newcommand{\juryMemberOneDesc} {%
+  Examiner %Mentor
+}
+
+\newcommand{\juryMemberTwo} {%
+  Mr Ben Foulen \textsc{Fouleni}%
+}
+\newcommand{\juryMemberTwoDesc} {%
+  Reviewer% Examiner, Reporter
+}
+
+\newcommand{\juryMemberThree} {%
+	M. Ben Foulen \textsc{Fouleni}%
+}
+\newcommand{\juryMemberThreeDesc} {%
+	Supervisor% Examiner, Reporter
+}
+
+\newcommand{\juryMemberFour} {%
+	M. Ben Foulen \textsc{Fouleni}%
+}
+\newcommand{\juryMemberFourDesc} {%
+	Mentor% Examiner, Reporter
+}
+
+
+\newcommand{\specialcell}[1]{%
+  \begin{tabularx}{\textwidth}{@{}X@{}}#1\end{tabularx}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Add your own commands here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\MyCommand} {%
+  Does nothing really%
+}
+
+
+% used in maketitle
+\title{\reportSubject}
+\author{\reportAuthor}
+
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
+%\usepackage{sagetex}
+
+%\hypersetup{
+%  pdftitle={\reportTitle~-~\reportSubject},%
+%  pdfauthor={\reportAuthor},%
+%  pdfsubject={\reportSubject},%
+%  pdfkeywords={report} {internship} {pfe} {enis}
+%}
+
+\usepackage{graphics}
+\usepackage{graphicx}
+
+
+\usepackage[acronym,toc,section=chapter]{glossaries}
+\makeglossaries
+
+\newacronym{abc}{ABC}{A contrived acronym}
+\newacronym{efg}{EFG}{Another acronym}
+\newacronym{svm}{SVM}{Support Vector Machines}
+
+\pagenumbering{roman} 
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{titlepage}
+\begin{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THE HEADER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\includegraphics[scale=0.15]{embleme.jpg}
+\vspace{0.5cm}
+
+{%
+  \fontsize{9pt}{9pt}\selectfont%
+  \begin{tabular}{c}
+    R\'epublique Tunisienne \\
+    Minist\`ere de l'Enseignement Supérieur et de la Recherche Scientifique \\%
+    Universit\'e de Carthage - \ESSAI{}\\ 
+  \end{tabular}
+}
+
+\vspace{0.5cm}
+
+\includegraphics[scale=0.04]{universite-carthage.jpg}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THE PAGE CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{5pt} {%
+  \renewcommand*{\familydefault}{\defaultFont}
+  \fontsize{46pt}{46pt}\selectfont%
+  % MEMOIRE\\%
+  %\reportTitle{}%\\\textsc{Report}\\%
+}
+
+%\vspace{5pt}
+
+\vspace{10pt}
+{\textit{Rapport de Projet de Fin d'Etudes soumis afin d'obtenir le}}\\
+
+\vspace{10pt}
+{\textbf{\large Diplôme National d'Ingénieur en Statistique et Analyse de l'Information}}\\
+
+\includegraphics[scale=0.4]{logo-essai.jpg}\\
+
+\vspace{5pt}
+\textbf{\textit{Réalisé par}}\\
+\vspace{10pt} {%
+  \fontsize{14pt}{14pt}\selectfont%
+  {\bfseries\Large\sc \reportAuthor}\\
+}%
+
+\vspace{5pt} {%
+  \renewcommand*{\familydefault}{\defaultFont}
+  \fontsize{27pt}{27pt}\selectfont%
+  \rule{0.5\textwidth}{.4pt}\\
+  \vspace{10pt}
+  \reportSubject{}\\%
+  \vspace{10pt}
+  \rule{0.5\textwidth}{.4pt}
+}
+
+\vspace{5pt}
+Soutenu le\, \dateSoutenance\,\, devant le Jury compos\'e de :\\
+%Soutenu le \dateSoutenance, devant la commission d'examen:\\
+\vspace{10pt}
+\begin{tabular}{p{0.3\linewidth} p{0.15\linewidth}}
+  \juryPresident{} & \juryPresidentDesc{}\\
+  \juryMemberOne{} & \juryMemberOneDesc{}\\
+  \juryMemberTwo{} & \juryMemberTwoDesc{}\\
+  \juryMemberThree{} & \juryMemberThreeDesc{}\\
+%  \juryMemberFour{} & \juryMemberFourDesc{}\\
+\end{tabular}
+
+%\vfill
+
+\vspace{10pt}%
+\textbf{\textit{Projet de Fin d'Etudes fait \`a}}\\
+\vspace{5pt}
+(\studyDepartment)\\
+%\includegraphics[scale=0.4]{logo-studyDepartment.jpg}
+\end{center}
+\end{titlepage}
+
+% ###############################
+% # HELP COMMANDS               #
+% ###############################
+%
+% -1 \part{part}
+%  0 \chapter{chapter}
+%  1 \section{section}
+%  2 \subsection{subsection}
+%  3 \subsubsection{subsubsection}
+%  4 \paragraph{paragraph}
+%  5 \subparagraph{subparagraph}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dédicace et Remerciements
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\chapter*{Dedication}
+\chapter*{D\'edicace}
+%\addcontentsline{toc}{chapter}{Dedication}
+\thispagestyle{empty}
+%
+%For all they have endured to satisfy all my needs and wishes
+
+\begin{center}
+{\it 
+	
+A ... pour son(leur) sacrifice et son(leur) soutien, \\
+en témoignage de mon infinie reconnaissance et mon profond attachement \\
+\vspace{1cm}
+A tous ceux qui me sont chers...
+
+}
+\end{center}
+%
+%\nopagebreak{%
+% And maybe a quote here
+% \raggedright\hspace{5.75cm} To all of you,~\\
+%\raggedright\hspace{7.75cm} I dedicate this work.
+%  \raggedleft\normalfont\large\itshape{} \reportAuthor\par%
+%}
+%
+%\cleardoublepage%
+
+%\chapter*{Thanks}
+\chapter*{Remerciements}
+%\addcontentsline{toc}{chapter}{Thanks}
+\thispagestyle{empty}
+%
+%Au terme de ce travail (A l'issue de ce travail), je tiens à remercier M., Mme, Pr., Dr. pour sa disponibilité et ses conseils judicieux. \\
+
+Je n'aurais jamais pu réaliser ce projet sans la précieuse aide et sans le soutien d'un grand nombre de personnes dont la générosité, la bonne humeur et l'intérêt manifestés à l'égard de mon PFE m'ont permis de progresser. \\
+
+%En premier lieu, je tiens à remercier mon encadrant universitaire, \juryMemberFour{}, pour la confiance qu'il m'a accordée en acceptant d'encadrer ce travail, pour ses multiples conseils et pour toutes les heures qu'il a consacrées à diriger ce travail. \\ 
+
+%Je souhaiterais exprimer ma gratitude à \juryMemberThree{}, pour m’avoir donné envie de réaliser un mémoire sur ... au sein de \og \studyDepartment \fg. Je le remercie également pour son accueil chaleureux à chaque fois que j'ai sollicité son aide, ainsi que pour ses multiples encouragements. J’ai été extrêmement sensible à ses qualités humaines d'écoute et de compréhension tout au long de ce travail de mémoire. \\
+
+%J'aimerais également dire à \juryPresident{} à quel point je suis honorée pour avoir accepté de présider ce jury de PFE. Je suis infiniment gré à  \juryMemberOne{} de s’être rendu disponible et d’avoir accepté la fonction de rapporteur. De même, je suis particulièrement reconnaissant(e) à (\juryMemberTwo{} de l'intérêt qu'il/elle a manifesté à l'égard de ce projet en s'engageant à être rapporteur. \\
+
+Ma reconnaissance va à ceux qui ont plus particulièrement assuré le soutien affectif de ce travail : ma famille ainsi que mes amis. Mes parents... 
+
+
+\input{abstract.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Divers chapitres
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+%\addcontentsline{toc}{chapter}{\contentsname}
+
+\listoffigures
+%\addcontentsline{toc}{chapter}{Liste des Figures}
+\listoftables
+%\addcontentsline{toc}{chapter}{Liste des Tableaux}
+\listofalgorithms
+\addcontentsline{toc}{chapter}{Liste des algorithmes}
+\cleardoublepage
+
+\newpage
+\pagenumbering{arabic}
+\chapter*{Introduction}
+\label{chap:general_intorduction}
+\input{introduction.tex}
+
+
+\chapter{Données étudiés}%
+\label{chap:chapterone}
+\input{chapitre1.tex}
+
+\chapter{Modèles utilisés et Applications}
+\label{chap:2}
+\input{chapitre2.tex}
+
+\chapter{Indicateurs de performances et Résultats}
+\label{chap:3}
+\input{chapitre3.tex}
+
+\chapter*{Conclusion et Perspectives}
+\label{chap:conclusion}
+\markboth{\MakeUppercase{Conclusion}}{}%
+\addcontentsline{toc}{chapter}{Conclusion}
+  And a very interesting conclusion here\@. ~\\
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat.
+
+\newpage
+\appendix
+\addcontentsline{toc}{chapter}{Annexes}
+%\markboth{\MakeUppercase{Annexe}}{}
+
+\chapter{Code R pour résoudre la problématique}
+\label{chap:appendix}
+
+
+\section{Pré-traitement des données}
+\section{Code R pour les modèles}
+
+ An appedix if you need it.
+ 
+ \begin{verbatim}
+ Insérer ici le code !
+ \end{verbatim}
+
+\section{Librairies utilisées}
+ 
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Don't touch this, it is auto generated
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nocite{*}
+
+%\phantomsection{}
+%\addcontentsline{toc}{chapter}{Webography}
+%\printbibliography[title={Webography},type=online]
+
+%\phantomsection{}
+%\addcontentsline{toc}{chapter}{Bibliography}
+%\printbibliography[title={Bibliography},nottype=online]
+
+%\printbibheading %exemple de bibliographie divisée en sections. Pour ajouter des oeuvres non citées,utiliser \nocite
+
+%\printbibliography[keyword=pratique,heading=subbibliography,title={Théories littéraires dans les jeux vidéo}]
+%\printbibliography[keyword=litteraire,heading=subbibliography,title={Narratologie et structuralisme}]
+
+%\printbibliography[keyword=jeu,heading=subbibliography,title={\emph{Games studies}}]
+
+\bibliographystyle{apalike}
+%\bibliographystyle{plain}
+
+\bibliography{Biblio.bib}
+
+\cleardoublepage%
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+
+\printglossaries
+\printindex
+
+\input{abstract}
+
+
+\end{document}

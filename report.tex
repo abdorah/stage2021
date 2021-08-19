@@ -1,0 +1,417 @@
+\documentclass[a4paper, oneside, french, 12pt, final]{extreport}
+\usepackage[utf8]{inputenc}
+
+\parindent 0cm
+\usepackage{makeidx}
+\makeindex
+
+\usepackage[lined,boxed,commentsnumbered, ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{exemple}{Example}[chapter]
+
+
+%\usepackage[nottoc]{tocbibind}
+%\addcontentsline{toc}{section}{References}
+
+\providecommand{\keywords}[1]{\textbf{\textit{Mots clés---}} #1}
+\providecommand{\keywordss}[1]{\textbf{\textit{Keywords---}} #1}
+
+\usepackage{etoolbox}
+%\makeatletter
+%\patchcmd{\thebibliography}{%
+%  \chapter*{\bibname}\@mkboth{\MakeUppercase\bibname}%{\MakeUppercase\bibname}}{%
+%  \section{References}}{}{}
+%\makeatother
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+
+\usepackage[nottoc]{tocbibind}
+
+\textwidth 18cm
+\textheight 24cm
+\topmargin -0.5cm
+\oddsidemargin -1cm
+
+% set font encoding for PDFLaTeX or XeLaTeX
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
+%\usepackage{sagetex}
+
+
+\newcommand{\reportTitle} {%
+  \textsc{Graduation Project Report}
+  %\textsc{Projet de Fin d'\'etudes}
+}
+
+\newcommand{\reportAuthor} {%
+  FirstName \textsc{LastName}%
+}
+
+\newcommand{\reportSubject} {%
+  My very attractive \\ Title%
+}
+
+\newcommand{\dateSoutenance} {%
+  12/06/2018%
+}
+
+\newcommand{\studyDepartment} {%
+  Entreprise d'accueil %Statistique
+}
+
+\newcommand{\ESSAI} {%
+   Engineering School of Statistics and Information Analysis
+  %Ecole Sup\'erieure de la Statistique et de l'Analyse de l'Information
+}
+
+%\newcommand{\codePFE} {% Reference
+%  Code PFE%
+%}
+
+\newcommand{\juryPresident} {%
+  Mr Ben Foulen \textsc{Foulenia}%
+}
+\newcommand{\juryPresidentDesc} {%
+  President%
+}
+
+\newcommand{\juryMemberOne} {%
+  Ms Ben Foulena \textsc{Foulen}%
+}
+\newcommand{\juryMemberOneDesc} {%
+  Examiner %Mentor
+}
+
+\newcommand{\juryMemberTwo} {%
+  Mr Ben Foulen \textsc{Fouleni}%
+}
+\newcommand{\juryMemberTwoDesc} {%
+  Reviewer% Examiner, Reporter
+}
+
+\newcommand{\juryMemberThree} {%
+	M. Ben Foulen \textsc{Fouleni}%
+}
+\newcommand{\juryMemberThreeDesc} {%
+	Supervisor% Examiner, Reporter
+}
+
+\newcommand{\juryMemberFour} {%
+	M. Ben Foulen \textsc{Fouleni}%
+}
+\newcommand{\juryMemberFourDesc} {%
+	Mentor% Examiner, Reporter
+}
+
+
+\newcommand{\specialcell}[1]{%
+  \begin{tabularx}{\textwidth}{@{}X@{}}#1\end{tabularx}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Add your own commands here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\MyCommand} {%
+  Does nothing really%
+}
+
+
+% used in maketitle
+\title{\reportSubject}
+\author{\reportAuthor}
+
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
+%\usepackage{sagetex}
+
+%\hypersetup{
+%  pdftitle={\reportTitle~-~\reportSubject},%
+%  pdfauthor={\reportAuthor},%
+%  pdfsubject={\reportSubject},%
+%  pdfkeywords={report} {internship} {pfe} {enis}
+%}
+
+\usepackage{graphics}
+\usepackage{graphicx}
+
+
+\usepackage[acronym,toc,section=chapter]{glossaries}
+\makeglossaries
+
+\newacronym{abc}{ABC}{A contrived acronym}
+\newacronym{efg}{EFG}{Another acronym}
+\newacronym{svm}{SVM}{Support Vector Machines}
+
+\pagenumbering{roman}
+\begin{document}
+
+\thispagestyle{empty}
+\begin{titlepage}
+  \begin{center}
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % THE HEADER
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \includegraphics[width=4cm, height=3cm]{lo.jpg}\\
+
+    {%
+    \fontsize{9pt}{9pt}\selectfont%
+    \begin{tabular}{c}
+      École nationale supérieure d’informatique
+      et d’analyse des systèmes - ENSIAS \\
+    \end{tabular}
+    }
+
+    \vspace{10pt}
+    \includegraphics[width=7cm, height=2.6cm]{logo-uir2.jpg} \\
+
+    {%
+    \fontsize{9pt}{9pt}\selectfont%
+    \begin{tabular}{c}
+      Univirsité Internationale de Rabat- UIR \\
+    \end{tabular}
+    }
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % THE PAGE CONTENT
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \vspace{10pt} {%
+      \renewcommand*{\familydefault}{\defaultFont}
+      \fontsize{46pt}{46pt}\selectfont%
+      % MEMOIRE\\%
+      %\reportTitle{}%\\\textsc{Report}\\%
+    }
+
+    \vspace{10pt}
+    \textbf{\large Rapport de Stage de Fin de 2ème Année} \\
+
+    \vspace{10pt}
+    \textit{
+      Génie Logiciel -GL-
+    }\\
+
+    % \includegraphics[width=2.5cm, height=2.5cm]{logo-essai.jpg}\\
+
+    \vspace{10pt}
+    \textbf{\textit{Réalisé par}}\\
+    \vspace{10pt} {%
+      \fontsize{18pt}{18pt}\selectfont%
+      \textbf{KOTBI Abderrahmane}\\
+    }%
+
+    \vspace{10pt} {%
+      \renewcommand*{\familydefault}{\defaultFont}
+      \fontsize{27pt}{27pt}\selectfont%
+      \rule{0.5\textwidth}{.4pt}\\
+      \vspace{10pt}
+      Gestion et suivi des contrats déléguées du transport urbains\\%
+      \vspace{10pt}
+      \rule{0.5\textwidth}{.4pt}
+    }
+
+    \vspace{10pt}
+    Présenté le~15/09/2021~devant le jury composé de:\\
+    %Soutenu le \dateSoutenance, devant la commission d'examen:\\
+    \vspace{20pt}
+    \begin{tabular}{p{0.3\linewidth} p{0.15\linewidth}}
+      \juryPresident{} & \juryPresidentDesc{} \\
+      \juryMemberOne{} & \juryMemberOneDesc{} \\
+    \end{tabular}
+
+    \vspace{10pt}%
+    \textbf{\textit{Année universitaire : 2020-2021}}\\
+
+    % \vspace{10pt}
+    % (\studyDepartment)\\
+
+  \end{center}
+\end{titlepage}
+
+%\begin{pfe-essai}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Table des matières, figures, tableaux ; Glossaire
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% ###############################
+% # HELP COMMANDS               #
+% ###############################
+%
+% -1 \part{part}
+%  0 \chapter{chapter}
+%  1 \section{section}
+%  2 \subsection{subsection}
+%  3 \subsubsection{subsubsection}
+%  4 \paragraph{paragraph}
+%  5 \subparagraph{subparagraph}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dédicace et Remerciements
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\printglossary[type=abbrev]
+
+
+
+\chapter*{Dédicace}
+%\chapter*{D\'edicace}
+%\addcontentsline{toc}{chapter}{Dedication}
+\thispagestyle{empty}
+%
+%For all they have endured to satisfy all my needs and wishes
+
+\begin{center}
+  {\it ~~À mes chers Encadrants (...) qui m'ont donné le temps et tout le nécessaire. Pour leur confiance et leur encadrement, je ne pourrai jamais exprimer la reconnaissance. Que dieu vous bénisse et vous procure une longue vie pleine de joie. À mes chers professeurs, à mes chers amis et camarades de l’ENSIAS qui ont converti notre vie universitaire en un rêve dont on ne souhaiterait jamais la fin.\\
+    \vspace{1cm}
+    À tous ceux qui me sont chers...
+  }
+\end{center}
+%
+%\nopagebreak{%
+% And maybe a quote here
+% \raggedright\hspace{5.75cm} To all of you,~\\
+%\raggedright\hspace{7.75cm} I dedicate this work.
+%  \raggedleft\normalfont\large\itshape{} \reportAuthor\par%
+%}
+%
+%\cleardoublepage%
+
+\chapter*{Remerciements}
+%\chapter*{Remerciements}
+%\addcontentsline{toc}{chapter}{Thanks}
+\thispagestyle{empty}
+~~Tout d’abord, je veux remercier mes encadrants de stage, (...). Ils ont su me faire confiance lors 
+de cette aventure dans le monde professionnel et ont partagé leurs connaissances d’une manière très 
+pédagogique. Je les remercie aussi pour leur disponibilité et la qualité de leur encadrement en 
+entreprise. Aussi je souhaite adresser mes remerciements au corps professoral et administratif de 
+l’Ecole nationale supérieure d’informatique et d’analyse des systèmes, pour la qualité de l’enseignement 
+offert et le soutient de l’équipe administrative. J'exprime ma sincère gratitude aux membres de jury, 
+qui ont accepté d’évaluer ce projet de stage. Enfin, j'adresse mes plus sincères remerciements à tous 
+mes proches et amis qui m'ont toujours soutenu et encouragé au cours de la réalisation de ce projet de stage.
+\input{abstract.tex}
+
+\tableofcontents
+\addcontentsline{toc}{chapter}{\contentsname}
+\cleardoublepage%
+
+\listoffigures
+%\addcontentsline{toc}{chapter}{\listfigurename}
+\cleardoublepage%
+
+\listoftables
+%\addcontentsline{toc}{chapter}{\listtablename}
+\cleardoublepage
+
+\listofalgorithms
+\addcontentsline{toc}{chapter}{List of Algorithms}
+\cleardoublepage
+%\printacronyms[heading=chapter*, name=Acronyms]
+%\printacronyms[heading=chapter*, name=Notations]
+
+
+
+%\sloppy
+
+\pagenumbering{arabic}% 1 2 3 4 5
+%    \doublespacing{}% Double spacing between lines
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Divers chapitres
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagenumbering{arabic}
+
+\chapter*{Introduction}
+\label{chap:general_intorduction}
+\markboth{\MakeUppercase{Introduction}}{}%
+%\addcontentsline{toc}{chapter}{Introduction}%
+
+\input{introduction.tex}
+
+\chapter{Chapter One}%
+\label{chap:chapterone}
+
+\input{chapitre1.tex}
+
+\chapter{Modelling data}
+\label{chap:2}
+\input{chapitre2.tex}
+
+\chapter{Results}
+\label{chap:3}
+\markboth{\MakeUppercase{Autrechap}}{}%
+\addcontentsline{toc}{chapter}{Autre Chapitre}%
+\input{chapitre3.tex}
+
+
+\chapter*{Conclusion}
+\label{chap:conclusion}
+\markboth{\MakeUppercase{Conclusion}}{}%
+\addcontentsline{toc}{chapter}{Conclusion}
+And a very interesting conclusion here\@. ~\\
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat.
+
+\newpage
+\appendix
+\addcontentsline{toc}{chapter}{Appendix}
+%\markboth{\MakeUppercase{Annexe}}{}
+
+\chapter{Code R/Python pour résoudre la problématique}
+\label{chap:appendix}
+
+
+\section{Pré-traitement des données}
+\section{Code R pour les modèles}
+
+\begin{verbatim}
+ Insérer ici le code !
+ \end{verbatim}
+
+\section{Librairies utilisées}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+
+
+
+\bibliographystyle{apalike}
+%\bibliographystyle{plain}
+
+\bibliography{Biblio}
+
+\cleardoublepage%
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+
+\printglossaries
+\printindex
+
+\input{abstract}
+
+\end{document}
