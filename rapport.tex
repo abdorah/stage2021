@@ -1,420 +1,646 @@
-%% @Author: Ines Abdeljaoued Tej
-%  @Date:   2018-06
-%% @Class:  PFE de l'ESSAI - Universite de Carthage, Tunisie.
-
-\documentclass[a4paper, oneside, 12pt, final]{extreport}
-\usepackage{graphicx}
-
-\parindent 0cm
-\usepackage{makeidx}
-\makeindex
-
-\usepackage[lined,boxed,commentsnumbered, french, ruled,vlined,linesnumbered]{algorithm2e}
-\usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{definition}{Definition}[chapter]
-\newtheorem{exemple}{Example}[chapter]
-
-
-%\usepackage[nottoc]{tocbibind}
-%\addcontentsline{toc}{section}{References}
-
-\providecommand{\keywords}[1]{\textbf{\textit{Mots clés---}} #1}
-\providecommand{\keywordss}[1]{\textbf{\textit{Keywords---}} #1}
-
-\usepackage{etoolbox}
-%\makeatletter
-%\patchcmd{\thebibliography}{%
-%  \chapter*{\bibname}\@mkboth{\MakeUppercase\bibname}%{\MakeUppercase\bibname}}{%
-%  \section{References}}{}{}
-%\makeatother
-
-
-
-\usepackage[nottoc]{tocbibind}
-
-\textwidth 18cm
-\textheight 24cm
-\topmargin -0.5cm
-\oddsidemargin -1cm
-
-% set font encoding for PDFLaTeX or XeLaTeX
-\usepackage{ifxetex}
-\ifxetex
-  \usepackage{fontspec}
-\else
-  \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
-  \usepackage{lmodern}
-\fi
-
-
-% Enable SageTeX to run SageMath code right inside this LaTeX file.
-% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
-%\usepackage{sagetex}
-
-
-\newcommand{\reportTitle} {%
-  %\textsc{Graduation Project Report}
-  \textsc{Projet de Fin d'\'etudes}
-}
-
-\newcommand{\reportAuthor} {%
-  FirstName \textsc{LastName}%
-}
-
-\newcommand{\reportSubject} {%
-  My very attractive \\ Title%
-}
-
-\newcommand{\dateSoutenance} {%
-  12/06/2018%
-}
-
-\newcommand{\studyDepartment} {%
-  Entreprise d'accueil %Statistique
-}
-
-\newcommand{\ESSAI} {%
-  %Higher School of Statistics and Information Analysis
-  Ecole Sup\'erieure de la Statistique et de l'Analyse de l'Information
-}
-
-%\newcommand{\codePFE} {% Reference
-%  Code PFE%
-%}
-
-\newcommand{\juryPresident} {%
-  Mr Ben Foulen \textsc{Foulenia}%
-}
-\newcommand{\juryPresidentDesc} {%
-  President%
-}
-
-\newcommand{\juryMemberOne} {%
-  Ms Ben Foulena \textsc{Foulen}%
-}
-\newcommand{\juryMemberOneDesc} {%
-  Examiner %Mentor
-}
-
-\newcommand{\juryMemberTwo} {%
-  Mr Ben Foulen \textsc{Fouleni}%
-}
-\newcommand{\juryMemberTwoDesc} {%
-  Reviewer% Examiner, Reporter
-}
-
-\newcommand{\juryMemberThree} {%
-	M. Ben Foulen \textsc{Fouleni}%
-}
-\newcommand{\juryMemberThreeDesc} {%
-	Supervisor% Examiner, Reporter
-}
-
-\newcommand{\juryMemberFour} {%
-	M. Ben Foulen \textsc{Fouleni}%
-}
-\newcommand{\juryMemberFourDesc} {%
-	Mentor% Examiner, Reporter
-}
-
-
-\newcommand{\specialcell}[1]{%
-  \begin{tabularx}{\textwidth}{@{}X@{}}#1\end{tabularx}%
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Add your own commands here
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\MyCommand} {%
-  Does nothing really%
-}
-
-
-% used in maketitle
-\title{\reportSubject}
-\author{\reportAuthor}
-
-% Enable SageTeX to run SageMath code right inside this LaTeX file.
-% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
-%\usepackage{sagetex}
-
-%\hypersetup{
-%  pdftitle={\reportTitle~-~\reportSubject},%
-%  pdfauthor={\reportAuthor},%
-%  pdfsubject={\reportSubject},%
-%  pdfkeywords={report} {internship} {pfe} {enis}
-%}
-
-\usepackage{graphics}
-\usepackage{graphicx}
-
-
-\usepackage[acronym,toc,section=chapter]{glossaries}
-\makeglossaries
-
-\newacronym{abc}{ABC}{A contrived acronym}
-\newacronym{efg}{EFG}{Another acronym}
-\newacronym{svm}{SVM}{Support Vector Machines}
-
-\pagenumbering{roman} 
-
+\documentclass[a4paper,12pt]{report}
 \usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
 \usepackage[french]{babel}
-
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{epstopdf}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{eurosym}
+\usepackage[top=3cm, bottom=2cm, left=1cm, right=1cm]{geometry}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{hyperref}
+\usepackage{array,multirow,makecell}
+\setcellgapes{3pt}
+\setlength{\parindent}{1.1cm}
+\makegapedcells
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash }b{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash }b{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[C]{\textbf{\thepage}}
+\fancyfoot[R]{Année universitaire: 2020/2021}
+\fancyfoot[L]{ Mémoire PFA}
 \begin{document}
-\thispagestyle{empty}
 \begin{titlepage}
 \begin{center}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% THE HEADER
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\includegraphics[scale=0.15]{embleme.jpg}
-\vspace{0.5cm}
-
-{%
-  \fontsize{9pt}{9pt}\selectfont%
-  \begin{tabular}{c}
-    R\'epublique Tunisienne \\
-    Minist\`ere de l'Enseignement Supérieur et de la Recherche Scientifique \\%
-    Universit\'e de Carthage - \ESSAI{}\\ 
-  \end{tabular}
-}
-
-\vspace{0.5cm}
-
-\includegraphics[scale=0.04]{universite-carthage.jpg}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% THE PAGE CONTENT
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\vspace{5pt} {%
-  \renewcommand*{\familydefault}{\defaultFont}
-  \fontsize{46pt}{46pt}\selectfont%
-  % MEMOIRE\\%
-  %\reportTitle{}%\\\textsc{Report}\\%
-}
-
-%\vspace{5pt}
-
-\vspace{10pt}
-{\textit{Rapport de Projet de Fin d'Etudes soumis afin d'obtenir le}}\\
-
-\vspace{10pt}
-{\textbf{\large Diplôme National d'Ingénieur en Statistique et Analyse de l'Information}}\\
-
-\includegraphics[scale=0.4]{logo-essai.jpg}\\
-
-\vspace{5pt}
-\textbf{\textit{Réalisé par}}\\
-\vspace{10pt} {%
-  \fontsize{14pt}{14pt}\selectfont%
-  {\bfseries\Large\sc \reportAuthor}\\
-}%
-
-\vspace{5pt} {%
-  \renewcommand*{\familydefault}{\defaultFont}
-  \fontsize{27pt}{27pt}\selectfont%
-  \rule{0.5\textwidth}{.4pt}\\
-  \vspace{10pt}
-  \reportSubject{}\\%
-  \vspace{10pt}
-  \rule{0.5\textwidth}{.4pt}
-}
-
-\vspace{5pt}
-Soutenu le\, \dateSoutenance\,\, devant le Jury compos\'e de :\\
-%Soutenu le \dateSoutenance, devant la commission d'examen:\\
-\vspace{10pt}
-\begin{tabular}{p{0.3\linewidth} p{0.15\linewidth}}
-  \juryPresident{} & \juryPresidentDesc{}\\
-  \juryMemberOne{} & \juryMemberOneDesc{}\\
-  \juryMemberTwo{} & \juryMemberTwoDesc{}\\
-  \juryMemberThree{} & \juryMemberThreeDesc{}\\
-%  \juryMemberFour{} & \juryMemberFourDesc{}\\
-\end{tabular}
-
-%\vfill
-
-\vspace{10pt}%
-\textbf{\textit{Projet de Fin d'Etudes fait \`a}}\\
-\vspace{5pt}
-(\studyDepartment)\\
-%\includegraphics[scale=0.4]{logo-studyDepartment.jpg}
+{}\\{}\\
+{}
+\begin{figure}[!h]
+\vspace{- 2 cm}
+\hspace{ 0 cm}
+\includegraphics[width=9em]{images/ensias.jpeg}
+\end{figure}
+\begin{figure}[!h]
+\vspace{- 3.97cm}
+\hspace{14 cm}
+\includegraphics[width=10em]{images/um5.jpeg}
+\end{figure}
 \end{center}
-\end{titlepage}
-
-% ###############################
-% # HELP COMMANDS               #
-% ###############################
-%
-% -1 \part{part}
-%  0 \chapter{chapter}
-%  1 \section{section}
-%  2 \subsection{subsection}
-%  3 \subsubsection{subsubsection}
-%  4 \paragraph{paragraph}
-%  5 \subparagraph{subparagraph}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Dédicace et Remerciements
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\chapter*{Dedication}
-\chapter*{D\'edicace}
-%\addcontentsline{toc}{chapter}{Dedication}
-\thispagestyle{empty}
-%
-%For all they have endured to satisfy all my needs and wishes
 
 \begin{center}
-{\it 
-	
-A ... pour son(leur) sacrifice et son(leur) soutien, \\
-en témoignage de mon infinie reconnaissance et mon profond attachement \\
-\vspace{1cm}
-A tous ceux qui me sont chers...
+\noindent \hspace{ 0.3 cm }\Huge \textbf{ Rapport de Projet  Fin d’année } 
+\vspace*{0.1cm}
 
-}
+\vspace*{0.1cm}
+\begin{center}
+ \rule{0.9\linewidth}{1pt}
 \end{center}
-%
-%\nopagebreak{%
-% And maybe a quote here
-% \raggedright\hspace{5.75cm} To all of you,~\\
-%\raggedright\hspace{7.75cm} I dedicate this work.
-%  \raggedleft\normalfont\large\itshape{} \reportAuthor\par%
-%}
-%
-%\cleardoublepage%
+\begin{center}
 
-%\chapter*{Thanks}
-\chapter*{Remerciements}
-%\addcontentsline{toc}{chapter}{Thanks}
-\thispagestyle{empty}
-%
-%Au terme de ce travail (A l'issue de ce travail), je tiens à remercier M., Mme, Pr., Dr. pour sa disponibilité et ses conseils judicieux. \\
-
-Je n'aurais jamais pu réaliser ce projet sans la précieuse aide et sans le soutien d'un grand nombre de personnes dont la générosité, la bonne humeur et l'intérêt manifestés à l'égard de mon PFE m'ont permis de progresser. \\
-
-%En premier lieu, je tiens à remercier mon encadrant universitaire, \juryMemberFour{}, pour la confiance qu'il m'a accordée en acceptant d'encadrer ce travail, pour ses multiples conseils et pour toutes les heures qu'il a consacrées à diriger ce travail. \\ 
-
-%Je souhaiterais exprimer ma gratitude à \juryMemberThree{}, pour m’avoir donné envie de réaliser un mémoire sur ... au sein de \og \studyDepartment \fg. Je le remercie également pour son accueil chaleureux à chaque fois que j'ai sollicité son aide, ainsi que pour ses multiples encouragements. J’ai été extrêmement sensible à ses qualités humaines d'écoute et de compréhension tout au long de ce travail de mémoire. \\
-
-%J'aimerais également dire à \juryPresident{} à quel point je suis honorée pour avoir accepté de présider ce jury de PFE. Je suis infiniment gré à  \juryMemberOne{} de s’être rendu disponible et d’avoir accepté la fonction de rapporteur. De même, je suis particulièrement reconnaissant(e) à (\juryMemberTwo{} de l'intérêt qu'il/elle a manifesté à l'égard de ce projet en s'engageant à être rapporteur. \\
-
-Ma reconnaissance va à ceux qui ont plus particulièrement assuré le soutien affectif de ce travail : ma famille ainsi que mes amis. Mes parents... 
+\noindent \hspace{ 0.4 cm}{\large \textsc{ Création d'une application Web E-Commerce avec prévision des ventes : \textbf{Laptop+}}} \\ 
+ \end{center} 
 
 
-\input{abstract.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Divers chapitres
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{0.5cm} \noindent \hspace{ -0.5 cm} \large 
+\begin{figure}[H]
+    \begin{center}
+    \includegraphics[width=3.5in,height=3in]{images/instagram_profile_image.png}
+    \end{center}
+\end{figure}
+\raggedright
+{\textbf{\emph{Préparé par: BOUMLIK Ayoub** OULJA Salma
 
+}}\\}
+\JUSTIFY
+\raggedleft
+{\textbf{\emph{Professeur encadrante: Mme.MHADA Fatima Zahra
+
+}}\\}
+
+\rule{0.7\linewidth}{2pt}\\
+\raggedleft
+{\textbf{\emph{Membre Jury: M.BENADADA Youssef
+}}}
+\vspace
+
+\begin{center}
+\Large \emph{Année universitaire : 2020-2021} 
+\end{center}
+
+
+\end{center}
+
+\end{titlepage}
+\pagenumbering{arabic} \setcounter{page}{1}
+\addcontentsline{toc}{chapter}{Remerciements}
+\begin{doublespace}
+\begin{center}
+\vspace*{1cm}
+
+\textbf{\huge{Remerciements}}
+
+\end{center}
+\end{doublespace}
+\begin{doublespace}
+\begin{center}
+
+\textit{Avant d'aborder la description des parties importantes du projet, on aimera tout d’abord exprimer notre gratitude intense à toute personne qui a contribué  énormément dans l'élaboration et la réalisation de notre travail, en assurant le bon déroulement de notre projet et la bonne influence des ressources partagées.}
+
+\textit{Nous commençons ainsi par offrir nos remerciements à l'intégralité des personnes travaillant au sein de l’Ecole Nationale supérieure d’informatique et d’analyse des systèmes qui ne cessent de nos intégrer dans des telles expériences afin de bien positionner ses lauréats dans le cadre réelle du marché de travail.}
+
+\textit{Toute notre gratitude et profonde reconnaissance s’adressent à  Mme.\textbf{MAHADA} Fatima Zahra  de nous avoir garanti un encadrement de qualité pour bien mener et assurer la réalisation de ce travail dans les meilleures des conditions.Ainsi qu'à l'égard de M.\textbf{BENADADA} Youssef qui nous a honorés d’avoir accepté et superviser notre travail.}}
+
+\end{center}
+
+\end{doublespace}
+
+\clearpage
+\addcontentsline{toc}{chapter}{Résumé}
+\begin{doublespace}
+\begin{center}
+\vspace*{1cm}
+
+\textbf{\huge{Résumé}}
+
+\end{center}
+\end{doublespace}
+\begin{doublespace}
+
+Ce document présente une synthèse du travail réalisé  dans le cadre du projet de fin d'année. L'idée consiste principalement à développer  une application Web de l'e-commerce des gadgets électroniques. Ce travail est constitué de plusieurs phases, notamment la phase d’analyse et de conception qui est si importante car elle  construit la base pour l'étude 
+des perceptions possibles du projet, et comme dernière étape, on aura à implémenter notre solution en 
+utilisant un ensemble des technologies et des différents outils et en découvrant plusieurs concepts  qui nous ont aidé à développer cette solution .
+
+Pour faire simple, nous allons présenter les différentes actions à réaliser afin de concrétiser notre idée de projet, ceci par le biais d’une étude de faisabilité dans un premier temps, ensuite une étude des plateformes existantes sur le marché.
+
+Puis, nous avons élaboré une étude plus précise des besoins, en s’appuyant sur les points importants mentionnés sur le plan initiale du cahier des charges suivant les différents scénarios, les différentes actions par rapport à chaque acteur.
+
+Enfin, nous avons élaborer une étude technique visant les outils et les langages utilisés lors de la réalisation du projet
+Et donc le présent rapport va mettre la lumière sur les différentes actions prises pour concrétiser l’idée de notre solution Laptop+. 
+
+
+\textbf	{\\Mots clés :\\ E-commerce, Projet, acteur, application,gadgets, électroniques, Laptop+ }
+
+
+
+
+
+
+\end{doublespace}
+\clearpage
+\addcontentsline{toc}{chapter}{Abstract}
+\begin{doublespace}
+\begin{center}
+\vspace*{1cm}
+
+\textbf{\huge{Abstract}}
+\end{center}
+\end{doublespace}
+\begin{doublespace}
+This document presents a summary of the work carried out within the framework of the end-of-year project. The idea is mainly to develop a web application of e-commerce electronic gadgets. This work consists of several phases, including the analysis and design phase which is so important because it builds the basis for the study
+possible perceptions of the project, and as a last step, we will have to implement our solution by
+using a set of technologies and different tools and discovering several concepts that helped us to develop this solution.
+
+To put it simply, we will present the different actions to be carried out in order to realize our project idea, this through a feasibility study first, then a study of existing platforms on the market.
+
+Then, we developed a more precise study of the needs, based on the important points mentioned in the initial plan of the specifications according to the different scenarios, the different actions in relation to each actor.
+Finally, we developed a technical study targeting the tools and languages used during the realization of the project.
+And so this report will shed light on the various actions taken to make the idea of  our Laptop + solution a reality.
+
+
+
+
+
+
+
+\textbf{\\Keywords:\\E-commerce, Project, actor, application, gadgets, electronics, Laptop +}
+
+
+\end{doublespace}
+
+\newpage
+
+\renewcommand{\contentsname}{Table de matières}
+\setcounter{tocdepth}{4}
 \tableofcontents
-%\addcontentsline{toc}{chapter}{\contentsname}
 
-\listoffigures
-%\addcontentsline{toc}{chapter}{Liste des Figures}
-\listoftables
-%\addcontentsline{toc}{chapter}{Liste des Tableaux}
-\listofalgorithms
-\addcontentsline{toc}{chapter}{Liste des algorithmes}
 \cleardoublepage
+% \phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
 
 \newpage
-\pagenumbering{arabic}
-\chapter*{Introduction}
-\label{chap:general_intorduction}
-\input{introduction.tex}
+\addcontentsline{toc}{chapter}{Introduction générale}
+\begin{doublespace}
+\begin{center}
+\vspace*{1cm}
+
+\textbf{\huge{Introduction générale}}
+
+\end{center}
+\end{doublespace}
+\begin{doublespace}
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[R]{\textbf{Introduction générale}}
+\fancyhead[L]{\hspace*{5cm}}
+De nos jours la crise sanitaire a créé un nouveau défi face aux besoins pertinents de la population, la fermeture des magazins et des grandes surfaces a suscité des dommages graves sur le capitale de certaines firmes et même sur les indicateurs de consommation quotidienne.Par conséquence, est ce qui est absurde les études trouvent que pendant la période du confinement les achats en ligne avaient des revenus importants, ce qui argumente bien l'efficience des plateformes de l'e-commerce avant l'avènement du contexte de l'épidémie, et aussi à subsister lors de cette période. 
+
+Aujourd’hui, dans l’ère de nouvelles technologies plusieurs firmes décident d'adopter le mode de l'achat en ligne en offrant aux utilisateurs le marché en un clique, en particulier ces solutions ne sont pas assez fiables en terme de disponibilité  des produits lors de la demande ainsi qu'ils ont des temps de livraison assez important, nous pouvons citer comme exemple « Jumia » qui est devenue une grande entreprise de commerce en ligne sur le niveau du marché africain, visant la mise en contact d'utilisateurs avec des prix assez légers mais avec mauvaise  politique de retour produit en cas de non satisfaction et délai d'attente très long. 
+L'idée de l'application e-commerce avec prévision des ventes  repose sur le fait d’inciter les utilisateurs à avoir une expérience d'achat en ligne plus authentique à celle faite dans un magazin des gadgets électroniques, tout cela dans l’objectif de convertir la majorité des utilisateurs vers des modes d'achat en ligne  moins couteux et compatible aux contraintes actuelles et qui peut parfois s’avérer plus optimale en terme de prévision des quantités et du stockage.
+ 
+Pour cela, le présent document est composé de trois parties: La première partie, nommée présentation du projet
+est organisé en un seul chapitre. Ce dernier décrit le cadre général du projet et sa mise en valeur ainsi qu’à la problématique existante et sa solution, le reste du rapport comporte deux chapitres consacrés à la conception et la réalisation de lapplication . Cette partie comporte deux chapitres. Dans le premier nous décrivons les outils d’analyse dont nous nous sommes servis pour établir la spécification des besoins correspondante au projet ainsi que, alors que le deuxième chapitre annonce les étapes conçues pour la réalisation finale de notre site web.
+Nous finalisons ce rapport par une conclusion qui clôture les atouts de notre site web « Laptop+ », jusqu’à ses limites et aux perspectives qu’il peut engendrer.
 
 
-\chapter{Données étudiés}%
-\label{chap:chapterone}
-\input{chapitre1.tex}
 
-\chapter{Modèles utilisés et Applications}
-\label{chap:2}
-\input{chapitre2.tex}
 
-\chapter{Indicateurs de performances et Résultats}
-\label{chap:3}
-\input{chapitre3.tex}
 
-\chapter*{Conclusion et Perspectives}
-\label{chap:conclusion}
-\markboth{\MakeUppercase{Conclusion}}{}%
-\addcontentsline{toc}{chapter}{Conclusion}
-  And a very interesting conclusion here\@. ~\\
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat.
+
+\end{doublespace}
 
 \newpage
-\appendix
-\addcontentsline{toc}{chapter}{Annexes}
-%\markboth{\MakeUppercase{Annexe}}{}
 
-\chapter{Code R pour résoudre la problématique}
-\label{chap:appendix}
+\chapter{Présentation générale du projet}
 
-
-\section{Pré-traitement des données}
-\section{Code R pour les modèles}
-
- An appedix if you need it.
- 
- \begin{verbatim}
- Insérer ici le code !
- \end{verbatim}
-
-\section{Librairies utilisées}
- 
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[R]{\textbf{Chapitre \thechapter: Présentation générale du projet}}
+\fancyhead[L]{\hspace*{5cm}}
+\begin{doublespace}
+   Dans ce chapitre nous entamons le projet dans son cadre général : présentation de l'idée de l'application, le contexte du projet, les objectifs à fixer, la démarche de la réalisation que nous avons adopté en équipe.
+   \end{doublespace}
+\begin{doublespace}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Don't touch this, it is auto generated
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\nocite{*}
-
-%\phantomsection{}
-%\addcontentsline{toc}{chapter}{Webography}
-%\printbibliography[title={Webography},type=online]
-
-%\phantomsection{}
-%\addcontentsline{toc}{chapter}{Bibliography}
-%\printbibliography[title={Bibliography},nottype=online]
-
-%\printbibheading %exemple de bibliographie divisée en sections. Pour ajouter des oeuvres non citées,utiliser \nocite
-
-%\printbibliography[keyword=pratique,heading=subbibliography,title={Théories littéraires dans les jeux vidéo}]
-%\printbibliography[keyword=litteraire,heading=subbibliography,title={Narratologie et structuralisme}]
-
-%\printbibliography[keyword=jeu,heading=subbibliography,title={\emph{Games studies}}]
-
-\bibliographystyle{apalike}
-%\bibliographystyle{plain}
-
-\bibliography{Biblio.bib}
-
-\cleardoublepage%
-
-\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
-
-\printglossaries
-\printindex
-
-\input{abstract}
+\section{Contexte et mise en valeur:}
+L'idée e-commerce commence à prendre le sens de l'évolution dans le monde du marketing, Dans un contexte de ralentissement de l'activité économique, COVID-19 a entraîné une augmentation du commerce électronique et une accélération de la transformation numérique.\\ Car tout les consommateurs  ont pu passer à l'achat numérique pendant cette pandémie, l'e-commerce consiste à créer une experience réaliste, authentique dédiée au consommateur en lui offrant un magazin sans frontière pour faciliter son expérience à condition qu'il aperçoit un produit de qualité et de même prix consulté au magazin.\\ Ce qui nous a poussé à créer une plateforme e-commerce des PC portables interactive et égronomique adressée au consommateurs, avec un moteur de prévision qui faciliterait la phase de ségmentation client pour un service plus précis.
+\newpage
+\section{Problématique:}
+La consultation et l'achat des biens de la plateforme entraine plusieurs sections d'utilisateurs, d'où cela imlique des difficultés en terme des prévisions des ventes, avec une large base des données des nouveaux consommateurs et ceux des anciens clients les gérants de la plateforme reste avec une prévision pas si fiable sur les ventes qu'ils auront à produire.\\ C'est où on introduit l'idée de la platefome Laptop+ comme solution effective qui répond à la question :
+\\\textbf{Comment peut on élaborer une étude prévisionelle qui améliore notre politique de vente ? }
 
 
+\section{ Solution:}
+Notre solution consiste à créer une application web E-commerce spécialisée dans la vente des ordinateurs portables et les accessoires en relation avec ces derniers. Le site implémentera un système de préision des ventes qui doit aider les responsables
+pour commander la quantité adéquate de leurs produits pour une meilleure productivité ainsi une bonne gestion de stock qui améliora l'experience client à chaque achat.
+
+\begin{figure}[H]
+    \begin{center}
+    \includegraphics[scale=0.9]{images/tree2.png}
+    \end{center}
+\end{figure}
+
+\newpage
+\section{Récapitulatif:}
+Ce chapitre décrit globalement, l’avènement de l'idée de l'application e-commerce et ainsi le contexte général qui coïncide avec le statut épidémiologique actuel, ainsi qu’il valorise l’idée de l'achat en ligne et exprime ses apports. \\Alors que notre plateforme web Laptop+ est la réponse d’une problématique en question: celle de l'authenticité des produits et leur disponibilité des produits exposés dans les magazins. \\Tandis que le site «Laptop+» est la solution à la problématique assez alarmante et équivoque, on arrive à accumuler l’objectif ultime de la création d’une 
+créer une application web e-commerce spécialisée dans la vente des ordinateurs portables et les accessoires en relation avec ces
+derniers. 
+
+\newpage
+\chapter{Analyse et conception}
+
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[R]{\textbf{Chapitre \thechapter: Analyse et conception}}
+\fancyhead[L]{\hspace*{5cm}}
+\begin{doublespace}
+
+Ce chapitre constitue la phase initiale de notre travail. En effet on fait la spécification des besoins du projet. Ensuite, nous identifions les différents acteurs partipant au système.\\Enfin, nous
+modélisons les divers processus dans un diagramme de cas d’utilisation général qui définit la solution d'une vue utilisateur.
+\color{ForestGreen}
+\section{Analyse:}
+\end{color}
+\subsection{Introduction à l'analyse:}
+Plusieurs applications d'achats en ligne optent à une optimisation des ventes plus pratique avec une interface machine - client créative ainsi interactive pour une meilleure expérience. Le commerce digitale est devenu très utile et adequat à la situation actuelle qui a annulé l'experience d'achat quotidienne aux magazins.\\ Ce qui implique la création de la plateforme \textbf{Laptop+} qui offre une diversité des laptops et des produits éléctroniques avec une bonne prévision de vente qui  aide à mieux gérer les stock et à éviter les ruptures de stock qui influencent le niveau de satisfaction client, c'est pour cela qu'on aura à créer un moteur de prévision pour mieux répondre aux besoins de nos  clients.
+\subsection{Balisage ou best Practise:}
+Suite à l'analyse du marché, nous avons découvert un large éventail des applications de commerce électronique. Comme un exemple, considérer les suivants deux applications:\\
+\color{ForestGreen}
+\textbf{\large Jumia:}\\
+\end{Color}
+Jumia est une entreprise de commerce en ligne active sur le marché africain qui a été fondée en 2012. Jumia, la plateforme en ligne marché qui relie les vendeurs et acheteurs en fournissant une solution logistique qui comprend l'entreposage, la distribution, et la livraison de colis, de même que d'un  service paiement responsable.\\
+\textbf{Avantages:}
+\begin{itemize}
+\item Une bonne gestion des promotions.
+\item Un service de paiement en ligne ou à la livraison.
+\item Une organisation et classification des produits.
+\end{itemize}\\
+\textbf{Inconvénients:}
+\begin{itemize}
+\item Délais de livraison très importants.
+\item Existence des redondance (Produits identiques avec deux a trois prix différents).
+\end{itemize}
+\color{ForestGreen}
+\textbf{\large AliExpress:}\\
+\end{Color}
+\begin{doublespace}
+Aliexpress.com est un site de commerce en ligne du Groupe Alibaba spécialisé dans la vente
+de produits à prix bas, aux particuliers (BC) et à l’international.\\
+\textbf{Avantages:}
+\begin{itemize}
+    \item Une livraison à l’échelle internationale.
+    \item Une protection pour l’acheteur et des paiements sécurisés.
+    \item Une possibilité de voir les retours clients.
+\end{itemize}
+\textbf{Inconvénients:}
+\begin{itemize}
+    \item Une durée de livraison élevée.
+    \item Peu de controle sur la marchandise.
+\end{itemize}
+\newpage
+\color{ForestGreen}
+\section{Spécification des besoins:}
+\end{color}
+\begin{doublespace}
+\subsection{Spécification des acteurs:}
+\begin{itemize}
+    \item L’administrateur: c'est la personne chargée d'affecter les différents rôles et de
+gérer les comptes et les produits ainsi que les réclamations.
+\item  Le client: Il consulte le catalogue et les offres  spéciaux.Il est possible pour lui de mener des recherches.En même que la capacité de voir les promotions.
+\item Le visiteur: Un utilisateur ordinaire qui n'est pas censé à d'avoir un compte ou  de s'authentifier, mais il peut voir les produits et les nouveautés.
+\end{itemize}
+\subsection{Besoins fonctionnels:}
+\begin{itemize}
+    \item Gestion des utilisateurs: L'administrateur doit avoir une section d'où il pourra faire une gestion des clients, ainsi de leurs détails et activités.
+    \item Gestion des produits: Les produits mis sur la plateforme de manière bien ordonnée.
+    \item Gestion des transaction : l’administrateur peut consulter les transaction dans l'application.
+    \item Gestion des ventes: Outil de prévision qui doit fournir des graphes fiables.
+\end{itemize}
+\subsection{Les besoins non fonctionnels:}
+\justify
+Les besoins fonctionels sont basiques pour un fonctionnement correcte et une réponse fiable aux besoins des utilisateurs, mais il y a des autres besoins qui tendent à améliorer la performance et la qualité de l'application pour une utilisation plus adéquate.
+\begin{itemize}
+\justify
+    \item Fiabilité de la plateforme: L’application doit fonctionner sans erreur.
+    \item Ergonomie, souplesse et confort d’utilisation: Pour faciliter l’utilisation, notre plateforme doit offrir une interface unifiée, conviviale et érgonomique.
+    \item Gain de temps: Notre application doit optimiser les traitements pour avoir un temps de réponse minimale.
+    \item Maintenabilité et sociabilité: Notre code source doit être lisible, commenté,compréhensible afin d’assurer son état évolutif et extensible par rapport aux besoins des utilisateurs.
+\item Sécurité: Notre plateforme doit  être très authentique en ce qui concerne les informations personnelles des utilisateurs.
+\end{itemize}
+\color{ForestGreen}
+\section{Conception:}
+\end{color}
+\begin{doublespace}
+Après la prise en charge de la question, nous avons abordé le principe de la création d'un site e-commerce qui répond aux normes et aux modalités existantes dans les applications du commerce digitales, avec l'daptation des nouvelles technique qui touchent la globalité de la solution, avec la possibilité d'une connexion à chaque tentative d'accès.
+
+\subsection{Cas d'utilisation globale:}
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.7]{images/pfa2 utilisation globale.png}
+ \caption{Cas d'utilisation globale}
+ \end{center}
+\end{figure}
+\newpage
+Dans cette figure on fait la segmentation des besoins principaux dont l'application doit répondre, on distingue les trois types des utilisateurs Administrateur, client et visiteur: \\Les deux premiers types sont les seuls à avoir des comptes avec authentification de soi, la fonctionnalité de l'administateur se focalise sur tout ce qui est comparable à la gestion.Toutefois, le client peut effectuer des achats ainsi qu'il peut évaluer son expérience et ses produits. \\ L'application est aussi ouverte pour les visiteurs ordinaux, ils peuvent avoir un panier, consulter les produits à la phase de la création des comptes ils peuvent devenir des clients.
+
+\subsection{Cas d'utilisation de l'administrateur:}
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.7]{images/admin cas.png}
+ \caption{Cas d'utilisation de l'administrateur}
+ \end{center}
+\end{figure}
+Dans cette figure on illustre le cas de l'utilisation de l'administrateur de façon plus détaillée, comme c'est déjà mentionné l'administrateur après son authentification, il prend la responsabilité de la gestion des clients, leurs transactions, ainsi qu'aux produits du magazins.Il fait la mise à jour, la suppression ou l'ajout des produits pour une gestion des produits plus fluide.\\ N'oubliant pas qu'il aura la possibilité de la consultation des informations des comptes clients leurs détails et leurs transactions effectuées.
+
+\subsection{Cas d'utilisation du client:}
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.7]{images/client cas (1).png}
+ \caption{Cas d'utilisation du client}
+ \end{center}
+\end{figure}
+
+L'utilisateur client est est l'acteur principale qu'on vise lors de la conception de l'application, il a un compte personnel d'où il peut effectuer plusieurs fonctionnalités dès qu'il s'authentifie il n'est plus visiteur. Lors de la consultation de son compte il peut faire des modifications sur le plan de ses données, pour les achats cette fonctionnalité est triviale ainsi disponible selon les critères de chaque produit.\\D'ou il peut faire l'évalution et la consultation de chaque produit dans sa commande. \\ La communication au client et le service de la vente forment des traits principaux lors de l'achat et la vente, ici le client peut toujours rapporter ses interrogations et les abus d'utilisation à l'administrateur. 
+\newpage
+\subsection{Cas d'utilisation visiteur:}
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.7]{images/client cas (2).png}
+ \caption{Cas d'utilisation du visiteur}
+ \end{center}
+\end{figure}
+
+Le client avant qu'il obtient un compte à lui, il reste un visiteur ordinaire, avec diffèrents aspects d'utilisation: chaque visiteur aura un panier dont il pourra effectuer ses achats, consulter les produits qui existent dans son panier ainsi qu'il peut ajouter des produits dans ce panier.\\
+Il peut à tout moment contacter l'administrateur pour les renseignements, les modalités de paiement des commandes et de livraison colis.
+
+\subsection{Diagramme de séquence Authentfication Administrateur/ client:}
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.6]{images/sec auth (2).png}
+ \caption{Diagramme de séquence Authentfication Administrateur/ client}
+ \end{center}
+\end{figure}
+Selon l'acteur, le système approuve les sessions d'utilisation des deux acteurs Administrateur ou client: Lors de l'authentification le système exige la validité des identifiants avec la vérification de la base de données, on approuve la connexion à la base de ces résultats.
+\subsection{Diagramme de séquence création d'un compte client:}
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.6]{images/sec auth (3) (1).png}
+ \caption{Diagramme de séquence création d'un compte client}
+ \end{center}
+\end{figure}
+La séquence  qui précède décrit la création des comptes effectuée par les visiteurs pour devenir des clients. Le visiteur entre ses données dans la case convenable, si ces données sont qualifiées valides alors le compte est valable. Le visiteur est un client à ce moment.
+\subsection{Diagramme de séquence ajout au panier:}
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.6]{images/sec auth (4).png}
+ \caption{Diagramme de séquence ajout au panier}
+ \end{center}
+\end{figure}
+Pendant chaque achat, les clients consultent les produits, font leurs recherches puis arrivent à choisir les produits qui leurs convient, d'où l'idée d'avoir un panier comme l'expérience au magazin réellement. \\Le client ajoute des produits à son panier, mais pour qu'il puisse accomplir son achat, l'application nécessite une phase d'enregistrement des données clients, la vérification des données si favorable permet au client de compléter son achat et d'accéder au paiement finalement.
+
+\subsection{Diagramme de séquence Ajouter ou Supprimer ou modifier les catégories:}
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.6]{images/sec auth (5).png}
+ \caption{Diagramme de séquence modifications des catégories}
+ \end{center}
+\end{figure}
+Pour assurer la bonne gestion des diffèrents produits sur notre plateforme, on a fait de sorte de classifier les produits sous des catégories, chacune contient un genre différent des produits:\\ L'administrateur est l'acteur en charge de faire des telles modifications comme la suppression, l'ajout ou la mise à jour des catégories dont on inscrit les produits. L'administrateur s'authentifie au système, avec un retour de validation il effectue la modification, suppression ou ajout. Cette action est envoyée à la base de donnée pour un enregistrement des changements, la base de données traite ces actions le retour donne l'application de ces changements sur plateforme réelle.
+\section{Structure conceptuelle de l'application:}
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.6]{images/Capp.PNG}
+ \caption{Structure des catégories}
+ \end{center}
+\end{figure}
+Pour bien expliquer la vision conceptuelle de l'application réelle , on consacré une phase de l'étude pour faire décider la structure de l'interface utilisateur  qui nécessite la conception des  sections suivants  disponible lors de la phase d'acceuil.
+\begin{itemize}
+    \item \textbf{Ordinateurs portables:} Où les acteurs trouvent la condition exacte du produit (Nouveau ou non ).
+    \item \textbf{Accessoires:} L'utilisateur peut savoir le niveau du stockage de chaque outil ainsi que l'ergonomie de ces accessoires les souris, claviers ainsi les cables.
+    \item \textbf{Contact/Plus d'informations:} A partir de celles-ci les acteurs en question peuvent contacter l'administrateur.
+    \item \textbf{Login/Register:} C'est la phase de l'authentification aux comptes.
+    \item \textbf{Panier:} C'est l'entité destinée aux clients lors de l'achat des produits.
+    
+\end{itemize}
+
+
+\newpage
+\section{Récapitulatif:}
+Face aux conditions actuelles de la distanciation sociale et la fermeture des magazins et des espaces makro, cela a bien incarné l'idée de l'achat en ligne d'où on a eu l'idée de la création d’une application web de l'e-commerce spécialisée en vente des gadgets électronique. Cette partie aborde encore toutes les besoins des utilisateurs dont le site doit répondre : celles de l’administrateur, le client  et même du visiteur.
+
+Dans la première section on a essayé de bien analyser à fond les besoins primordiales des utilisateurs qu'on a spécifié lors de la phase de l'argumentation des besoins, où on a cité trois types d'acteurs avec les typologies de leurs besoins, sous forme plus graphique on a utilisé le langage UML pour décrire tout les cas d'utilisation possible à chaque utilisateur de façon globale puis  détaillée pour bien déterminer les limites d'action de chaque utilisateur.
+Ensuite on a décider de rendre les actions plus dynamiques, avec des diagrammes de séquence, qui font la description des interactions entre le système et les acteurs lors de chaque cas d'utilisation. 
+
+
+
+
+
+\chapter{Réalisation:}
+\fancyhead[R]{\textbf{Chapitre \thechapter:Réalisation}}
+\fancyhead[L]{\hspace*{5cm}}
+\begin{doublespace}
+
+\section{Technologies de travail:}
+Ce chapitre citera toutes les technologies et les outils utilisés pour la mise en œuvre de l'application Laptop+ .
+\subsection{Langage Python:}
+\begin{figure}[H]
+\raggedleft{
+ \includegraphics[scale=0.3]{images/pythob.png}
+
+\end{figure}  }
+Python est un langage de programmation largement utilisé, interprété, orienté objet et de haut niveau avec une sémantique dynamique, utilisé pour la programmation à usage général. Il a été créé par Guido van Rossum et sorti pour la première fois le 20 février 1991. C'est un langage simple et intuitif tout aussi puissant que ceux des grands concurrents,open source , pour que chacun puisse contribuer à son développement , il est aussi compréhensible 
+adapté aux tâches quotidiennes , permettant des temps de développement courts.
+
+\newpage
+
+\subsection{Frame work Django:}
+\begin{figure}[H]
+\raggedleft{
+ \includegraphics[scale=0.3]{images/django.png}
+\end{figure} }
+ Django est un framework Web Python de haut niveau qui encourage un développement rapide et une conception propre et pragmatique. Construit par des développeurs expérimentés, il prend en charge une grande partie des tracas du développement Web, vous pouvez donc vous concentrer sur l'écriture de votre application sans avoir à réinventer la roue. C'est gratuit et open source.
+
+\subsection{L'éditeur de texte Atome:} 
+ \begin{figure}[H]
+\raggedleft{
+ \includegraphics[scale=0.3]{images/atome.png}
+\end{figure} }
+ Atom est un éditeur de texte et de code source gratuit et open-source pour macOS , Linux et Microsoft Windows avec prise en charge des plug-ins écrits en JavaScript et Git Control intégré , développé par GitHub . Atom est une application de bureau construite à l'aide des technologies Web .La plupart des packages d'extension ont des licences de logiciel libre et sont construits et maintenus par la communauté. 
+  \newpage
+\subsection{ Les graphiques Chart.Js:}  
+   \begin{figure}[H]
+\raggedleft{
+ \includegraphics[scale=0.4]{images/cahrtjs.png}
+\end{figure} }
+ Chart.js est une bibliothèque JavaScript open source gratuite pour la visualisation de données , qui prend en charge 8 types de graphiques : bar , line , area , pie ( donut ), bubble , radar , polar et scatter. Créé par le développeur Web  Nick Downie, il est maintenant maintenu par la communauté et est la deuxième bibliothèque de graphiques JS la plus populaire sur GitHub par le nombre d'étoiles après D3.js , considéré comme beaucoup plus facile à utiliser mais moinspersonnalisable que ce dernier. Chart.js est rendu dans un canevas HTML5 et est largement considéré comme l'une des meilleures bibliothèques de visualisation de données. 
+\subsection{Databases Sqlite:}
+\begin{figure}[H]
+\raggedleft{
+ \includegraphics[scale=0.4]{images/sqlite.jpg}
+\end{figure} }
+SQLite est une bibliothèque in-process qui implémente un moteur de base de données SQL transactionnel autonome, sans serveur, à configuration zéro . Le code de SQLite est dans le domaine public et est donc libre d'utilisation à toutes fins, commerciales ou privées.
+\newpage
+\section{L'application Web Laptp+ :} 
+L'application Laptop+ est une application web e-commerce spécialisée dans la vente des ordinateurs portables et les accessoires en relation avec ces derniers. \\Laptop+ expose à la vue une plateforme d'achat est si innovante et puissante, son design relaxant et l’explicité de son contenu crée un espace compatible à tous les utilisateurs.
+
+\section{ Visualisation de la base de données:}
+ \subsection{ Table des catégories: } 
+\begin{figure}[H]
+ \includegraphics[scale=0.5]{images/WhatsApp Image 2021-06-21 at 15.34.09.jpeg}
+ \caption{Table des catégories}
+\end{figure}
+Cette figure donne l'aspect technique des catégories citées à l'étude 
+fonctionnelle , chaque produit a son propre Id, le lien exact c'est à dire le slag ainsi qu'il appartient à une catégorie de produits spécifique. 
+\subsection{ Table des produits: } 
+\begin{figure}[H]
+
+ \includegraphics[scale=0.5]{images/WhatsApp Image 2021-06-21 at 11.37.55.jpeg}
+ \caption{Table des produits}
+\end{figure}  
+Chaque produit s'enregistre dans la base des données suivant plusieurs spécifications, l'identifiant du produit, nom , prix ainsi que la présentation visuelle du produit. Avec les informations par rapport à la disponibilité dans le stock et la condition du produit.
+\subsection{ Table des paniers: } 
+\begin{figure}[H]
+
+ \includegraphics[scale=0.5]{images/WhatsApp Image 2021-06-21 at 11.37.22.jpeg}
+ \caption{Table des paniers}
+\end{figure}    
+Les paniers fonctionnent comme des paniers réelles, ce tableau fait la spécification de la quantité des produits dans le panier,  à l'aide des identificateurs panier et produits pour bien déterminer le positionnement des produits dans les paniers.
+ \subsection{ Table des achats: } 
+\begin{figure}[H]
+
+ \includegraphics[scale=0.5]{images/WhatsApp Image 2021-06-21 at 11.36.25.jpeg}
+ \caption{Table des achats}
+\end{figure} 
+En ce qui concerne les ordres d'achats enregistrés, table  des achats fait l'inscription de tout les données concernant les ordres, elle désigne l'adresse mail du client son adresse domicile, la  date dont l'ordre a été effectué en plus du prix totale de l'ordre.
+ \subsection{ Table clients: } 
+\begin{figure}[H]
+
+ \includegraphics[scale=0.5]{images/WhatsApp Image 2021-06-21 at 11.35.41 (1).jpeg}
+ \caption{Table clients}
+\end{figure}  
+La table client comme son nom l'indique contient tout les indicateurs du client son nom, la date de la création de son compte client ainsi que son Id-utilisateur.  
+
+\section{Création des pages de l'application web:}
+\subsection{Page d'acceuil:}
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.7]{images/a1.PNG}
+ \caption{Page d'acceuil}
+ \end{center}
+\end{figure}  
+\newpage
+La page d'acceuil expose une selection des produits, avec leurs images réelles, chaque case contient un produit différent avec la possibilité de l'ajouter en panier. En haut de la page on trouve le logo significatif, la barre en haut donne la possibilité d'avoir un panier ou faire le login aux comptes. 
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.7]{images/a2.PNG}
+ \caption{Page d'acceuil section aide }
+ \end{center}
+\end{figure} 
+La figure indique les conseils à suivre pour bien maintenir les produits, ainsi qu'elle offre aux utilisateurs la possibilité de contacter l'administrateur pour signaler leurs problèmes.
+\subsection{Page authentifiation adminstrateur:}
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.3]{images/WhatsApp Image 2021-06-21 at 17.59.39 (2).jpeg}
+ \caption{Page authentifiation adminstrateur}
+ \end{center}
+\end{figure} 
+L’authentification est une étape simple, l'administrateur insert les données déjà inscrites dans la base des données, il aura accès à son compte quand ses données sont valables.
+\subsection{Page authentification adminstrateur:}
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.3]{images/WhatsApp Image 2021-06-21 at 17.59.39 (2).jpeg}
+ \caption{Page authentification adminstrateur}
+ \end{center}
+\end{figure}
+\subsection{Page espace adminstrateur:}
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.3]{images/WhatsApp Image 2021-06-21 at 17.59.39 (4).jpeg}
+ \caption{Page espace administrateur}
+ \end{center}
+\end{figure}
+C'est l'espace administrateur où il pourra avoir l'historique de toutes les actions, les produits vendus, l'état des paniers et des ordres des clients. 
+\subsection{Graphe Graphe nombre d'utilisateur:}
+
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.3]{images/WhatsApp Image 2021-06-22 at 00.49.13.jpeg}
+ \caption{Graphe nombre d'utilisateur}
+ \end{center}
+ \end{figure}
+Dans cette figure on peut savoir à tout moment l'efficience de l'application grace à ce type de graphe qui indique le taux d'utilisateurs qui utilisent l'application par jours .
+ \subsection{Graphe prévision des ventes:}
+Pour une gestion plus fiable et moins couteuse on a choisit de faire une prévision d'avance qui sert à prévenir les achats qui peuvent être effectués à la période d'un an, en utilisant la méthode de regression linéaire, pour diminuer les pertes qui influencent le capitale et la satisfaction des clients.
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.6]{images/WhatsApp Image 2021-06-22 at 01.31.37.jpeg}
+ \caption{Graphe prévision des ventes}
+ \end{center}
+ \end{figure}
+\subsection{Page produit type PC Portable:}
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.7]{images/T1.PNG}
+ \caption{Page produit type PC Portable}
+ \end{center}
+\end{figure}
+Cette page affiche tout les produits de type ordinateurs portables, en accordant le prix de chaque produit, sa condition et sa fiche informative pour mieux connaitre le produit.
+\subsection{Page produit type accessoire:}
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.7]{images/T2.PNG}
+ \caption{Page produit type accessoire:}
+ \end{center}
+\end{figure}
+
+La plateforme offre une diversité des accessoires souris, cables de types qui diffèrent selon l'utilité, chaque case donne la description technique des accessoires ainsi que la possibilité de les ajouter au panier pour effectuer l'achat.
+
+\subsection{Page produit type stockages:}
+\begin{figure}[H]
+\begin{center}
+ \includegraphics[scale=0.7]{images/T3.PNG}
+ \caption{Page produit type stockage:}
+ \end{center}
+\end{figure}
+
+Les accessoires du stockage font aussi parties des produits exposés avec leurs deux types SDD et HDD, les accessoires stokages sont réparties dans des cases avec le prix qui leurs correspond et l'image du produit. 
+\subsection{Recapitulatif:}
+La réalisation du projet est un chapitre très descriptive et abrégeant toutes les étapes réelles de la mise en œuvre de l'application web. En premier, il aborde toutes les outils utilisés tel que le langage  Python. Ensuite, ce chapitre en son intégralité mentionne toutes technologies utisées pour la création des interfaces dynamiques. Finalement une grande partie, consacrée à la consultation de toutes les parties du site et de tous les cas de l’utilisation du « Laptop+ », avec l’insertion des screenshots qui simulent toutes les utilisations possibles avec la totalité des fonctionnalités offertes par l'application ainsi que celles du graphe de prévision qui sert à la bonne gestion des ventes au sein de l'application.
+\newpage
+\section{\textbf{Conclusion générale  } }
+L'e-commerce n'est pas la thématique qu'on aura apprendre seulement sous un contexte académique, mais un état d'esprit de mise en question et de prise de decision dans un cadre entreprenariale qui soutient la digitalisation de plusieurs secteurs. Cela explique notre choix de sujet su lequel on travaillait en particulier ces derniers mois, sous la demande énorme de l'informatisation des opérations d'achat effectuées par les consommateurs dans l'agenda des réglementations conçues sous le cadre de la pandémie.
+
+Actuellement, les documentations montrent que les achats en ligne sont plus utiles de la part des clients et pour les firmes en terme des revenus importants, ce qui les distingue comme les points que  l'application vise en premier.
+
+Notre idée part d'un contexte digitale qui s'intitule \textbf{Laptop+}: C’est une application à utiliser par les entreprises spécialisées par la vente des ordinateurs, accessoires et des outils de stockage, pour encourager les client à utiliser ce mode d'achat, en leurs offrant une solution pratique, fiable et en plus  sécurisé en terme des transactions et des paiements.
+
+Ce projet a été une belle occasion pour travailler en groupe en des conditions qui ne sont pas assez simples, pour développer nos
+connaissances et nos compétences et surtout pour découvrir de nouvelles fonctionnalités des plateformes d'achats en ligne et des prévision des ventes et des langages tels que Python , la création des graphe dans la phase technique.
+
+\newpage
+\section{Webographie:}
+\justify
+\subsection{Plateforme open source:}
+\begin{itemize}
+    \item \textbf{[kaggle]:} https://www.kaggle.com/carrie1/ecommerce-data, dernière mise à jour le 15/06/2021.
+    \item \textbf{[GitHub]:} https://github.com/topics/ecommerce-website dernière mise à jour le 20/06/2021.
+\end{itemize}
+\subsection{Cours:}
+\begin{itemize}
+ \item \textbf{Coursera:} https://www.coursera.org/specializations/django dernière mise à jour le 20/06/2021 mais avec inscription.
+ \item\textbf{Udemy:}https://www.udemy.com/course/learn-python-django-from-scratch/ dernière mise à jour 21/06/2021.
+ \item \textbf{Citycours :}https://sites.uclouvain.be/P2SINF/chartjs.html . Dernière mise à jour le 21/06/2021. 
+\end{itemize}
+\subsection{Dataset:}
+ \begin{itemize}
+     \item \textbf{Kaggle:} https://www.kaggle.com/jzeferino/predictive-sales-with-linear-regressions. Dernière mise à jour le 19/06/2021.
+ \end{itemize}
+
+
+\end{doublespace}
 \end{document}
