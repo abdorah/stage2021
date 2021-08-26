@@ -2,7 +2,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
-% \usepackage{amsmath}
 \usepackage{setspace}
 \usepackage{graphicx}
 \usepackage{wrapfig}
@@ -22,13 +21,13 @@
 \setcellgapes{3pt}
 \setlength{\parindent}{1.1cm}
 \makegapedcells
-\newcolumntype{R}[1]{>{\raggedleft\arraybackslash }b{#1}}
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash }b{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash }b{#1}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
 \renewcommand{\footrulewidth}{1pt}
+\fancyfoot[L]{ENSIAS}
 \fancyfoot[C]{\textbf{\thepage}}
 \fancyfoot[R]{Année universitaire: 2020/2021}
-\fancyfoot[L]{ Mémoire PFA}
 \begin{document}
 \begin{titlepage}
     \begin{center}
@@ -65,12 +64,9 @@
         \end{figure}
         \raggedright
         {\textbf{\emph{Préparé par: KOTBI Abderrahamane}}}
-        \raggedleft
-
-        \rule{0.7\linewidth}{2pt}\\
-        \raggedleft
-        {\textbf{\emph{Membre Jury: *****}}}
-        \Large \emph{Année universitaire : 2020-2021}
+        \raggedleft\rule{0.7\linewidth}{2pt}\\
+        \raggedleft{\textbf{\emph{Membre Jury: *****}}}\\
+        \Large\emph{Année universitaire : 2020-2021}
 
     \end{center}
 \end{titlepage}
@@ -290,11 +286,11 @@
         \item Assurer le suivi de la gestion des contrats de transport urbain.
     \end{itemize}
     \newpage
-    \section{Conclusion}
-    Dans ce chapitre introductif, nous avons pu décrit le conteste général du projet, et
-    déterminer son objectif principal. En addition, les aspects que nous allons
+    \section{Récapitulatif }
+    Dans ce chapitre introductif, j'ai pu décrire le conteste général du projet, et
+    déterminer son objectif principal. En addition, les aspects que je vai
     avoir besoin lors de la réalisation de cette application.
-    Le chapitre qui suit consiste la phase de conception d'analyse et de conception du projet.
+    Le chapitre qui suit consiste la phase d'analyse des besoins du projet.
     \newpage
     \chapter{Analyse et conception}
 
@@ -303,12 +299,23 @@
     \fancyhead[L]{\hspace*{5cm}}
     \begin{doublespace}
 
-        Ce chapitre constitue la phase initiale de notre travail. En effet on fait la spécification des besoins du projet. Ensuite, j'identeons les différents acteurs partipant au système.\\Enfin, j'     emodélisons les divers processus dans un diagramme de cas d’utilisation général qui définit la solution d'une vue utilisateur.
-        \section{Analyse:}
-        \subsection{Introduction à l'analyse:}
-        Plusieurs applications d'achats en ligne optent à une optimisation des ventes plus pratique avec une interface machine - client créative ainsi interactive pour une meilleure expérience. Le commerce digitale est devenu très utile et adequat à la situation actuelle qui a annulé l'experience d'achat quotidienne aux magazins.\\ Ce qui implique la création de la plateforme \textbf{Laptop+} qui offre une diversité des laptops et des produits éléctroniques avec une bonne prévision de vente qui  aide à mieux gérer les stock et à éviter les ruptures de stock qui influencent le niveau de satisfaction client, c'est pour cela qu'on aura à créer un moteur de prévision pour mieux répondre aux besoins de nos  clients.
-        \subsection{Balisage ou best Practise:}
-        Suite à l'analyse du marché, j'avonsecouvert un large éventail des applications de commerce électronique. Comme un exemple, considérer les suivants deux applications:\\
+        Ce chapitre représente le point de départ de mon travail. Premièrement, j'analyse et
+        je spécifie les besoins du projet. Ensuite, j'identifie les différents acteurs. Et enfin, je
+        modélise le tout dans un diagramme des cas d’utilisation général qui sera notre file conducteur
+        durant la prochaine phase.
+        \section{Analyse}
+        \subsection{Introduction à l'analyse}
+        Certes, la gestion et le suivis des données en utilisant des solutions Web ne date pas d'hière. Mais,
+        elle demeure une solution optimisante et interéssante en terme de temps et de productivité. Sûrtout,
+        dans un tel cas où les informations sont, à la fois, cruciale et nombrueses. Ainsi, la solution
+        proposée premièrement par la \textbf{DGST} est d'avoir une plateforme Web pour faciliter la collècte,
+        le traitement, la présentation, et la centralisation de l'information. Sur la même longueur d'onde, j'ai
+        travaillé sur la solution proposée avec une équipe de la \textbf{DGST} pour apporter les bonnes
+        fonctionnalités répondantes aux besoins de cette dernière.
+        \subsection{Étude de l’existant}
+        Après une étude du marché, on a trouvé une diversité des sites web et des applications dédiées à la
+        gestion et au suivi.
+        Comme un exemple, considérer les suivants deux applications:\\
         \textbf{\large Jumia:}\\
         Jumia est une entreprise de commerce en ligne active sur le marché africain qui a été fondée en 2012. Jumia, la plateforme en ligne marché qui relie les vendeurs et acheteurs en fournissant une solution logistique qui comprend l'entreposage, la distribution, et la livraison de colis, de même que d'un  service paiement responsable.\\
         \textbf{Avantages:}
@@ -644,8 +651,10 @@
                         Les accessoires du stockage font aussi parties des produits exposés avec leurs deux types SDD et HDD, les accessoires stokages sont réparties dans des cases avec le prix qui leurs correspond et l'image du produit.
                         \subsection{Recapitulatif:}
                         La réalisation du projet est un chapitre très descriptive et abrégeant toutes les étapes réelles de la mise en œuvre de l'application web. En premier, il aborde toutes les outils utilisés tel que le langage  Python. Ensuite, ce chapitre en son intégralité mentionne toutes technologies utisées pour la création des interfaces dynamiques. Finalement une grande partie, consacrée à la consultation de toutes les parties du site et de tous les cas de l’utilisation du « Laptop+ », avec l’insertion des screenshots qui simulent toutes les utilisations possibles avec la totalité des fonctionnalités offertes par l'application ainsi que celles du graphe de prévision qui sert à la bonne gestion des ventes au sein de l'application.
-                        \newpage
-                        \section{\textbf{Conclusion générale  } }
+                        \chapter{Conclusion générale et perspectives}
+                        \fancyhead[R]{\textbf{Chapitre \thechapter:Conclusion générale et perspectives}}
+                        \fancyhead[L]{\hspace*{5cm}}
+                        \section{Conclusion générale}
                         L'e-commerce n'est pas la thématique qu'on aura apprendre seulement sous un contexte académique, mais un état d'esprit de mise en question et de prise de decision dans un cadre entreprenariale qui soutient la digitalisation de plusieurs secteurs. Cela explique notre choix de sujet su lequel on travaillait en particulier ces derniers mois, sous la demande énorme de l'informatisation des opérations d'achat effectuées par les consommateurs dans l'agenda des réglementations conçues sous le cadre de la pandémie.
 
                         Actuellement, les documentations montrent que les achats en ligne sont plus utiles de la part des clients et pour les firmes en terme des revenus importants, ce qui les distingue comme les points que  l'application vise en premier.
@@ -654,21 +663,22 @@
 
                         Ce projet a été une belle occasion pour travailler en groupe en des conditions qui ne sont pas assez simples, pour développer nos
                         connaissances et nos compétences et surtout pour découvrir de nouvelles fonctionnalités des plateformes d'achats en ligne et des prévision des ventes et des langages tels que Python , la création des graphe dans la phase technique.
-
-                        \newpage
-                        \section{Webographie:}
-                        \subsection{Plateforme open source:}
+                        \section{Perspectives}
+                        \chapter{Webographie}
+                        \fancyhead[R]{\textbf{Chapitre \thechapter:Webographie}}
+                        \fancyhead[L]{\hspace*{5cm}}
+                        \section{Plateforme open source:}
                         \begin{itemize}
                             \item \textbf{[kaggle]:} https://www.kaggle.com/carrie1/ecommerce-data, dernière mise à jour le 15/06/2021.
                             \item \textbf{[GitHub]:} https://github.com/topics/ecommerce-website, dernière mise à jour le 20/06/2021.
                         \end{itemize}
-                        \subsection{Cours:}
+                        \section{Cours:}
                         \begin{itemize}
                             \item \textbf{Coursera:} https://www.coursera.org/specializations/django, dernière mise à jour le 20/06/2021 mais avec inscription.
                             \item\textbf{Udemy:}https://www.udemy.com/course/learn-python-django-from-scratch/, dernière mise à jour 21/06/2021.
                             \item \textbf{Citycours :}https://sites.uclouvain.be/P2SINF/chartjs.html, dernière mise à jour le 21/06/2021.
                         \end{itemize}
-                        \subsection{Dataset:}
+                        \section{Dataset:}
                         \begin{itemize}
                             \item \textbf{Kaggle:} https://www.kaggle.com/jzeferino/predictive-sales-with-linear-regressions, dernière mise à jour le\\ 19/06/2021.
                         \end{itemize}
