@@ -1,5 +1,4 @@
 \documentclass[a4paper]{report}
-\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
 \usepackage{setspace}
@@ -8,7 +7,6 @@
 \usepackage{lscape}
 \usepackage{bookmark}
 \usepackage{rotating}
-\usepackage{epstopdf}
 \usepackage{subcaption}
 \usepackage{float}
 \usepackage{eurosym}
@@ -17,6 +15,13 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \usepackage{hyperref}
+\hypersetup{
+     colorlinks=true,
+     linkcolor=black,
+     citecolor=black,
+     filecolor=black,
+     urlcolor=black,
+}
 \usepackage{array,multirow,makecell}
 \setcellgapes{3pt}
 \setlength{\parindent}{1.1cm}
@@ -106,15 +111,7 @@
     \end{center}
 \end{doublespace}
 \begin{doublespace}
-
-    Ce document représente une étude synthétique du travail réalisé dans le cadre de mon stage d'été de deuxième année. J'ai effectué mon stage au sein de
-    l'université internationale de Rabat \textbf{UIR}. Ce dernier a duré les deux mois juillet et août de l'année 2021. L’objectif principal de ce travail
-    consiste à développer une platform Web pour la gestion et le suivi des contrats du transport délégués. D'ailleurs, le travail effectué dans le cadre
-    de ce projet m'a représenté la bonne chance pour appliquer mes savoirs et savoirs-faire acquis durant cette année. En ce sens, la réalisation du projet
-    a passé en trois étapes principal: l'élaboration d'une analyse détaillée des besoins du client, conception des différentes composantes de l'application,
-    et enfin l'implémentation des objectifs soulignés. Par conséquent, j'ai eu la chance d'utiliser plusieurs téchnologies, outils et concepts
-    qui m'ont aidé à développer cette solution.
-
+    Ce document représente une étude synthétique du travail réalisé dans le cadre de mon stage d'été de deuxième année. J'ai effectué mon stage au sein de l'université internationale de Rabat \textbf{UIR}. Ce dernier a duré les deux mois juillet et août de l'année 2021. L’objectif principal de ce travail consiste à développer une platform Web pour la gestion et le suivi des contrats du transport délégués. D'ailleurs, le travail effectué dans le cadre de ce projet m'a représenté la bonne chance pour appliquer mes savoirs et savoirs-faire acquis durant cette année. En ce sens, la réalisation du projet a passé en trois étapes principal: l'élaboration d'une analyse détaillée des besoins du client, conception des différentes composantes de l'application, et enfin l'implémentation des objectifs soulignés. Par conséquent, j'ai eu la chance d'utiliser plusieurs téchnologies, outils et concepts qui m'ont aidé à développer cette solution.
 \end{doublespace}
 \begin{doublespace}
 
@@ -123,7 +120,7 @@
     la spésification des besoins. Ensuite le chapitre III présente l´étude conceptuelle. Enfin le chapitre
     IV traite la partie réalisation.
 
-    \textbf	{\\Mots clés :\\ Gestion, Suivi, Donnée, Projet, Contrats délégués, Transport urbain, Centralisation, Application low-code.}
+    \textbf	{\\Mots clés :\\ Gestion, Suivi, Donnée, Contrats délégués, Transport urbain, Centralisation, Application low-code.}
 
 \end{doublespace}
 \clearpage
@@ -145,7 +142,7 @@
     needs, the design of the application's different components, and finally the implementation of the outlined objectives.
     Therefore, I had the chance to use several technologies, tools, and concepts that helped me develop this solution.
 
-    \textbf{\\Keywords:\\Management, Monitoring, Data, Project, Delegated contracts, Urban transport, Centralization, Low-code application.}
+    \textbf{\\Keywords:\\Management, Monitoring, Data, Delegated contracts, Urban transport, Centralization, Low-code application.}
 
 \end{doublespace}
 
@@ -247,7 +244,6 @@
         \item Accompagnement financier des collectivités territoriales.
         \item Coopération décentralisée.
     \end{itemize}
-
     \begin{figure}[H]
         \begin{center}
             \includegraphics[scale=0.27]{images/logo-fr.png}
@@ -286,19 +282,17 @@
         \item Assurer le suivi de la gestion des contrats de transport urbain.
     \end{itemize}
     \newpage
-    \section{Récapitulatif }
+    \section{Récapitulatif}
     Dans ce chapitre introductif, j'ai pu décrire le conteste général du projet, et
     déterminer son objectif principal. En addition, les aspects que je vai
     avoir besoin lors de la réalisation de cette application.
     Le chapitre qui suit consiste la phase d'analyse des besoins du projet.
     \newpage
     \chapter{Analyse et conception}
-
     \renewcommand{\headrulewidth}{1pt}
     \fancyhead[R]{\textbf{Chapitre \thechapter: Analyse et conception}}
     \fancyhead[L]{\hspace*{5cm}}
     \begin{doublespace}
-
         Ce chapitre représente le point de départ de mon travail. Premièrement, j'analyse et
         je spécifie les besoins du projet. Ensuite, j'identifie les différents acteurs. Et enfin, je
         modélise le tout dans un diagramme des cas d’utilisation général qui sera notre file conducteur
@@ -312,6 +306,16 @@
         le traitement, la présentation, et la centralisation de l'information. Sur la même longueur d'onde, j'ai
         travaillé sur la solution proposée avec une équipe de la \textbf{DGST} pour apporter les bonnes
         fonctionnalités répondantes aux besoins de cette dernière.
+        \subsection{Description générale du projet}
+        Le projet est décomposé en trois partie. La première concernant la partie
+        client dans laquelle l'utilisateur peut saisir les données. Ensuite, une base
+        de données SQL server et enfin la partie reporting.
+        \begin{figure}[H]
+            \begin{center}
+                \includegraphics[scale=0.2]{images/descrip-projet.png}
+                \caption{Description générale du projet}
+            \end{center}
+        \end{figure}
         \subsection{Étude de l’existant}
         Après une étude du marché, on a trouvé une diversité des sites web et des applications dédiées à la
         gestion et au suivi.
@@ -373,7 +377,6 @@
                 \section{Conception:}
                 \begin{doublespace}
                     Après la prise en charge de la question, j'avonseordé le principe de la création d'un site e-commerce qui répond aux normes et aux modalités existantes dans les applications du commerce digitales, avec l'daptation des nouvelles technique qui touchent la globalité de la solution, avec la possibilité d'une connexion à chaque tentative d'accès.
-
                     \subsection{Cas d'utilisation globale:}
                     \begin{figure}[H]
                         \begin{center}
