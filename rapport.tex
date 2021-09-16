@@ -2,6 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
 \usepackage{setspace}
+\usepackage{tabularx}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{lscape}
@@ -168,15 +169,15 @@
 \end{doublespace}
 
 \newpage
-
-\renewcommand{\contentsname}{Table de matières}
-\setcounter{tocdepth}{4}
 \tableofcontents
 
 \cleardoublepage
-
-\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
+
+\cleardoublepage
+\renewcommand{\listtablename}{Table des tableaux}
+\listoftables
+
 \newpage
 \begin{doublespace}
 	\addcontentsline{toc}{chapter}{Introduction générale}
@@ -283,14 +284,14 @@
 	coordination avec les départements et organismes concernés, de
 	concourir au développement territorial. Bref, ses missions sont en gros:
 	\begin{itemize}
-		\item Planification et développement territorial.
-		\item Assistance des réseaux publics locaux, et des institutions
+		\item[•] Planification et développement territorial.
+		\item[•] Assistance des réseaux publics locaux, et des institutions
 		      locales.
-		\item Suivi juridique et gestion des services locaux.
-		\item Amélioration de la mobilité urbaine et du transport.
-		\item Développement des compétences et transformation digitale.
-		\item Accompagnement financier des collectivités territoriales.
-		\item Coopération décentralisée.
+		\item[•] Suivi juridique et gestion des services locaux.
+		\item[•] Amélioration de la mobilité urbaine et du transport.
+		\item[•] Développement des compétences et transformation digitale.
+		\item[•] Accompagnement financier des collectivités territoriales.
+		\item[•] Coopération décentralisée.
 	\end{itemize}
 	\begin{figure}[H]
 		\begin{center}
@@ -339,16 +340,16 @@
 	base de donné, et une deuxième partie qui concerne l'analyse des données.
 	Bref, je cherche une solution pour:
 	\begin{itemize}
-		\item Centraliser l’information contenue dans les contrats de gestion
+		\item[•] Centraliser l’information contenue dans les contrats de gestion
 		      déléguée et
 		      leurs avenants le cas échéant.
-		\item Centraliser les documents exigés par le contrat que l’opérateur
+		\item[•] Centraliser les documents exigés par le contrat que l’opérateur
 		      est tenu de
 		      fournir périodiquement à l’autorité délégante.
-		\item Permettre aux utilisateurs de partager en interne des
+		\item[•] Permettre aux utilisateurs de partager en interne des
 		      informations et des
 		      documents.
-		\item Assurer le suivi de la gestion des contrats de transport urbain.
+		\item[•] Assurer le suivi de la gestion des contrats de transport urbain.
 	\end{itemize}
 	\section{Récapitulatif}
 	Dans ce chapitre introductif, j'ai pu décrire le conteste général du
@@ -439,11 +440,12 @@
 	L'administrateur est la personne chargée de charger les informations des différentes communes et de gérer leurs données, préparées par les différentes communes du Maroc.
 	\subsection{Besoins fonctionnels}
 	\begin{itemize}
-		\item Gestion des délégants et des délégataires: L'administrateur doit avoir
+		\item[•] Gestion des délégants et des délégataires: L'administrateur doit avoir
 		      une section où il pourra gérer les délégants et les délégataires.
-		\item Gestion des contrats: Il doit avoir également la possibilité de gérer les contrats signés. En addition, il peut suivre les avenants et les révisions de chaque contrats. Ainsi que le status de chaque avenant ou révision.
-		\item Gestion des Avancements: L'application doit permettre de gérer les avancements semestriels des contrats. Aussi, consulter et suivre les changements apportés à chaque période.
-		\item Présentation des tableaux de bord: L'application doit présenter des données historisées de chaque contrats permettant de bien estimer la qualité de service en question et prendre les bonnes décisions.
+		\item[•] Gestion des contrats: Il doit avoir également la possibilité de gérer les contrats signés. En addition, il peut suivre les avenants et les révisions de chaque contrats. Ainsi que le status de chaque avenant ou révision.
+		\item[•] Gestion des Avancements: L'application doit permettre de gérer les avancements semestriels des contrats. Aussi, consulter et suivre les changements apportés à chaque période.
+		\item[•] Présentation des tableaux de bord: L'application doit présenter des données historisées de chaque contrats permettant de bien estimer la qualité de service en question et prendre les bonnes décisions.
+		\item[•] Sauvegarde des fichiers sur un serveur WEB, et de sauvegarder en base de données le chemin de celui-ci. Généralement, cette solution est assez efficace, assez simple à mettre en œuvre.
 	\end{itemize}
 	\subsection{Les besoins non fonctionnels}
 	Les besoins fonctionnels sont basiques pour un fonctionnement
@@ -451,18 +453,18 @@
 	autres besoins qui tendent à améliorer la performance et la qualité de
 	l'application pour une utilisation plus adéquate.
 	\begin{itemize}
-		\item Fiabilité de la plateforme: L’application doit
+		\item[•] Fiabilité de la plateforme: L’application doit
 		      fonctionner sans erreur.
-		\item Ergonomie, souplesse et confort d’utilisation: Pour
+		\item[•] Ergonomie, souplesse et confort d’utilisation: Pour
 		      faciliter l’utilisation, notre plateforme doit offrir une interface unifiée,
 		      conviviale et ergonomique.
-		\item Gain de temps: L'application doit optimiser les
+		\item[•] Gain de temps: L'application doit optimiser les
 		      traitements pour avoir un temps de réponse minimale.
-		\item Maintenabilité et sociabilité: La source de l'application doit être compréhensible
+		\item[•] Maintenabilité et sociabilité: La source de l'application doit être compréhensible
 		      afin d’assurer son état évolutif et extensible par rapport aux besoins des utilisateurs. En outre, l’expérience des utilisateurs doit être meilleurs.
-		\item Sécurité: Notre plateforme doit  être très authentique en ce qui concerne les informations confidentielles des communes.
+		\item[•] Sécurité: Notre plateforme doit  être très authentique en ce qui concerne les informations confidentielles des communes.
 	\end{itemize}
-	\section{Analyse Fonctionnelle}
+	\section{Analyse fonctionnelle}
 	Suivant à ce qui précède et d’après l’ensemble des documents communiqués par mes encadrants, j’ai essayé de créer une décomposition hiérarchique des fonctionnalités du projet.
 	\begin{figure}[H]
 		\begin{center}
@@ -472,8 +474,8 @@
 	\end{figure}
 	Ainsi, J'ai divisé le projet en deux parties fondamentales. En plus, on peut voir clairement les grandes fonctionnalités demandées dans cette application. Par conséquent, l'application peut être divisée en deux partie: partie saisi et partie reporting.
 	\begin{itemize}
-		\item La partie saisi est la partie dans laquelle l'administrateur peut ajouter des délégants et des délégataires. En conséquences, il peut définir un contrat. Par ailleurs, le contrat définit peut avoir des mises à jour semestriels des informations qui le concerne.
-		\item La partie reporting est la partie qui concerne les tableaux de bords de l’application. Il doit bien présenter les informations saisîtes. En plus, il est préférables d'avoir la possibilité de générer des documents contenants les informations saisîtes.
+		\item[•] La partie saisi est la partie dans laquelle l'administrateur peut ajouter des délégants et des délégataires. En conséquences, il peut définir un contrat. Par ailleurs, le contrat définit peut avoir des mises à jour semestriels des informations qui le concerne.
+		\item[•] La partie reporting est la partie qui concerne les tableaux de bords de l’application. Il doit bien présenter les informations saisîtes. En plus, il est préférables d'avoir la possibilité de générer des documents contenants les informations saisîtes.
 	\end{itemize}
 	\section{Analyse technique}
 	La solution que je propose est une solution basée sur les données.
@@ -522,8 +524,37 @@
 	tableaux de bord. Il fait partie de la plate-
 	forme Microsoft Power.\\
 	Suite à cette proposition le consultant technique a approuver ces choix. Ainsi la décision est prise d'utiliser ces technologies Microsoft afin de réaliser une application Low-Code pour la gestion des contrats de transport délégués.
+	\section{Planification et démarche de travail}
+	\subsection{Plan de travail prévu}
+	Pour la bonne organisation des étapes du projet, j'ai proposé premièrement le plan suivant pour la réalisation de la plateforme demandée:
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[scale=0.3]{images/GanttPrévu.png}
+			\caption{Plan de travail prévu du projet}
+		\end{center}
+	\end{figure}
+	\subsection{Définition des Livrables}
+	À la fin de chaque étape de la réalisation
+	(section dans le diagramme de Gantt si-dessus),
+	il est exigé d'avoir un livrable.
+	Les livrables que nous proposons sont les suivants:
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17cm}{|p{4cm}|X|}
+				\hline
+				\textbf{Étape} & \textbf{Livrable} \\
+				\hline
+				Analyse        & Document de spécification décrivant le besoin, les fonctionnalités de la solution à implémenter, les technologies à utiliser, et toutes les contraints à respecter dans le projet. \\
+				\hline
+				Conception     & Document de conception qui donne une idée clair et global sur le projet.\\
+				\hline
+				Réalisation    & Plateforme de suivi de l’exécution des Contrats de Gestion de mobilité Urbaine. \\
+				\hline
+			\end{tabularx}
+			\caption{Livrables prévus de projet}
+		\end{center}
+	\end{table}
 	\section{Récapitulatif}
-	
 \end{doublespace}
 
 \end{document}
