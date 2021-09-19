@@ -1,5 +1,6 @@
 \documentclass[a4paper]{report}
 \usepackage[T1]{fontenc}
+\usepackage[sfdefault]{biolinum}
 \usepackage[french]{babel}
 \usepackage{setspace}
 \usepackage{tabularx}
@@ -44,24 +45,24 @@
 		\end{figure}
 		\begin{figure}[!h]
 			\vspace{- 3.34cm}
-			\hspace{14 cm}
+			\hspace{15cm}
 			\includegraphics[width=10em]{images/um5.jpeg}
 		\end{figure}
 	\end{center}
 
 	\begin{center}
-		\noindent \hspace{ 0.3 cm }\Huge \textbf{Rapport de Stage Fin de
-			deuxième Année}
-		\vspace*{0.1cm}
-
-		\vspace*{0.1cm}
+		\begin{center}
+			\noindent \hspace{ 0.4 cm}{\LARGE \textsc{Rapport de Stage de Fin de deuxième Année}}\\
+		\end{center}
 		\begin{center}
 			\rule{0.9\linewidth}{1pt}
 		\end{center}
+		\vspace*{0.2cm}
+		\noindent \hspace{ 0.3 cm }\Huge \textbf{Création d'une
+			plateforme Web pour la gestion et le suivi des contrats du transport
+			délégués}
 		\begin{center}
-			\noindent \hspace{ 0.4 cm}{\large \textsc{ Création d'une
-					plateforme Web pour la gestion et le suivi des contrats du transport
-					délégués}}\\
+			\rule{0.9\linewidth}{1pt}
 		\end{center}
 
 		\vspace*{0.5cm} \noindent \hspace{ -0.5 cm} \large
@@ -70,11 +71,24 @@
 				\includegraphics[scale=0.8]{images/logo-uir2.jpg}
 			\end{center}
 		\end{figure}
-		\raggedright
-		{\textbf{\emph{Préparé par: KOTBI Abderrahamane}}}
-		\raggedleft\rule{0.7\linewidth}{2pt}\\
-		\raggedleft{\textbf{\emph{Membres de Jury: *****}}}\\
-		\Large\emph{Année universitaire: 2020-2021}
+		\textbf{\emph{Préparé par: KOTBI Abderrahamane}}
+		\raggedright{\rule{0.7\linewidth}{2pt}}\\
+		\textbf{\emph{
+			Membres de Jury:\\
+			\begin{itemize}
+				\item[•] ****
+				\item[•] ****
+			\end{itemize}
+			}}
+		\mbox{}\vfill
+		\begin{center}
+			\rule{0.9\linewidth}{1pt}\\
+			\Large\emph{
+				Filière Génie Logiciel\\
+				Année universitaire: 2020-2021
+			}
+		\end{center}
+
 
 	\end{center}
 \end{titlepage}
@@ -249,7 +263,7 @@
 	émergents, et en terme d’innovation.
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=0.1]{images/logo-uir.jpg}
+			\fbox{\includegraphics[scale=0.1]{images/logo-uir.jpg}}
 			\caption{Organisme d'acceuil}
 		\end{center}
 	\end{figure}
@@ -266,7 +280,7 @@
 	Microsoft. En fait, \textbf{DYN IT} est un partenaire Microsoft.
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=0.6]{images/dynit.png}
+			\fbox{\includegraphics[scale=0.6]{images/dynit.png}}
 			\caption{Partenaire de consulting technique}
 		\end{center}
 	\end{figure}
@@ -295,7 +309,7 @@
 	\end{itemize}
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=0.27]{images/logo-fr.png}
+			\fbox{\includegraphics[scale=0.27]{images/logo-fr.png}}
 			\caption{Client}
 		\end{center}
 	\end{figure}
@@ -358,9 +372,9 @@
 	avoir besoin lors de la réalisation de cette application.
 	Le chapitre qui suit consiste la phase d'analyse des besoins du projet.
 	\newpage
-	\chapter{Analyse}
+	\chapter{Analyse du projet}
 	\renewcommand{\headrulewidth}{1pt}
-	\fancyhead[R]{\textbf{Chapitre \thechapter: Analyse et conception}}
+	\fancyhead[R]{\textbf{Chapitre \thechapter: Analyse du projet}}
 	\fancyhead[L]{\hspace*{5cm}}
 
 	Ce chapitre représente le point de départ de mon travail. Premièrement,
@@ -390,7 +404,7 @@
 	les données. Ensuite, une base de données et enfin la partie reporting.
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=0.2]{images/pre-descip-projet.png}
+			\fbox{\includegraphics[scale=0.2]{images/pre-descip-projet.png}}
 			\caption{Description préliminaire du projet}
 		\end{center}
 	\end{figure}
@@ -428,7 +442,7 @@
 	accès plus rapide aux données."
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=0.32]{images/example.png}
+			\fbox{\includegraphics[scale=0.32]{images/example.png}}
 			\caption{Exemple de Environnement Canterbury (ECan)}
 		\end{center}
 	\end{figure}
@@ -468,7 +482,7 @@
 	Suivant à ce qui précède et d’après l’ensemble des documents communiqués par mes encadrants, j’ai essayé de créer une décomposition hiérarchique des fonctionnalités du projet.
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=0.5]{images/WBS KPI.png}
+			\fbox{\includegraphics[scale=0.5]{images/WBS KPI.png}}
 			\caption{Décomposition fonctionnelle du projet}
 		\end{center}
 	\end{figure}
@@ -484,7 +498,7 @@
 	l'acquisition, la gestion et la présentation d'informations. Ainsi, le groupe du projet à proposer l'ensemble des outils suivants:
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=0.41]{images/outilsDB.png}
+			\fbox{\includegraphics[scale=0.41]{images/outilsDB.png}}
 			\caption{Base de donnée SQL SERVER}
 		\end{center}
 	\end{figure}
@@ -499,7 +513,7 @@
 	autre ordinateur via un réseau.
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=0.41]{images/outilsDEV.png}
+			\fbox{\includegraphics[scale=0.41]{images/outilsDEV.png}}
 			\caption{Microsoft Power Apps}
 		\end{center}
 	\end{figure}
@@ -511,7 +525,7 @@
 	de développement de logiciels personnalisés.
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=1.1]{images/outilsREP.png}
+			\fbox{\includegraphics[scale=1.1]{images/outilsREP.png}}
 			\caption{Microsft Power BI}
 		\end{center}
 	\end{figure}
@@ -529,7 +543,7 @@
 	Pour la bonne organisation des étapes du projet, j'ai proposé premièrement le plan suivant pour la réalisation de la plateforme demandée:
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=0.3]{images/GanttPrévu.png}
+			\fbox{\includegraphics[scale=0.3]{images/GanttPrévu.png}}
 			\caption{Plan de travail prévu du projet}
 		\end{center}
 	\end{figure}
@@ -592,7 +606,7 @@
 	nécessaire dans les meilleurs délais. Pour ce faire j'ai utilisé la plateforme Trello. Ainsi, on présente le tableau suivant basée sur le modèle kanban pour l'organisation des tâches et des livrables:
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=0.37]{images/trello.png}
+			\fbox{\includegraphics[scale=0.37]{images/trello.png}}
 			\caption{Modèle Kanban du projet}
 		\end{center}
 	\end{figure}
@@ -600,15 +614,24 @@
 	Dans ce chapitre, j'ai déterminé les acteurs principaux dans ce projet ainsi que leur
 	besoin. L'étude élaborée serai ma base de travail par la suite, à
 	savoir: la conception et la réalisation de notre projet. Dans le chapitre suivant je vais
-	exposer ma vue conceptuelle vis-à-vis du projet.
+	exposer ma vue conceptuelle vis-à-vis au projet.
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[scale=0.2]{images/KDI.png}
+			\fbox{\includegraphics[scale=0.19]{images/KDI.png}}
 			\caption{Description générale du projet}
 		\end{center}
 	\end{figure}
+	\chapter{Étude conceptuelle}
+	\renewcommand{\headrulewidth}{1pt}
+	\fancyhead[R]{\textbf{Chapitre \thechapter: Analyse du projet}}
+	\fancyhead[L]{\hspace*{5cm}}
+	Cette partie est très importante dans le cycle de vie du projet. Théoriquement, toute la fondation du projet a été construite dans cette base, par la suite, il ne reste que la mise en œuvre.
+	\section{•}
+	\chapter{Réalisation}
+	\renewcommand{\headrulewidth}{1pt}
+	\fancyhead[R]{\textbf{Chapitre \thechapter: Analyse du projet}}
+	\fancyhead[L]{\hspace*{5cm}}
 \end{doublespace}
-
 \appendix
 \chapter{Bibliographie}
 \section{Cours}
