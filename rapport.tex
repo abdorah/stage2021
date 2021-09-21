@@ -1,4 +1,4 @@
-\documentclass[a4paper]{report}
+ \documentclass[a4paper]{report}
 \usepackage[T1]{fontenc}
 \usepackage[sfdefault]{biolinum}
 \usepackage[french]{babel}
@@ -626,13 +626,452 @@
 	\end{figure}
 	\chapter{Étude conceptuelle}
 	\renewcommand{\headrulewidth}{1pt}
-	\fancyhead[R]{\textbf{Chapitre \thechapter: Analyse du projet}}
+	\fancyhead[R]{\textbf{Chapitre \thechapter: Étude conceptuelle}}
 	\fancyhead[L]{\hspace*{5cm}}
 	Cette partie est très importante dans le cycle de vie du projet. Théoriquement, toute la fondation du projet a été construite dans cette base, par la suite, il ne reste que la mise en œuvre.
-	\section{•}
+	\section{Étude des données}
+	\subsection{Dictionnaire des données}
+	Pour bien comprendre les données traitées dans ce projet, j'ai obtenu plusieurs documents de suivi et un exemple de contrat de gestion déléguée. Ainsi, j'ai proposé le dictionnaire des données suivant:
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17.5cm}{|X|X|X|}
+				\hline
+				\textbf{Attribut} & \textbf{Signification}            &
+				\textbf{Exemple}                                                            \\
+				\hline
+				IDCont            & Identificateur du contrat         & 11                  \\
+				\hline
+				DateVisa          & Date visa                         & 26-Jul-13           \\
+				\hline
+				IDAvenantActif    & Identificateur de l'avenant actif &
+				20                                                                          \\
+				\hline
+				Titre             & titre du contrat                  & gestion deleguee de
+				transport                                                                   \\
+				\hline
+				IDDelegant        & Identificateur du délégant        & la commune de
+				tanger                                                                      \\
+				\hline
+				IDDelegataire     & Identificateur du délégataire     & Societe ALSA
+				TANGER                                                                      \\
+				\hline
+			\end{tabularx}
+			\caption{Livrables prévus de projet}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17.5cm}{|X|X|X|}
+				\hline
+				\textbf{Attribut} & \textbf{Signification}            &
+				\textbf{Exemple}                                                       \\
+				\hline
+				IDAvenant         & Identificateur de l'avenant       & 20             \\
+				\hline
+				Date              &                                   & 1-Jun-14       \\
+				\hline
+				Motif             &                                   &                \\
+				\hline
+				IDCont            & Identificateur du contrat         & 11             \\
+				\hline
+				Duree             &                                   & 10 ans         \\
+				\hline
+				Status            & si l'avenent est actif ou non     & actif          \\
+				\hline
+				NombreCommunes    & Nombre de communes desservis      & 15             \\
+				\hline
+				Population        &                                   & 1 105 783 Habt \\
+				\hline
+				LonguerReseau     & Longueur du réseau                & 849,4 Km       \\
+				\hline
+				NombreLignes      &                                   & 45 lignes      \\
+				\hline
+				LLUrbaines        & Longueur des lignes urbaines      & 315,4 Km       \\
+				\hline
+				LLPeripheriques   & Longueur des lignes périphériques & 534
+				Km                                                                     \\
+				\hline
+			\end{tabularx}
+			\caption{Livrables prévus de projet}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17cm}{|X|X|X|}
+				\hline
+				\textbf{Attribut} & \textbf{Signification}      &
+				\textbf{Exemple}                                                                              \\
+				\hline
+				IDRevision        & Identificateur de révision  & 30                                          \\
+				\hline
+				Date              &                             & En cours                                    \\
+				\hline
+				Motif             &                             & Parc inssufisant et déséquilibre du contrat \\
+				\hline
+				IDAven            & Identificateur de l'avenant & 20                                          \\
+				\hline
+			\end{tabularx}
+			\caption{Livrables prévus de projet}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17.5cm}{|X|X|X|}
+				\hline
+				\textbf{Attribut} & \textbf{Signification}        &
+				\textbf{Exemple}                                                        \\
+				\hline
+				IDDelegataire     & Identificateur du délégataire & 40                  \\
+				\hline
+				Nom               & Nom du délégataire            & Societe ALSA TANGER \\
+				\hline
+			\end{tabularx}
+			\caption{Livrables prévus de projet}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17.5cm}{|X|X|X|}
+				\hline
+				\textbf{Attribut} & \textbf{Signification}       &
+				\textbf{Exemple}                                                        \\
+				\hline
+				IDDeleguant       & Identificateur du délégant   & 50                   \\
+				\hline
+				Nom               & nom du délégant              & la commune de tanger \\
+				\hline
+				IDCommune         & Identificateur de la commune & 60                   \\
+				\hline
+			\end{tabularx}
+			\caption{Livrables prévus de projet}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17.5cm}{|X|X|X|}
+				\hline
+				\textbf{Attribut} & \textbf{Signification}       &
+				\textbf{Exemple}                                                        \\
+				\hline
+				IDCommune         & Identificateur de la commune & 60                   \\
+				\hline
+				Nom               & nom de la commune            & la commune de tanger \\
+				\hline
+			\end{tabularx}
+			\caption{Livrables prévus de projet}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17.5cm}{|X|X|X|}
+				\hline
+				\textbf{Attribut} & \textbf{Signification}      &
+				\textbf{Exemple}                                                        \\
+				\hline
+				IDTarif           & Identificateur du tarif     & 70                    \\
+				\hline
+				IDAven            & Identificateur de l'avenant & 20                    \\
+				\hline
+				Description       & une description du tarif    & tarif normale: ticket
+				réseau urbain                                                           \\
+				\hline
+				Valeurs           & les valeurs du tarif        & 2,5DH 3,5 DH          \\
+				\hline
+				Annee             &                             & 2014                  \\
+				\hline
+				Periode           & Semestre                    & T1                    \\
+				\hline
+			\end{tabularx}
+			\caption{Livrables prévus de projet}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17.5cm}{|X|X|X|}
+				\hline
+				\textbf{Attribut} & \textbf{Signification}                 &
+				\textbf{Exemple}                                                        \\
+				\hline
+				IDEP              & Identificateur de l'effectif personnel & 80         \\
+				\hline
+				IDAven            & Identificateur de l'avenant            & 20         \\
+				\hline
+				Profil            & Profil du personnel                    & Conducteur \\
+				\hline
+				Periode           & semestre                               & T1         \\
+				\hline
+				Annee             &                                        & 2014       \\
+				\hline
+			\end{tabularx}
+			\caption{Livrables prévus de projet}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17.5cm}{|X|X|X|}
+				\hline
+				\textbf{Attribut} & \textbf{Signification}                            &
+				\textbf{Exemple}                                                                    \\
+				\hline
+				IDInvst           & Identificateur de l'investissement                & 90          \\
+				\hline
+				Description       & Desciption de l'investissement                    & Bus
+				touristique                                                                         \\
+				\hline
+				Type              & Type de l'investissement (contractuel ou réalisé) &
+				contractuel                                                                         \\
+				\hline
+				Valeur            & la valeur de l'investissement                     & 184,131,445 \\
+				\hline
+				Periode           & semestre                                          & T1          \\
+				\hline
+				Annee             &                                                   & 2014        \\
+				\hline
+				Partenaire        &                                                   & Partemaire  \\
+				\hline
+			\end{tabularx}
+			\caption{Livrables prévus de projet}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17.5cm}{|X|X|X|}
+				\hline
+				\textbf{Attribut} & \textbf{Signification}               &
+				\textbf{Exemple}                                                        \\
+				\hline
+				IDMatCirculant    & Identificateur du materiel circulant &
+				100                                                                     \\
+				\hline
+				Nombre            &                                      & 59           \\
+				\hline
+				AgeMoyen          &                                      & 6,68 ans     \\
+				\hline
+				Kmparcourus       &                                      & 88,361,937   \\
+				\hline
+				Periode           & semestre                             & T2           \\
+				\hline
+				Annee             &                                      & 2015         \\
+				\hline
+				Description       &                                      & Bus standard \\
+				\hline
+				IDAven            & Identificateur de l'avenant          & 20           \\
+				\hline
+			\end{tabularx}
+			\caption{Livrables prévus de projet}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17.5cm}{|X|X|X|}
+				\hline
+				\textbf{Attribut} & \textbf{Signification}          &
+				\textbf{Exemple}                                                             \\
+				\hline
+				IDMatFixe         & Identificateur du materiel fixe & 200                    \\
+				\hline
+				Periode           & semestre                        & T3                     \\
+				\hline
+				Annee             &                                 & 2015                   \\
+				\hline
+				Nombre            &                                 & 2                      \\
+				\hline
+				AgeMoyen          &                                 & 7 ans                  \\
+				\hline
+				Capacite Totale   &                                 & 198 places             \\
+				\hline
+				Description       &                                 & Aires de stationnement \\
+				\hline
+				IDAven            & Identificateur de l'avenant     & 20                     \\
+				\hline
+			\end{tabularx}
+			\caption{Livrables prévus de projet}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17.5cm}{|p{2.5cm}|X|p{3.5cm}|}
+				\hline
+				\textbf{Attribut}                            & \textbf{Signification}                              &
+				\textbf{Exemple}                                                                                                   \\
+				\hline
+				IDQS                                         & Identificateur du qualité de service                & 300           \\
+				\hline
+				IDAven                                       & Identificateur de l'avenant                         & 20            \\
+				\hline
+				Periode                                      & semestre                                            & T1            \\
+				\hline
+				Annee                                        &                                                     & 2016          \\
+				\hline
+				PQM                                          & Plan du maintenance Qualité                         & oui           \\
+				\hline
+				Reclamation                                  & Réclamation des usagers                             & 22/semestre   \\
+				\hline
+				Equipement                                   & Equipement des points d'arrêt                       & Signalisation verticale                                                                     \\
+				\hline
+				SAEV                                         & Système d'information de type SAEV(Système d'aide à
+				l'exploitation et à l'information voyageurs) & OUI                                                                 \\
+				\hline
+				SYSGeo                                       & Système de géolocalisation                          & oui           \\
+				\hline
+				WifiEmb                                      & wifi embarqué                                       & non           \\
+				\hline
+				VedioSurvEmb                                 & video surveillance embarquée                        & oui           \\
+				\hline
+				CentreAppel                                  & centre d'appel                                      & non           \\
+				\hline
+				Adresse                                      &                                                     & oui           \\
+				\hline
+				InfoStatReseau                               & Informations statiques sur le réseau                &
+				oui                                                                                                                \\
+				\hline
+				HoraireServ                                  & horaires du service                                 & oui           \\
+				\hline
+				InfosPertu                                   & informations sur les perturbations                  & non           \\
+				\hline
+				TarifsApp                                    & Tarifs appliqués                                    & oui           \\
+				\hline
+				VenteEnLigne                                 &                                                     & non           \\
+				\hline
+				Correspondances                              &                                                     & oui           \\
+				\hline
+				Intermodalité                                &                                                     & oui           \\
+				\hline
+			\end{tabularx}
+			\caption{Livrables prévus de projet}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17.5cm}{|X|X|X|}
+				\hline
+				\textbf{Attribut} & \textbf{Signification}               &
+				\textbf{Exemple}                                                        \\
+				\hline
+				IDAC              & Identificateur del'aspect commercial & 400          \\
+				\hline
+				IDAven            & Identificateur de l'avenant          & 20           \\
+				\hline
+				NbrVoyJrs         & nombre de voyageur par jours         & 117,442      \\
+				\hline
+				NbrPlaceVidJrs    & nombre de places vides par jours     &
+				283                                                                     \\
+				\hline
+				TotAnnVoyJrs      & Total annuel de voyageur par jours   &
+				24,662,833                                                              \\
+				\hline
+				TicketsVendu      & Nombre de tickets svendu             & 37,781,318   \\
+				\hline
+				Kmparcourus       &                                      & 8 018 629 Km \\
+				\hline
+				FreqMoyPass       & fréquence moyenne de passage         & 1.33
+				passage/jours                                                           \\
+				\hline
+				VitesseComm       & vitesse commerciale moyenne          & 17
+				Km/heure                                                                \\
+				\hline
+				Ponctualité       &                                      & 9 min        \\
+				\hline
+				TauxRempli        & Taux de remplissage                  & 71.92\%      \\
+				\hline
+				HeurDepartServ    & heure de départ de service           & 4:45H        \\
+				\hline
+				HeureFinServ      & Heure de fin de service              & 22:45H       \\
+				\hline
+				Pannes            & nombre de pannes                     & 6500         \\
+				\hline
+				Accidents         & nombre d'accidents                   & 511          \\
+				\hline
+				DelaiMoyEvacu     & Delai moyen d'évacuation             & 15 min       \\
+				\hline
+				Période           & semestre                             & T3           \\
+				\hline
+				Annee             &                                      & 2016         \\
+				\hline
+			\end{tabularx}
+			\caption{Livrables prévus de projet}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17.5cm}{|X|X|X|}
+				\hline
+				\textbf{Attribut}    & \textbf{Signification}                  &
+				\textbf{Exemple}                                                          \\
+				\hline
+				IDEffEnMoy           & Identificateur d'éfficacité énergitique &
+				500                                                                       \\
+				\hline
+				IDAven               & Identificateur de l'avenant             & 20       \\
+				\hline
+				ConsomationCarbu     & la consomation du carburant             & 4 616.72
+				Tonnes                                                                    \\
+				\hline
+				ConsomationTotalElec & la consomation total en électricité     & 490
+				996.47 KWH                                                                \\
+				\hline
+				EmmissionCarb        & Emission du carbone CO2                 & 14 055
+				Tonnes                                                                    \\
+				\hline
+				Periode              & semestre                                & T2       \\
+				\hline
+				Annee                &                                         & 2016     \\
+				\hline
+			\end{tabularx}
+			\caption{Livrables prévus de projet}
+		\end{center}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17.5cm}{|X|X|X|}
+				\hline
+				\textbf{Attribut} & \textbf{Signification}                        &
+				\textbf{Exemple}                                                            \\
+				\hline
+				IDEffEnTotal      & Identificateur d'efficacite energitique total &
+				600                                                                         \\
+				\hline
+				IDAven            & Identificateur de l'avenant                   & 20      \\
+				\hline
+				ConsomationMoy    & Consomation moyenne par Km et par type de bus &
+				26.97 litres/100km                                                          \\
+				\hline
+				TypeMoyenTrans    & Type du moyen de transport                    & minibus \\
+				\hline
+				Periode           & semestre                                      & T2      \\
+				\hline
+				Annee             &                                               & 2016    \\
+				\hline
+			\end{tabularx}
+			\caption{Livrables prévus de projet}
+		\end{center}
+	\end{table}
+	\section{Étude structurale}
+    \begin{figure}[H]
+		\begin{center}
+			\fbox{\includegraphics[scale=0.3]{images/Pre-MCT.png}}
+			\caption{Décomposition fonctionnelle du projet}
+		\end{center}
+	\end{figure}
+	\section{Étude comportementale}
+	\section{Conclusion}
 	\chapter{Réalisation}
 	\renewcommand{\headrulewidth}{1pt}
-	\fancyhead[R]{\textbf{Chapitre \thechapter: Analyse du projet}}
+	\fancyhead[R]{\textbf{Chapitre \thechapter: Réalisation}}
 	\fancyhead[L]{\hspace*{5cm}}
 \end{doublespace}
 \appendix
