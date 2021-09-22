@@ -1,4 +1,4 @@
- \documentclass[a4paper]{report}
+\documentclass[a4paper]{report}
 \usepackage[T1]{fontenc}
 \usepackage[sfdefault]{biolinum}
 \usepackage[french]{babel}
@@ -630,8 +630,30 @@
 	\fancyhead[L]{\hspace*{5cm}}
 	Cette partie est très importante dans le cycle de vie du projet. Théoriquement, toute la fondation du projet a été construite dans cette base, par la suite, il ne reste que la mise en œuvre.
 	\section{Étude des données}
+	\subsection{Règles de gestion recensées}
+	Au cours de la réalisation du projet, j'ai vu qu’un ensemble de règles de gestion sont à respecter afin d'assurer la bonne satisfaction du besoin et le bon fonctionnement du système. Quant à ce projet j'ai proposé l’ensemble des règles suivantes:
+	\begin{itemize}
+	\item[•] L'administrateur de système doit demander l’accès au système pour recevoir les informations de son compte de part du directeur de l'espace Office 365 \textbf{DYN IT}.
+	\item[•] L'administrateur doit choisir un contrat pour accéder et gérer ses informations.
+	\item[•] L'administrateur doit voir toujours les informations d'entête d'un contrat sélectionné.
+	\item[•] L'administrateur doit choisir un contrat et une période pour accéder et gérer les informations reliées aux avancements semestriels.
+	\item[•] L'administrateur doit avoir un référentiel des délégants et des délégataires.
+	\item[•] L'administrateur doit avoir la possibilité de modifié le référentiel des délégants ou des délégataires.
+	\item[•] L'administrateur doit avoir la possibilité d'accéder à des tableaux de bord modifiable selon le contrat et/ou la période.
+	\item[•] L'administrateur doit avoir la possibilité de générer des rapports d'un contrat et/ou une période sélectionnée.
+    \end{itemize}
 	\subsection{Dictionnaire des données}
-	Pour bien comprendre les données traitées dans ce projet, j'ai obtenu plusieurs documents de suivi et un exemple de contrat de gestion déléguée. Ainsi, j'ai proposé le dictionnaire des données suivant:
+	Pour bien comprendre les données traitées dans ce projet, j'ai obtenu plusieurs documents de suivi et un exemple de contrat de gestion déléguée. Ainsi, j'ai proposé le dictionnaire des données suivant. Ce dernier est divisées en plusieurs tableaux qui sont classées dans trois catégories:
+    \begin{itemize}
+	\item[•] Les données d'entête: Ils représentes les informations qui définissent un contrat. Certes, ils peuvent être gérer, mais ils ne dépendent pas des périodes. Ils ne peuvent pas être changées sauf dans le cadre d'une révision ou d'un avenant.
+	\item[•] Les données des référentiels: Ils représentes les informations qui ne dépendent ni du contrat et ni de la période. En effet, il peuvent être inclus dans la définitions d'un contrat.
+	\item[•] Les données d'avancements: Ils représentes les informations qui dépendent du contrat et de la période.
+    \end{itemize}
+    
+    \subsubsection{Les données d'entête}
+    
+    Cette catégorie groupe les données des contrats, des révisions, des avenants.
+    
 	\begin{table}[H]
 		\begin{center}
 			\begin{tabularx}{17.5cm}{|X|X|X|}
@@ -657,6 +679,27 @@
 				\hline
 			\end{tabularx}
 			\caption{Table contrat}
+		\end{center}
+	\end{table}
+
+	\begin{table}[H]
+	
+		\begin{center}
+			\begin{tabularx}{17cm}{|p{4cm}|p{4cm}|X|}
+				\hline
+				\textbf{Attribut} & \textbf{Signification}      &
+				\textbf{Exemple}                                                                              \\
+				\hline
+				IDRevision        & Identificateur de révision  & 30                                          \\
+				\hline
+				Date              &                             & En cours                                    \\
+				\hline
+				Motif             &                             & Parc insuffisant et déséquilibre du contrat \\
+				\hline
+				IDAven            & Identificateur de l'avenant & 20                                          \\
+				\hline
+			\end{tabularx}
+			\caption{Table révision}
 		\end{center}
 	\end{table}
 
@@ -697,25 +740,9 @@
 		\end{center}
 	\end{table}
 
-	\begin{table}[H]
-		\begin{center}
-			\begin{tabularx}{17cm}{|p{4cm}|p{4cm}|X|}
-				\hline
-				\textbf{Attribut} & \textbf{Signification}      &
-				\textbf{Exemple}                                                                              \\
-				\hline
-				IDRevision        & Identificateur de révision  & 30                                          \\
-				\hline
-				Date              &                             & En cours                                    \\
-				\hline
-				Motif             &                             & Parc insuffisant et déséquilibre du contrat \\
-				\hline
-				IDAven            & Identificateur de l'avenant & 20                                          \\
-				\hline
-			\end{tabularx}
-			\caption{Table révision}
-		\end{center}
-	\end{table}
+    \subsubsection{Les données des référentiels}
+    
+    Cette catégorie groupe les données des délégataires, des délégants et des communes.
 
 	\begin{table}[H]
 		\begin{center}
@@ -729,7 +756,7 @@
 				Nom               & Nom du délégataire            & Société ALSA TANGER \\
 				\hline
 			\end{tabularx}
-			\caption{Table délégataire}
+			\caption{Référentiel des délégataires}
 		\end{center}
 	\end{table}
 
@@ -747,7 +774,7 @@
 				IDCommune         & Identificateur de la commune & 60                   \\
 				\hline
 			\end{tabularx}
-			\caption{Table délégant}
+			\caption{Référentiel des délégants}
 		\end{center}
 	\end{table}
 
@@ -763,34 +790,13 @@
 				Nom               & nom de la commune            & la commune de Tanger \\
 				\hline
 			\end{tabularx}
-			\caption{Table commune}
+			\caption{Référentiel des communes}
 		\end{center}
 	\end{table}
 
-	\begin{table}[H]
-		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|X|X|}
-				\hline
-				\textbf{Attribut} & \textbf{Signification}      &
-				\textbf{Exemple}                                                        \\
-				\hline
-				IDTarif           & Identificateur du tarif     & 70                    \\
-				\hline
-				IDAven            & Identificateur de l'avenant & 20                    \\
-				\hline
-				Description       & une description du tarif    & tarif normale: ticket
-				réseau urbain                                                           \\
-				\hline
-				Valeurs           & les valeurs du tarif        & 2,5DH 3,5 DH          \\
-				\hline
-				Annee             &                             & 2014                  \\
-				\hline
-				Periode           & Semestre                    & T1                    \\
-				\hline
-			\end{tabularx}
-			\caption{Table tarifs}
-		\end{center}
-	\end{table}
+    \subsubsection{Les données des avancements}
+    
+    Cette catégorie groupe les données d'effectif personnel, des investissements, des matériaux roulants et fixes, etc...
 
 	\begin{table}[H]
 		\begin{center}
@@ -896,6 +902,31 @@
 				\hline
 			\end{tabularx}
 			\caption{Table matériel fixe}
+		\end{center}
+	\end{table}
+	
+			\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17.5cm}{|X|X|X|}
+				\hline
+				\textbf{Attribut} & \textbf{Signification}      &
+				\textbf{Exemple}                                                        \\
+				\hline
+				IDTarif           & Identificateur du tarif     & 70                    \\
+				\hline
+				IDAven            & Identificateur de l'avenant & 20                    \\
+				\hline
+				Description       & une description du tarif    & tarif normale: ticket
+				réseau urbain                                                           \\
+				\hline
+				Valeurs           & les valeurs du tarif        & 2,5DH 3,5 DH          \\
+				\hline
+				Annee             &                             & 2014                  \\
+				\hline
+				Periode           & Semestre                    & T1                    \\
+				\hline
+			\end{tabularx}
+			\caption{Table tarifs}
 		\end{center}
 	\end{table}
 
@@ -1064,8 +1095,23 @@
 	Le modèle conceptuel des données est une représentation statique du système d’information.
 	Il a pour but d’écrire de façon formelle les données qui seront utilisées par le système d’information.
 	Il s’agit donc d’une représentation des données, facilement compréhensible.
-	Le formalisme adopté par la méthode Merise pour réaliser cette description est basé sur les concepts « entités-association ».
-	D’après ce qui précède, on obtient le modèle conceptuel de données suivant:
+	Le formalisme adopté par la méthode Merise pour réaliser cette description est basé sur les concepts « entités association ».
+	D’après ce qui précède, on obtient le MCD est décomposé en trois parties, comme suivant:
+	\subsubsection{MCD des données d'entête}
+	\begin{figure}[H]
+		\begin{center}
+			\fbox{\includegraphics[scale=0.29]{images/MCD.png}}
+			\caption{Le modèle conceptuel des données}
+		\end{center}
+	\end{figure}
+	\subsubsection{MCD des données des référentiels}
+	\begin{figure}[H]
+		\begin{center}
+			\fbox{\includegraphics[scale=0.29]{images/MCD.png}}
+			\caption{Le modèle conceptuel des données}
+		\end{center}
+	\end{figure}
+	\subsubsection{MCD des données des avancements}
 	\begin{figure}[H]
 		\begin{center}
 			\fbox{\includegraphics[scale=0.29]{images/MCD.png}}
@@ -1073,10 +1119,16 @@
 		\end{center}
 	\end{figure}
 	\subsection{Le schéma relationnel de la base des données}
-	Enfin, j'ai proposé le schéma relationnel de la base de données suivant:
+	Suite à ce qui précède, j'ai proposé le schéma relationnel de la base de données suivant:
+	\begin{figure}[H]
+		\begin{center}
+			\fbox{\includegraphics[scale=0.38]{images/database.png}}
+			\caption{Le modèle conceptuel des données}
+		\end{center}
+	\end{figure}
 	\section{Étude structurale}
 	\section{Étude comportementale}
-	\section{Conclusion}
+	\section{Récapitulatif}
 	\chapter{Réalisation}
 	\renewcommand{\headrulewidth}{1pt}
 	\fancyhead[R]{\textbf{Chapitre \thechapter: Réalisation}}
@@ -1094,6 +1146,7 @@
 \chapter{Liste des Abréviations}
 \begin{itemize}
 	\item[•] \textbf{CDC:} Cahier des charges.
+	\item[•] \textbf{MCD:} Modèle conceptuel des données.
 \end{itemize}
 
 \end{document}
