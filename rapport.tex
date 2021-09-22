@@ -31,6 +31,7 @@
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}b{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}b{#1}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}b{#1}}
+\renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{1pt}
 \fancyfoot[L]{ENSIAS}
 \fancyfoot[C]{\textbf{\thepage}}
@@ -99,7 +100,6 @@
 		\vspace*{1cm}
 		\textbf{\huge{Remerciements}}
 	\end{center}
-	\renewcommand{\headrulewidth}{1pt}
 	\fancyhead[R]{\textbf{Remerciements}}
 	\fancyhead[L]{\hspace*{5cm}}
 
@@ -129,7 +129,6 @@
 		\vspace*{1cm}
 		\textbf{\huge{Résumé}}
 	\end{center}
-	\renewcommand{\headrulewidth}{1pt}
 	\fancyhead[R]{\textbf{Résumé}}
 	\fancyhead[L]{\hspace*{5cm}}
 
@@ -163,7 +162,6 @@
 		\vspace*{1cm}
 		\textbf{\huge{Abstract}}
 	\end{center}
-	\renewcommand{\headrulewidth}{1pt}
 	\fancyhead[R]{\textbf{Abstract}}
 	\fancyhead[L]{\hspace*{5cm}}
 
@@ -190,7 +188,6 @@
 \end{doublespace}
 
 \newpage
-\renewcommand{\headrulewidth}{1pt}
 \fancyhead[R]{\textbf{Table des matières}}
 \fancyhead[L]{\hspace*{5cm}}
 \tableofcontents
@@ -209,7 +206,6 @@
 		\vspace*{1cm}
 		\textbf{\huge{Introduction générale}}
 	\end{center}
-	\renewcommand{\headrulewidth}{1pt}
 	\fancyhead[R]{\textbf{Introduction générale}}
 	\fancyhead[L]{\hspace*{5cm}}
 
@@ -252,7 +248,6 @@
 		\vspace*{1cm}
 		\textbf{\huge{Liste des abréviations}}
 	\end{center}
-	\renewcommand{\headrulewidth}{1pt}
 	\fancyhead[R]{\textbf{Liste des abréviations}}
 	\fancyhead[L]{\hspace*{5cm}}
 	\begin{itemize}
@@ -262,7 +257,6 @@
 
 	\newpage
 	\chapter{Cadre générale du projet}
-	\renewcommand{\headrulewidth}{1pt}
 	\fancyhead[R]{\textbf{Chapitre \thechapter: Cadre générale du projet}}
 	\fancyhead[L]{\hspace*{5cm}}
 	Dans ce chapitre j'entame le projet dans son cadre général : présentation
@@ -399,7 +393,6 @@
 	Le chapitre qui suit consiste la phase d'analyse des besoins du projet.
 	\newpage
 	\chapter{Analyse du projet}
-	\renewcommand{\headrulewidth}{1pt}
 	\fancyhead[R]{\textbf{Chapitre \thechapter: Analyse du projet}}
 	\fancyhead[L]{\hspace*{5cm}}
 
@@ -651,7 +644,6 @@
 		\end{center}
 	\end{figure}
 	\chapter{Étude conceptuelle}
-	\renewcommand{\headrulewidth}{1pt}
 	\fancyhead[R]{\textbf{Chapitre \thechapter: Étude conceptuelle}}
 	\fancyhead[L]{\hspace*{5cm}}
 	Cette partie est très importante dans le cycle de vie du projet. Théoriquement, toute la fondation du projet a été construite dans cette base, par la suite, il ne reste que la mise en œuvre.
@@ -682,45 +674,45 @@
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
+			\begin{tabularx}{17.5cm}{|p{3.5cm}|X|p{3.5cm}|}
 				\hline
-				\textbf{Attribut}    & \textbf{Signification} & \textbf{Exemple} \\
+				\textbf{Attribut}    & \textbf{Signification}                                        & \textbf{Exemple}    \\
 				\hline
-				NumContrat           & Numéro du Contrat      & 45858            \\
+				NumContrat           & Numéro du contrat                                             & 45858               \\
 				\hline
-				LibelleContrat       &                        &                  \\
+				LibelleContrat       & Libellé du contrat                                            & ALBAIDA             \\
 				\hline
-				DateDemarrageContrat &                        &                  \\
+				DateDemarrageContrat & Date de démarrage du contrat                                  & 01/11/2019          \\
 				\hline
-				DateFinContrat       &                        &                  \\
+				DateFinContrat       & Date du fin du contrat                                        & 01/11/2027          \\
 				\hline
-				DateVisa             &                        &                  \\
+				DateVisa             & Date visa                                                     & 01/06/2019          \\
 				\hline
-				DureeContrat         &                        &                  \\
+				DureeContrat         & Durée du contrat                                              & 10 ans              \\
 				\hline
-				Delegant             &                        &                  \\
+				Delegant             & Nom du délégant                                               & Commune Tanger      \\
 				\hline
-				Delegataire          &                        &                  \\
+				Delegataire          & Nom du délégataire                                            & ALSA Tanger         \\
 				\hline
-				Autre Partenaire     &                        &                  \\
+				Autre Partenaire     & Nom d'un partenaire (autre que le délégant et le délégataire) & Coopération El-Amal \\
 				\hline
-				NumAvenant           &                        &                  \\
+				NumAvenant           & Numéro d'avenant                                              & 5245                \\
 				\hline
-				LibelleAvenant       &                        &                  \\
+				LibelleAvenant       & Libellé d'avenant                                             &                     \\
 				\hline
-				DateAvenant          &                        &                  \\
+				DateAvenant          & Date d'avenant                                                & 01/06/2023          \\
 				\hline
-				MotifAvenant         &                        &                  \\
+				MotifAvenant         & Motif d'avenant                                               &                     \\
 				\hline
-				Status               &                        &                  \\
+				Status               & Status d'avenant                                              & Actif/ Non Actif    \\
 				\hline
-				NumRevision          &                        &                  \\
+				NumRevision          & Numéro de révision                                            & 2336                \\
 				\hline
-				LibelleRevision      &                        &                  \\
+				LibelleRevision      & Libellé de révision                                           &                     \\
 				\hline
-				DateRevision         &                        &                  \\
+				DateRevision         & Date de révision                                              & 01/01/2026          \\
 				\hline
-				MotifRevision        &                        &                  \\
+				MotifRevision        & Motif de la révision                                          &                     \\
 				\hline
 			\end{tabularx}
 			\caption{Table d'entête}
@@ -728,59 +720,53 @@
 	\end{table}
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
+			\begin{tabularx}{17.5cm}{|p{6.5cm}|X|p{2.1cm}|}
 				\hline
-				\textbf{Attribut}                              & \textbf{Signification} & \textbf{Exemple} \\
+				\textbf{Attribut}                    & \textbf{Signification}                                       & \textbf{Exemple} \\
 				\hline
-				Nombre de communes desservies                  &                        &                  \\
+				NumCommunesDesservies                & Nombre de communes desservies                                & 10               \\
 				\hline
-				Population                                     &                        &                  \\
+				Population                           & Population                                                   & 100252           \\
 				\hline
-				LongueurReseau                                 &                        &                  \\
+				LongueurReseau                       & Longueur du réseau                                           & 200 Km           \\
 				\hline
-				LongueurLignesUrbaines                         &                        &                  \\
+				LongueurLignesUrbaines               & Longueur des lignes urbaines                                 & 130 Km           \\
 				\hline
-				LongueurLignesPeripheriques                    &                        &                  \\
+				LongueurLignesPeripheriques          & Longueur des lignes périphériques                            & 70km             \\
 				\hline
-				NombreLignes                                   &                        &                  \\
+				NombreLignes                         & Nombre des lignes                                            & 24               \\
 				\hline
-				PrixMinTarifScolaire                           &                        &                  \\
+				PrixMinTarifScolaire                 & Prix minimal de tarif scolaire                               & 3 Dhs            \\
 				\hline
-				PrixMaxTarifScolaire                           &                        &                  \\
+				PrixMaxTarifScolaire                 & Prix maximal de tarif scolaire                               & 6 Dhs            \\
 				\hline
-				PrixMinTarifNormal                             &                        &                  \\
+				PrixMinTarifNormal                   & Prix minimal de tarif normal                                 & 4 Dhs            \\
 				\hline
-				PrixMaxTarifNormal                             &                        &                  \\
+				PrixMaxTarifNormal                   & Prix maximal de tarif normal                                 & 5 Dhs            \\
 				\hline
-				PrixMinTarifConvention                         &                        &                  \\
+				PrixMinTarifConvention               & Prix maximal de tarif convention                             & 5 Dhs            \\
 				\hline
-				PrixMaxTarifConvention                         &                        &                  \\
+				PrixMaxTarifConvention               & Prix maximal de tarif convention                             & 7 Dhs            \\
 				\hline
-				ValeurInvestissementContractuelle delegant     &                        &                  \\
+				ValeurInvestissementContractuelDN    & Valeur d'investissement contractuel de délégant              & 150000 Dhs       \\
 				\hline
-				NombreBusContractuel delegant                  &                        &                  \\
+				NombreBusContractuelDN               & Nombre des bus contractuel de délégant                       & 50               \\
 				\hline
-				NombreAbriBusContractuel delegant              &                        &                  \\
+				NombreAbriBusContractuelDN           & Nombre des abris bus contractuel de délégant                 & 15               \\
 				\hline
-				NombreArretContractuel delegant                &                        &                  \\
+				NombreArretContractuelDN             & Nombre des arrêts contractuel de délégant                    & 150              \\
 				\hline
-				NombreAireStationnementContractuel delegant    &                        &                  \\
+				NombreAireStationnementContractuelDN & Nombre des aires de stationnement contractuel de délégant    & 10               \\
 				\hline
-				ValeurInvestissementContractuelle delegataire  &                        &                  \\
+				ValeurInvestissementContractuelDT    & Valeur d'investissement contractuelle de délégataire         & 100000 Dhs       \\
 				\hline
-				NombreBusContractuel delegataire               &                        &                  \\
+				NombreBusContractuelDT               & Nombre des bus contractuel de délégataire                    & 45               \\
 				\hline
-				NombreAbriBusContractuel delegataire           &                        &                  \\
+				NombreAbriBusContractuelDT           & Nombre des abris bus contractuel de délégataire              & 10               \\
 				\hline
-				NombreArretContractuel delegataire             &                        &                  \\
+				NombreArretContractuelDT             & Nombre des arrêts contractuel de délégataire                 & 120              \\
 				\hline
-				NombreAireStationnementContractuel delegataire &                        &                  \\
-				\hline
-				ValeurInvestissementContractuelle Autre        &                        &                  \\
-				\hline
-				NombreBusContractuel Autre                     &                        &                  \\
-				\hline
-				NombreAbriBusContractuel Autre                 &                        &                  \\
+				NombreAireStationnementContractuelDT & Nombre des aires de stationnement contractuel de délégataire & 7                \\
 				\hline
 			\end{tabularx}
 			\caption{Suite 1 de la table d'entête}
@@ -788,13 +774,19 @@
 	\end{table}
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
+			\begin{tabularx}{17.5cm}{|p{6cm}|X|p{1.6cm}|}
 				\hline
-				\textbf{Attribut}                        & \textbf{Signification} & \textbf{Exemple} \\
+				\textbf{Attribut}                    & \textbf{Signification}                                                                                          & \textbf{Exemple} \\
 				\hline
-				NombreArretContractuel Autre             &                        &                  \\
+				ValeurInvestissementContractuelleAT  & Valeur d'investissement contractuelle des autres partenaires (autre que le délégants et le délégataire)         & 90000 Dhs        \\
 				\hline
-				NombreAireStationnementContractuel Autre &                        &                  \\
+				NombreBusContractuelAT               & Nombre des bus contractuel des autres partenaires (autre que le délégants et le délégataire)                    & 30               \\
+				\hline
+				NombreAbriBusContractuelAT           & Nombre des abris bus contractuel des autres partenaires (autre que le délégants et le délégataire)              & 7                \\
+				\hline
+				NombreArretContractuelAT             & Nombre des arrêts contractuel des autres partenaires (autre que le délégants et le délégataire)                 & 80               \\
+				\hline
+				NombreAireStationnementContractuelAT & Nombre des aires de stationnement contractuel des autres partenaires (autre que le délégants et le délégataire) & 0                \\
 				\hline
 			\end{tabularx}
 			\caption{Suite 2 de la table d'entête}
@@ -807,11 +799,11 @@
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
+			\begin{tabularx}{17.5cm}{|p{3cm}|p{3cm}|X|}
 				\hline
-				\textbf{Attribut} & \textbf{Signification} & \textbf{Exemple} \\
+				\textbf{Attribut} & \textbf{Signification} & \textbf{Exemple}                                       \\
 				\hline
-				NomDelegant       &                        &                  \\
+				NomDelegant       & Nom du délégant        & Etablissement de Coopération Intercommunal  "Al Baida" \\
 				\hline
 			\end{tabularx}
 			\caption{Référentiel des délégants}
@@ -820,17 +812,18 @@
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
+			\begin{tabularx}{17.5cm}{|p{3cm}|p{3cm}|X|}
 				\hline
-				\textbf{Attribut} & \textbf{Signification} & \textbf{Exemple} \\
+				\textbf{Attribut} & \textbf{Signification} & \textbf{Exemple}    \\
 				\hline
-				NomDelegataire    &                        &                  \\
+				NomDelegataire    & Nom du délégataire     & Société ALSA Tanger \\
 				\hline
 			\end{tabularx}
 			\caption{Référentiel des délégataires}
 		\end{center}
 	\end{table}
 
+	\newpage
 	\subsubsection{Les données des avancements}
 
 	Cette catégorie groupe les données d'effectif personnel, des investissements, des matériaux roulants et fixes, etc...
@@ -838,7 +831,7 @@
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
+			\begin{tabularx}{17.5cm}{|p{3cm}|X|p{1.5cm}|}
 				\hline
 				\textbf{Attribut} & \textbf{Signification} & \textbf{Exemple} \\
 				\hline
@@ -1187,7 +1180,7 @@
 				date de mise a jour                                            &                        &                  \\
 				\hline
 			\end{tabularx}
-			\caption{Table de l'effecacité énergétique}
+			\caption{Table de l’efficacité énergétique}
 		\end{center}
 	\end{table}
 
@@ -1260,11 +1253,12 @@
 	\section{Étude comportementale}
 	\section{Récapitulatif}
 	\chapter{Réalisation}
-	\renewcommand{\headrulewidth}{1pt}
 	\fancyhead[R]{\textbf{Chapitre \thechapter: Réalisation}}
 	\fancyhead[L]{\hspace*{5cm}}
 \end{doublespace}
+\clearpage
 \appendix
+\pagenumbering{alph} \setcounter{page}{1}
 \chapter{Références}
 \begin{itemize}
 	\item[•] \textbf{Rapport en \LaTeX:} \url{https://github.com/abdorah/stage2021}
