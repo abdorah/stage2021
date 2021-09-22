@@ -74,11 +74,11 @@
 		\textbf{\emph{Préparé par: KOTBI Abderrahamane}}
 		\raggedright{\rule{0.7\linewidth}{2pt}}\\
 		\textbf{\emph{
-			Membres de Jury:\\
-			\begin{itemize}
-				\item[•] ****
-				\item[•] ****
-			\end{itemize}
+				Membres de Jury:\\
+				\begin{itemize}
+					\item[•] ****
+					\item[•] ****
+				\end{itemize}
 			}}
 		\mbox{}\vfill
 		\begin{center}
@@ -97,10 +97,11 @@
 \begin{doublespace}
 	\begin{center}
 		\vspace*{1cm}
-
 		\textbf{\huge{Remerciements}}
-
 	\end{center}
+	\renewcommand{\headrulewidth}{1pt}
+	\fancyhead[R]{\textbf{Remerciements}}
+	\fancyhead[L]{\hspace*{5cm}}
 
 	\textit{
 		Avant d'aborder la description des parties importantes du projet,
@@ -128,6 +129,9 @@
 		\vspace*{1cm}
 		\textbf{\huge{Résumé}}
 	\end{center}
+	\renewcommand{\headrulewidth}{1pt}
+	\fancyhead[R]{\textbf{Résumé}}
+	\fancyhead[L]{\hspace*{5cm}}
 
 	Ce document représente une étude synthétique du travail réalisé dans le
 	cadre de mon stage d'été de deuxième année. J'ai effectué mon stage au sein de
@@ -155,13 +159,16 @@
 
 	\clearpage
 	\addcontentsline{toc}{chapter}{Abstract}
-	\begin{center}
-		\vspace*{1cm}
-		\textbf{\huge{Abstract}}
-	\end{center}
+		\begin{center}
+			\vspace*{1cm}
+			\textbf{\huge{Abstract}}
+		\end{center}
+		\renewcommand{\headrulewidth}{1pt}
+		\fancyhead[R]{\textbf{Abstract}}
+		\fancyhead[L]{\hspace*{5cm}}
 
 	This document represents a synthetic study of the work carried out as part
-	of my second-year summer intern-ship.
+	of my second-year summer internship.
 	I did my intern-ship at the international university of Rabat \textbf{UIR}.
 	The latter lasted the two months
 	July and August of the year 2021. It aims to develop a web platform for the
@@ -179,9 +186,13 @@
 
 	\textbf{\\Keywords:\\Management, Monitoring, Data, Delegated contracts,
 		Urban transport, Centralization, Low-code application.}
+
 \end{doublespace}
 
 \newpage
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[R]{\textbf{Table des matières}}
+\fancyhead[L]{\hspace*{5cm}}
 \tableofcontents
 
 \cleardoublepage
@@ -234,6 +245,21 @@
 	une
 	solution simple pour la gestion et la représentation des données en
 	question.
+
+	\clearpage
+	\addcontentsline{toc}{chapter}{Liste des abréviations}
+	\begin{center}
+		\vspace*{1cm}
+		\textbf{\huge{Liste des abréviations}}
+	\end{center}
+	\renewcommand{\headrulewidth}{1pt}
+	\fancyhead[R]{\textbf{Liste des abréviations}}
+	\fancyhead[L]{\hspace*{5cm}}
+	\begin{itemize}
+		\item[•] \textbf{CDC:} Cahier des charges.
+		\item[•] \textbf{MCD:} Modèle conceptuel des données.
+	\end{itemize}
+
 	\newpage
 	\chapter{Cadre générale du projet}
 	\renewcommand{\headrulewidth}{1pt}
@@ -633,145 +659,159 @@
 	\subsection{Règles de gestion recensées}
 	Au cours de la réalisation du projet, j'ai vu qu’un ensemble de règles de gestion sont à respecter afin d'assurer la bonne satisfaction du besoin et le bon fonctionnement du système. Quant à ce projet j'ai proposé l’ensemble des règles suivantes:
 	\begin{itemize}
-	\item[•] L'administrateur de système doit demander l’accès au système pour recevoir les informations de son compte de part du directeur de l'espace Office 365 \textbf{DYN IT}.
-	\item[•] L'administrateur doit choisir un contrat pour accéder et gérer ses informations.
-	\item[•] L'administrateur doit voir toujours les informations d'entête d'un contrat sélectionné.
-	\item[•] L'administrateur doit choisir un contrat et une période pour accéder et gérer les informations reliées aux avancements semestriels.
-	\item[•] L'administrateur doit avoir un référentiel des délégants et des délégataires.
-	\item[•] L'administrateur doit avoir la possibilité de modifié le référentiel des délégants ou des délégataires.
-	\item[•] L'administrateur doit avoir la possibilité d'accéder à des tableaux de bord modifiable selon le contrat et/ou la période.
-	\item[•] L'administrateur doit avoir la possibilité de générer des rapports d'un contrat et/ou une période sélectionnée.
-    \end{itemize}
+		\item[•] L'administrateur de système doit demander l’accès au système pour recevoir les informations de son compte de part du directeur de l'espace Office 365 \textbf{DYN IT}.
+		\item[•] L'administrateur doit choisir un contrat pour accéder et gérer ses informations.
+		\item[•] L'administrateur doit voir toujours les informations d'entête d'un contrat sélectionné.
+		\item[•] L'administrateur doit choisir un contrat et une période pour accéder et gérer les informations reliées aux avancements semestriels.
+		\item[•] L'administrateur doit avoir un référentiel des délégants et des délégataires.
+		\item[•] L'administrateur doit avoir la possibilité de modifié le référentiel des délégants ou des délégataires.
+		\item[•] L'administrateur doit avoir la possibilité d'accéder à des tableaux de bord modifiable selon le contrat et/ou la période.
+		\item[•] L'administrateur doit avoir la possibilité de générer des rapports d'un contrat et/ou une période sélectionnée.
+	\end{itemize}
 	\subsection{Dictionnaire des données}
 	Pour bien comprendre les données traitées dans ce projet, j'ai obtenu plusieurs documents de suivi et un exemple de contrat de gestion déléguée. Ainsi, j'ai proposé le dictionnaire des données suivant. Ce dernier est divisées en plusieurs tableaux qui sont classées dans trois catégories:
-    \begin{itemize}
-	\item[•] Les données d'entête: Ils représentes les informations qui définissent un contrat. Certes, ils peuvent être gérer, mais ils ne dépendent pas des périodes. Ils ne peuvent pas être changées sauf dans le cadre d'une révision ou d'un avenant.
-	\item[•] Les données des référentiels: Ils représentes les informations qui ne dépendent ni du contrat et ni de la période. En effet, il peuvent être inclus dans la définitions d'un contrat.
-	\item[•] Les données d'avancements: Ils représentes les informations qui dépendent du contrat et de la période.
-    \end{itemize}
-    
-    \subsubsection{Les données d'entête}
-    
-    Cette catégorie groupe les données des contrats, des révisions, des avenants.
-    
-	\begin{table}[H]
-		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|X|X|}
-				\hline
-				\textbf{Attribut} & \textbf{Signification}            &
-				\textbf{Exemple}                                                            \\
-				\hline
-				IDCont            & Identificateur du contrat         & 11                  \\
-				\hline
-				DateVisa          & Date visa                         & 26-Jul-13           \\
-				\hline
-				IDAvenantActif    & Identificateur de l'avenant actif &
-				20                                                                          \\
-				\hline
-				Titre             & titre du contrat                  & gestion deleguee de
-				transport                                                                   \\
-				\hline
-				IDDelegant        & Identificateur du délégant        & la commune de
-				tanger                                                                      \\
-				\hline
-				IDDelegataire     & Identificateur du délégataire     & Societe ALSA
-				TANGER                                                                      \\
-				\hline
-			\end{tabularx}
-			\caption{Table contrat}
-		\end{center}
-	\end{table}
+	\begin{itemize}
+		\item[•] Les données d'entête: Ils représentes les informations qui définissent un contrat. Certes, ils peuvent être gérer, mais ils ne dépendent pas des périodes. Ils ne peuvent pas être changées sauf dans le cadre d'une révision ou d'un avenant.
+		\item[•] Les données des référentiels: Ils représentes les informations qui ne dépendent ni du contrat et ni de la période. En effet, il peuvent être inclus dans la définitions d'un contrat.
+		\item[•] Les données d'avancements: Ils représentes les informations qui dépendent du contrat et de la période.
+	\end{itemize}
 
-	\begin{table}[H]
-	
-		\begin{center}
-			\begin{tabularx}{17cm}{|p{4cm}|p{4cm}|X|}
-				\hline
-				\textbf{Attribut} & \textbf{Signification}      &
-				\textbf{Exemple}                                                                              \\
-				\hline
-				IDRevision        & Identificateur de révision  & 30                                          \\
-				\hline
-				Date              &                             & En cours                                    \\
-				\hline
-				Motif             &                             & Parc insuffisant et déséquilibre du contrat \\
-				\hline
-				IDAven            & Identificateur de l'avenant & 20                                          \\
-				\hline
-			\end{tabularx}
-			\caption{Table révision}
-		\end{center}
-	\end{table}
+	\subsubsection{• Les données d'entête}
+
+	Cette catégorie groupe les données des contrats, des révisions, des avenants, des tarifs, etc.
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|X|X|}
+			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
 				\hline
-				\textbf{Attribut} & \textbf{Signification}            &
-				\textbf{Exemple}                                                       \\
+				\textbf{Attribut}    & \textbf{Signification} & \textbf{Exemple} \\
 				\hline
-				IDAvenant         & Identificateur de l'avenant       & 20             \\
+				NumContrat           & Numéro du Contrat      & 45858            \\
 				\hline
-				Date              &                                   & 1-Jun-14       \\
+				LibelleContrat       &                        &                  \\
 				\hline
-				Motif             &                                   &                \\
+				DateDemarrageContrat &                        &                  \\
 				\hline
-				IDCont            & Identificateur du contrat         & 11             \\
+				DateFinContrat       &                        &                  \\
 				\hline
-				Duree             &                                   & 10 ans         \\
+				DateVisa             &                        &                  \\
 				\hline
-				Status            & si l’avenant est actif ou non     & actif          \\
+				DureeContrat         &                        &                  \\
 				\hline
-				NombreCommunes    & Nombre de communes desservis      & 15             \\
+				Delegant             &                        &                  \\
 				\hline
-				Population        &                                   & 1 105 783 Habt \\
+				Delegataire          &                        &                  \\
 				\hline
-				LonguerReseau     & Longueur du réseau                & 849,4 Km       \\
+				Autre Partenaire     &                        &                  \\
 				\hline
-				NombreLignes      &                                   & 45 lignes      \\
+				NumAvenant           &                        &                  \\
 				\hline
-				LLUrbaines        & Longueur des lignes urbaines      & 315,4 Km       \\
+				LibelleAvenant       &                        &                  \\
 				\hline
-				LLPeripheriques   & Longueur des lignes périphériques & 534
-				Km                                                                     \\
+				DateAvenant          &                        &                  \\
+				\hline
+				MotifAvenant         &                        &                  \\
+				\hline
+				Status               &                        &                  \\
+				\hline
+				NumRevision          &                        &                  \\
+				\hline
+				LibelleRevision      &                        &                  \\
+				\hline
+				DateRevision         &                        &                  \\
+				\hline
+				MotifRevision        &                        &                  \\
 				\hline
 			\end{tabularx}
-			\caption{Table avenant}
+			\caption{Table d'entête}
+		\end{center}
+	\end{table}
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
+				\hline
+				\textbf{Attribut}                              & \textbf{Signification} & \textbf{Exemple} \\
+				\hline
+				Nombre de communes desservies                  &                        &                  \\
+				\hline
+				Population                                     &                        &                  \\
+				\hline
+				LongueurReseau                                 &                        &                  \\
+				\hline
+				LongueurLignesUrbaines                         &                        &                  \\
+				\hline
+				LongueurLignesPeripheriques                    &                        &                  \\
+				\hline
+				NombreLignes                                   &                        &                  \\
+				\hline
+				PrixMinTarifScolaire                           &                        &                  \\
+				\hline
+				PrixMaxTarifScolaire                           &                        &                  \\
+				\hline
+				PrixMinTarifNormal                             &                        &                  \\
+				\hline
+				PrixMaxTarifNormal                             &                        &                  \\
+				\hline
+				PrixMinTarifConvention                         &                        &                  \\
+				\hline
+				PrixMaxTarifConvention                         &                        &                  \\
+				\hline
+				ValeurInvestissementContractuelle delegant     &                        &                  \\
+				\hline
+				NombreBusContractuel delegant                  &                        &                  \\
+				\hline
+				NombreAbriBusContractuel delegant              &                        &                  \\
+				\hline
+				NombreArretContractuel delegant                &                        &                  \\
+				\hline
+				NombreAireStationnementContractuel delegant    &                        &                  \\
+				\hline
+				ValeurInvestissementContractuelle delegataire  &                        &                  \\
+				\hline
+				NombreBusContractuel delegataire               &                        &                  \\
+				\hline
+				NombreAbriBusContractuel delegataire           &                        &                  \\
+				\hline
+				NombreArretContractuel delegataire             &                        &                  \\
+				\hline
+				NombreAireStationnementContractuel delegataire &                        &                  \\
+				\hline
+				ValeurInvestissementContractuelle Autre        &                        &                  \\
+				\hline
+				NombreBusContractuel Autre                     &                        &                  \\
+				\hline
+				NombreAbriBusContractuel Autre                 &                        &                  \\
+				\hline
+			\end{tabularx}
+			\caption{Suite 1 de la table d'entête}
+		\end{center}
+	\end{table}
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
+				\hline
+				\textbf{Attribut}                        & \textbf{Signification} & \textbf{Exemple} \\
+				\hline
+				NombreArretContractuel Autre             &                        &                  \\
+				\hline
+				NombreAireStationnementContractuel Autre &                        &                  \\
+				\hline
+			\end{tabularx}
+			\caption{Suite 2 de la table d'entête}
 		\end{center}
 	\end{table}
 
-    \subsubsection{Les données des référentiels}
+	\subsubsection{Les données des référentiels}
     
     Cette catégorie groupe les données des délégataires, des délégants et des communes.
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|X|X|}
+			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
 				\hline
-				\textbf{Attribut} & \textbf{Signification}        &
-				\textbf{Exemple}                                                        \\
+				\textbf{Attribut} & \textbf{Signification} & \textbf{Exemple} \\
 				\hline
-				IDDelegataire     & Identificateur du délégataire & 40                  \\
-				\hline
-				Nom               & Nom du délégataire            & Société ALSA TANGER \\
-				\hline
-			\end{tabularx}
-			\caption{Référentiel des délégataires}
-		\end{center}
-	\end{table}
-
-	\begin{table}[H]
-		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|X|X|}
-				\hline
-				\textbf{Attribut} & \textbf{Signification}       &
-				\textbf{Exemple}                                                        \\
-				\hline
-				IDDeleguant       & Identificateur du délégant   & 50                   \\
-				\hline
-				Nom               & nom du délégant              & la commune de Tanger \\
-				\hline
-				IDCommune         & Identificateur de la commune & 60                   \\
+				NomDelegant       &                        &                  \\
 				\hline
 			\end{tabularx}
 			\caption{Référentiel des délégants}
@@ -780,317 +820,407 @@
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|X|X|}
+			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
 				\hline
-				\textbf{Attribut} & \textbf{Signification}       &
-				\textbf{Exemple}                                                        \\
+				\textbf{Attribut} & \textbf{Signification} & \textbf{Exemple} \\
 				\hline
-				IDCommune         & Identificateur de la commune & 60                   \\
-				\hline
-				Nom               & nom de la commune            & la commune de Tanger \\
+				NomDelegataire    &                        &                  \\
 				\hline
 			\end{tabularx}
-			\caption{Référentiel des communes}
+			\caption{Référentiel des délégataires}
 		\end{center}
 	\end{table}
 
-    \subsubsection{Les données des avancements}
+	\subsubsection{Les données des avancements}
     
     Cette catégorie groupe les données d'effectif personnel, des investissements, des matériaux roulants et fixes, etc...
 
+
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|X|X|}
+			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
 				\hline
-				\textbf{Attribut} & \textbf{Signification}                 &
-				\textbf{Exemple}                                                        \\
+				\textbf{Attribut} & \textbf{Signification} & \textbf{Exemple} \\
 				\hline
-				IDEP              & Identificateur de l'effectif personnel & 80         \\
+				numcontrat       & Numéro du Contrat      & 25462            \\
 				\hline
-				IDAven            & Identificateur de l'avenant            & 20         \\
+				numavenant       &                        &                  \\
 				\hline
-				Profil            & Profil du personnel                    & Conducteur \\
+				numrevision      &                        &                  \\
 				\hline
-				Période           & semestre                               & T1         \\
+				valeur delegant   &                        &                  \\
 				\hline
-				Année             &                                        & 2014       \\
+				abri delegant     &                        &                  \\
+				\hline
+				arret delegant    &                        &                  \\
+				\hline
+				bus delegant      &                        &                  \\
+				\hline
+				air delegant      &                        &                  \\
+				\hline
+				air delegataire   &                        &                  \\
+				\hline
+				valeur autre      &                        &                  \\
+				\hline
+				abri autre        &                        &                  \\
+				\hline
+				arret autre       &                        &                  \\
+				\hline
+				bus autre         &                        &                  \\
+				\hline
+				air autre         &                        &                  \\
+				\hline
+				datedemiseajour   &                        &                  \\
+				\hline
+				periode           & Période                & 2020/S1          \\
 				\hline
 			\end{tabularx}
-			\caption{Table effectif personnel}
+			\caption{Table d'investissements réalisés}
 		\end{center}
 	\end{table}
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|p{4cm}|X|p{4cm}|}
+			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
 				\hline
-				\textbf{Attribut} & \textbf{Signification}                            &
-				\textbf{Exemple}                                                                    \\
+				\textbf{Attribut}                      & \textbf{Signification} & \textbf{Exemple} \\
 				\hline
-				IDInvst           & Identificateur de l'investissement                & 90          \\
+				NumContrat                             & Numéro du Contrat      & 25462            \\
 				\hline
-				Description       & Description de l'investissement                    & Bus
-				touristique                                                                         \\
+				NumRevision                            &                        &                  \\
 				\hline
-				Type              & Type de l'investissement (contractuel ou réalisé) &
-				contractuel                                                                         \\
+				Numavenant                             &                        &                  \\
 				\hline
-				Valeur            & la valeur de l'investissement                     & 184,131,445 \\
+				abris bus nombre                       &                        &                  \\
 				\hline
-				Période           & semestre                                          & T1          \\
+				abris bus age moyen                    &                        &                  \\
 				\hline
-				Année             &                                                   & 2014        \\
+				abris bus satisfaction                 &                        &                  \\
 				\hline
-				Partenaire        &                                                   & Partenaire  \\
+				abris bus capacité totale              &                        &                  \\
+				\hline
+				arrêts nombre                          &                        &                  \\
+				\hline
+				arrêts age moyen                       &                        &                  \\
+				\hline
+				arrêts satisfaction                    &                        &                  \\
+				\hline
+				arrêts capacité totale                 &                        &                  \\
+				\hline
+				ateliers nombre                        &                        &                  \\
+				\hline
+				atelier age moyen                      &                        &                  \\
+				\hline
+				ateliers satisfaction                  &                        &                  \\
+				\hline
+				ateliers capacité totale               &                        &                  \\
+				\hline
+				aires de stationnement nombres         &                        &                  \\
+				\hline
+				aires de stationnement age moyen       &                        &                  \\
+				\hline
+				aires de stationnement satisfaction    &                        &                  \\
+				\hline
+				aires de stationnement capacité totale &                        &                  \\
+				\hline
+				guichet nombre                         &                        &                  \\
+				\hline
+				guichet age moyen                      &                        &                  \\
+				\hline
+				guichet capacité totale                &                        &                  \\
+				\hline
+				guichet satisfaction                   &                        &                  \\
+				\hline
+				Période                                &                        &                  \\
+				\hline
+				date de mise a jour                    &                        &                  \\
 				\hline
 			\end{tabularx}
-			\caption{Table investissement}
+			\caption{Table des matériaux fixes}
 		\end{center}
 	\end{table}
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|X|X|}
+			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
 				\hline
-				\textbf{Attribut} & \textbf{Signification}               &
-				\textbf{Exemple}                                                        \\
+				\textbf{Attribut}             & \textbf{Signification} & \textbf{Exemple} \\
 				\hline
-				IDMatCirculant    & Identificateur du materiel circulant &
-				100                                                                     \\
+				Numcontrat                    & Numéro du contrat      & 54225            \\
 				\hline
-				Nombre            &                                      & 59           \\
+				Numrevision                   &                        &                  \\
 				\hline
-				AgeMoyen          &                                      & 6,68 ans     \\
+				Numavenant                    &                        &                  \\
 				\hline
-				Kmparcourus       &                                      & 88,361,937   \\
+				Bus standard nombre           &                        &                  \\
 				\hline
-				Periode           & semestre                             & T2           \\
+				bus standard age moyen        &                        &                  \\
 				\hline
-				Annee             &                                      & 2015         \\
+				bus standard km parcourus     &                        &                  \\
 				\hline
-				Description       &                                      & Bus standard \\
+				bus articulé nombre           &                        &                  \\
 				\hline
-				IDAven            & Identificateur de l'avenant          & 20           \\
+				bus articulé age moyen        &                        &                  \\
+				\hline
+				bus articulés km parcourus    &                        &                  \\
+				\hline
+				bus éléctrique nombre         &                        &                  \\
+				\hline
+				bus éléctrique age moyen      &                        &                  \\
+				\hline
+				bus éléctrique km parcourus   &                        &                  \\
+				\hline
+				bus sites prores nombre       &                        &                  \\
+				\hline
+				bus sites prores age moyen    &                        &                  \\
+				\hline
+				bus sites prores km parcourus &                        &                  \\
+				\hline
+				Période                       &                        &                  \\
+				\hline
+				Date de mise a jour           &                        &                  \\
 				\hline
 			\end{tabularx}
-			\caption{Table matériel circulant}
+			\caption{Table des matériaux circulants}
 		\end{center}
 	\end{table}
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|X|X|}
+			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
 				\hline
-				\textbf{Attribut} & \textbf{Signification}          &
-				\textbf{Exemple}                                                             \\
+				\textbf{Attribut}                                                     & \textbf{Signification} & \textbf{Exemple} \\
 				\hline
-				IDMatFixe         & Identificateur du materiel fixe & 200                    \\
+				Numcontrat                                                            & Numéro du contrat      & 4545             \\
 				\hline
-				Periode           & semestre                        & T3                     \\
+				Numavenant                                                            &                        &                  \\
 				\hline
-				Annee             &                                 & 2015                   \\
+				Numrevision                                                           &                        &                  \\
 				\hline
-				Nombre            &                                 & 2                      \\
+				Plan de Maintenance Qualité  PQM                                      &                        &                  \\
 				\hline
-				AgeMoyen          &                                 & 7 ans                  \\
+				Réclamation des usagers                                               &                        &                  \\
 				\hline
-				Capacite Totale   &                                 & 198 places             \\
+				Equipement des points d'arrêt                                         &                        &                  \\
 				\hline
-				Description       &                                 & Aires de stationnement \\
+				Système d'information de type SAEV  Systèmes d'Aide à l'Exploitation et
+				à l'Information Voyageurs                                             &                        &                  \\
 				\hline
-				IDAven            & Identificateur de l'avenant     & 20                     \\
+				Système de géolocalisation                                            &                        &                  \\
+				\hline
+				Site internet et information disponible en temps réel Adresse         &                        &                  \\
+				\hline
+				Site internet et information disponible en temps réel Adressedescp    &                        &                  \\
+				\hline
+				Site internet et information disponible en temps réel Informations
+				Statiques sur le réseau                                               &                        &                  \\
+				\hline
+				Site internet et information disponible en temps réel Informations
+				Statiques sur le réseaudescp                                          &                        &                  \\
+				\hline
+				Site internet et information disponible en temps réel Horaire du
+				services                                                              &                        &                  \\
+				\hline
+				Site internet et information disponible en temps réel Horaire du
+				services descp                                                        &                        &                  \\
+				\hline
+				Site internet et information disponible en temps réel Information sur
+				les perturbations                                                     &                        &                  \\
+				\hline
+				Site internet et information disponible en temps réel Information sur
+				les perturbationsdescp                                                &                        &                  \\
+				\hline
+				Site internet et information disponible en temps réel tarifs applique &                        &                  \\
+				\hline
+				Site internet et information disponible en temps réel tarifs
+				appliquedescp                                                         &                        &                  \\
+				\hline
+				Site internet et information disponible en temps réel vente en ligne  &                        &                  \\
+				\hline
+				Site internet et information disponible en temps réel vente en
+				lignedescp                                                            &                        &                  \\
 				\hline
 			\end{tabularx}
-			\caption{Table matériel fixe}
+			\caption{Table de la qualité des services}
 		\end{center}
 	\end{table}
-	
-			\begin{table}[H]
+	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|X|X|}
+			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
 				\hline
-				\textbf{Attribut} & \textbf{Signification}      &
-				\textbf{Exemple}                                                        \\
+				\textbf{Attribut}                                                    & \textbf{Signification} & \textbf{Exemple} \\
 				\hline
-				IDTarif           & Identificateur du tarif     & 70                    \\
+				Site internet et information disponible en temps réel correspondance &                        &                  \\
 				\hline
-				IDAven            & Identificateur de l'avenant & 20                    \\
+				Site internet et information disponible en temps
+				réel correspondancedescp                                             &                        &                  \\
 				\hline
-				Description       & une description du tarif    & tarif normale: ticket
-				réseau urbain                                                           \\
+				Site internet et information disponible en temps réel intermodalité  &                        &                  \\
 				\hline
-				Valeurs           & les valeurs du tarif        & 2,5DH 3,5 DH          \\
+				Site internet et information disponible en temps
+				réel intermodalitédescp                                              &                        &                  \\
 				\hline
-				Annee             &                             & 2014                  \\
+				wifi embarqué                                                        &                        &                  \\
 				\hline
-				Periode           & Semestre                    & T1                    \\
+				Vidéosurveillance embarquée                                          &                        &                  \\
+				\hline
+				Centre d'appel                                                       &                        &                  \\
+				\hline
+				période                                                              &                        &                  \\
+				\hline
+				date de mise a jour                                                  &                        &                  \\
 				\hline
 			\end{tabularx}
-			\caption{Table tarifs}
+			\caption{Suite de la table de la qualité des services}
 		\end{center}
 	\end{table}
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|p{2.75cm}|X|p{2.5cm}|}
+			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
 				\hline
-				\textbf{Attribut}                            & \textbf{Signification}                              &
-				\textbf{Exemple}                                                                                                   \\
+				\textbf{Attribut}                                                 & \textbf{Signification} & \textbf{Exemple} \\
 				\hline
-				IDQS                                         & Identificateur du qualité de service                & 300           \\
+				Numcontrat                                                        & Numéro du contrat      & 4542             \\
 				\hline
-				IDAven                                       & Identificateur de l'avenant                         & 20            \\
+				Numavenant                                                        &                        &                  \\
 				\hline
-				Période                                      & semestre                                            & T1            \\
+				Numrevision                                                       &                        &                  \\
 				\hline
-				Année                                        &                                                     & 2016          \\
+				Nombre moyen de voyageurs/jour  sur un semestre                   &                        &                  \\
 				\hline
-				PQM                                          & Plan du maintenance Qualité                         & oui           \\
+				Nombre moyen place vide /jour  sur un semestre                    &                        &                  \\
 				\hline
-				Réclamation                                  & Réclamation des usagers                             & 22/semestre   \\
+				Total annuel des voyageurs  sur un semestre                       &                        &                  \\
 				\hline
-				Équipement                                   & Équipement des points d'arrêt                       & Signalisation \\
+				Tickets vendus/semestre totale                                    &                        &                  \\
 				\hline
-				SAEV                                         & Système d'information de type SAEV (Système d'aide à
-				l'exploitation et à l'information voyageurs) & OUI                                                                 \\
+				Tickets vendus/semestre tarif scolaire                            &                        &                  \\
 				\hline
-				SYSGeo                                       & Système de géolocalisation                          & oui           \\
+				Tickets vendus/semestre tarif normal                              &                        &                  \\
 				\hline
-				WifiEmb                                      & wifi embarqué                                       & non           \\
+				Tickets vendus/semestre tarif conventions                         &                        &                  \\
 				\hline
-				VedioSurvEmb                                 & video surveillance embarquée                        & oui           \\
+				Km parcourus/semestre totale semestriel parcouru                  &                        &                  \\
 				\hline
-				CentreAppel                                  & centre d'appel                                      & non           \\
+				Km parcourus/semestre moyenne par ligne                           &                        &                  \\
 				\hline
-				Adresse                                      &                                                     & oui           \\
+				Km parcourus/semestre trajet le plus long                         &                        &                  \\
 				\hline
-				InfoStatReseau                               & Informations statiques sur le réseau                &
-				oui                                                                                                                \\
+				Km parcourus/semestre trajet le plus court                        &                        &                  \\
 				\hline
-				HoraireServ                                  & horaires du service                                 & oui           \\
+				Km parcourus/semestre temps max trajet                            &                        &                  \\
 				\hline
-				InfosPertu                                   & informations sur les perturbations                  & non           \\
+				Km parcourus/semestre temps min trajet                            &                        &                  \\
 				\hline
-				TarifsApp                                    & Tarifs appliqués                                    & oui           \\
+				Fréquence moyenne de passage unité/heure                          &                        &                  \\
 				\hline
-				VenteEnLigne                                 &                                                     & non           \\
+				Vitesse commerciale moyenne Durée moyenne des trajets bus         &                        &                  \\
 				\hline
-				Correspondances                              &                                                     & oui           \\
+				Ponctualité Ecart moyen entre horaire contractuel et horaire réel &                        &                  \\
 				\hline
-				Intermodalité                                &                                                     & oui           \\
+				Taux moyen de remplissage                                         &                        &                  \\
+				\hline
+				Taux de transport à vide                                          &                        &                  \\
+				\hline
+				Horaires du service departHeure                                   &                        &                  \\
+				\hline
+				Horaires du service departmin                                     &                        &                  \\
 				\hline
 			\end{tabularx}
-			\caption{Table qualité de service}
+			\caption{Table des aspects commerciaux}
+		\end{center}
+	\end{table}
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
+				\hline
+				\textbf{Attribut}                               & \textbf{Signification} & \textbf{Exemple} \\
+				\hline
+				Horaires du service finheure                    &                        &                  \\
+				\hline
+				Horaires du service finmin                      &                        &                  \\
+				\hline
+				Pannes des bus sur la voie publique             &                        &                  \\
+				\hline
+				Accidents de circulation des bus                &                        &                  \\
+				\hline
+				Délai moyes d'évacuation des véhicules en panne &                        &                  \\
+				\hline
+				période                                         &                        &                  \\
+				\hline
+				date de mise a jour                             &                        &                  \\
+				\hline
+			\end{tabularx}
+			\caption{Suite de la table des aspects commerciaux}
 		\end{center}
 	\end{table}
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|X|X|}
+			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
 				\hline
-				\textbf{Attribut} & \textbf{Signification}               &
-				\textbf{Exemple}                                                        \\
+				\textbf{Attribut}                                              & \textbf{Signification} & \textbf{Exemple} \\
 				\hline
-				IDAC              & Identificateur d’aspect commercial & 400          \\
+				Numcontrat                                                     & Numéro du contrat      & 4525             \\
 				\hline
-				IDAven            & Identificateur de l'avenant          & 20           \\
+				numavenant                                                     &                        &                  \\
 				\hline
-				NbrVoyJrs         & nombre de voyageur par jours         & 117,442      \\
+				Numrevision                                                    &                        &                  \\
 				\hline
-				NbrPlaceVidJrs    & nombre de places vides par jours     &
-				283                                                                     \\
+				Consommation moyenne par km et par type de bus bus standard    &                        &                  \\
 				\hline
-				TotAnnVoyJrs      & Total annuel de voyageur par jours   &
-				24,662,833                                                              \\
+				Consommation moyenne par km et par type de bus bus articulé    &                        &                  \\
 				\hline
-				TicketsVendu      & Nombre de tickets vendu             & 37,781,318   \\
+				Consommation moyenne par km et par type de bus bus éléctrique  &                        &                  \\
 				\hline
-				Kmparcourus       &                                      & 8 018 629 Km \\
+				Consommation moyenne par km et par type de bus bus sites pores &                        &                  \\
 				\hline
-				FreqMoyPass       & fréquence moyenne de passage         & 1.33
-				passage/jours                                                           \\
+				Consommation carburant annuelle pour l'ensemble du parc        &                        &                  \\
 				\hline
-				VitesseComm       & vitesse commerciale moyenne          & 17
-				Km/heure                                                                \\
+				Consommation totale en electricité annuelle                    &                        &                  \\
 				\hline
-				Ponctualité       &                                      & 9 min        \\
+				emission Carbone  Co2                                          &                        &                  \\
 				\hline
-				TauxRempli        & Taux de remplissage                  & 71.92\%      \\
+				période                                                        &                        &                  \\
 				\hline
-				HeurDepartServ    & heure de départ de service           & 4:45H        \\
-				\hline
-				HeureFinServ      & Heure de fin de service              & 22:45H       \\
-				\hline
-				Pannes            & nombre de pannes                     & 6500         \\
-				\hline
-				Accidents         & nombre d'accidents                   & 511          \\
-				\hline
-				DelaiMoyEvacu     & Délai moyen d'évacuation             & 15 min       \\
-				\hline
-				Période           & semestre                             & T3           \\
-				\hline
-				Année             &                                      & 2016         \\
+				date de mise a jour                                            &                        &                  \\
 				\hline
 			\end{tabularx}
-			\caption{Table aspect commercial}
+			\caption{Table de l'effecacité énergétique}
 		\end{center}
 	\end{table}
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|X|X|}
+			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
 				\hline
-				\textbf{Attribut}    & \textbf{Signification}                  &
-				\textbf{Exemple}                                                          \\
+				\textbf{Attribut}       & \textbf{Signification} & \textbf{Exemple} \\
 				\hline
-				IDEffEnMoy           & Identificateur d’efficacité énergétique &
-				500                                                                       \\
+				Numcontrat              & Numéro du contrat      & 4525             \\
 				\hline
-				IDAven               & Identificateur de l'avenant             & 20       \\
+				Numavenant              &                        &                  \\
 				\hline
-				ConsomationCarbu     & la consommation du carburant             & 4 616.72
-				Tonnes                                                                    \\
+				numrevision             &                        &                  \\
 				\hline
-				ConsomationTotalElec & la consommation total en électricité     & 490
-				996.47 KWH                                                                \\
+				Conducteurs             &                        &                  \\
 				\hline
-				EmmissionCarb        & Émission du carbone CO2                 & 14 055
-				Tonnes                                                                    \\
+				controleur              &                        &                  \\
 				\hline
-				Période              & semestre                                & T2       \\
+				mécanicier              &                        &                  \\
 				\hline
-				Année                &                                         & 2016     \\
+				personnel administratif &                        &                  \\
+				\hline
+				période                 &                        &                  \\
+				\hline
+				date a jour             &                        &                  \\
 				\hline
 			\end{tabularx}
-			\caption{Table d’efficacité énergétique moyenne}
+			\caption{Table d'effectif personnel}
 		\end{center}
 	\end{table}
 
-	\begin{table}[H]
-		\begin{center}
-			\begin{tabularx}{17.5cm}{|p{4cm}|X|p{4cm}|}
-				\hline
-				\textbf{Attribut} & \textbf{Signification}                        &
-				\textbf{Exemple}                                                            \\
-				\hline
-				IDEffEnTotal      & Identificateur d’efficacité énergétique total &
-				600                                                                         \\
-				\hline
-				IDAven            & Identificateur de l'avenant                   & 20      \\
-				\hline
-				ConsomationMoy    & Consommation moyenne par Km et par type de bus &
-				26.97 litres/100km                                                          \\
-				\hline
-				TypeMoyenTrans    & Type du moyen de transport                    & minibus \\
-				\hline
-				Période           & semestre                                      & T2      \\
-				\hline
-				Année             &                                               & 2016    \\
-				\hline
-			\end{tabularx}
-			\caption{Table d’efficacité énergétique total}
-		\end{center}
-	\end{table}
+
 	\subsection{Le modèle conceptuel des données}
 	Le modèle conceptuel des données est une représentation statique du système d’information.
 	Il a pour but d’écrire de façon formelle les données qui seront utilisées par le système d’information.
@@ -1143,10 +1273,5 @@
 \section{Cours}
 \section{Sites Web}
 \section{Documentations}
-\chapter{Liste des Abréviations}
-\begin{itemize}
-	\item[•] \textbf{CDC:} Cahier des charges.
-	\item[•] \textbf{MCD:} Modèle conceptuel des données.
-\end{itemize}
 
 \end{document}
