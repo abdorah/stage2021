@@ -93,16 +93,13 @@
 
 	\end{center}
 \end{titlepage}
-\pagenumbering{arabic} \setcounter{page}{1}
-\addcontentsline{toc}{chapter}{Remerciements}
-\begin{doublespace}
-	\begin{center}
-		\vspace*{1cm}
-		\textbf{\huge{Remerciements}}
-	\end{center}
-	\fancyhead[R]{\textbf{Remerciements}}
-	\fancyhead[L]{\hspace*{5cm}}
 
+\newpage
+
+\pagenumbering{roman} \setcounter{page}{1}
+\begin{doublespace}
+	\chapter*{\centering Remerciements}
+	\addcontentsline{toc}{chapter}{Remerciements}
 	\textit{
 		Avant d'aborder la description des parties importantes du projet,
 		j'aimerai tout d’abord exprimer ma gratitude
@@ -123,14 +120,11 @@
 	}
 
 
-	\clearpage
+
+	\newpage
+
+	\chapter*{\centering Résumé}
 	\addcontentsline{toc}{chapter}{Résumé}
-	\begin{center}
-		\vspace*{1cm}
-		\textbf{\huge{Résumé}}
-	\end{center}
-	\fancyhead[R]{\textbf{Résumé}}
-	\fancyhead[L]{\hspace*{5cm}}
 
 	Ce document représente une étude synthétique du travail réalisé dans le
 	cadre de mon stage d'été de deuxième année. J'ai effectué mon stage au sein de
@@ -156,14 +150,11 @@
 	\textbf	{\\Mots clés :\\ Gestion, Suivi, Donnée, Contrats délégués,
 		Transport urbain, Centralisation, Application low-code.}
 
-	\clearpage
+
+	\newpage
+
+	\chapter*{\centering Abstract}
 	\addcontentsline{toc}{chapter}{Abstract}
-	\begin{center}
-		\vspace*{1cm}
-		\textbf{\huge{Abstract}}
-	\end{center}
-	\fancyhead[R]{\textbf{Abstract}}
-	\fancyhead[L]{\hspace*{5cm}}
 
 	This document represents a synthetic study of the work carried out as part
 	of my second-year summer internship.
@@ -187,27 +178,25 @@
 
 \end{doublespace}
 
+
 \newpage
+
 \fancyhead[R]{\textbf{Table des matières}}
 \fancyhead[L]{\hspace*{5cm}}
 \tableofcontents
 
-\cleardoublepage
+\newpage
 \listoffigures
 
-\cleardoublepage
+\newpage
 \renewcommand{\listtablename}{Table des tableaux}
 \listoftables
 
 \newpage
+
 \begin{doublespace}
+	\chapter*{\centering Introduction générale}
 	\addcontentsline{toc}{chapter}{Introduction générale}
-	\begin{center}
-		\vspace*{1cm}
-		\textbf{\huge{Introduction générale}}
-	\end{center}
-	\fancyhead[R]{\textbf{Introduction générale}}
-	\fancyhead[L]{\hspace*{5cm}}
 
 	Dans le cadre de la modernisation de la gestion des secteurs publics
 	collectifs
@@ -242,20 +231,19 @@
 	solution simple pour la gestion et la représentation des données en
 	question.
 
-	\clearpage
+
+	\newpage
+
+	\chapter*{\centering Liste des abréviations}
 	\addcontentsline{toc}{chapter}{Liste des abréviations}
-	\begin{center}
-		\vspace*{1cm}
-		\textbf{\huge{Liste des abréviations}}
-	\end{center}
-	\fancyhead[R]{\textbf{Liste des abréviations}}
-	\fancyhead[L]{\hspace*{5cm}}
 	\begin{itemize}
 		\item[•] \textbf{CDC:} Cahier des charges.
 		\item[•] \textbf{MCD:} Modèle conceptuel des données.
 	\end{itemize}
 
 	\newpage
+	\pagenumbering{arabic} \setcounter{page}{1}
+
 	\chapter{Cadre générale du projet}
 	\fancyhead[R]{\textbf{Chapitre \thechapter: Cadre générale du projet}}
 	\fancyhead[L]{\hspace*{5cm}}
@@ -1256,7 +1244,9 @@
 	\fancyhead[R]{\textbf{Chapitre \thechapter: Réalisation}}
 	\fancyhead[L]{\hspace*{5cm}}
 \end{doublespace}
-\clearpage
+
+\newpage
+
 \appendix
 \pagenumbering{alph} \setcounter{page}{1}
 \chapter{Références}
