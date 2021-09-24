@@ -6,14 +6,8 @@
 \usepackage{tabularx}
 \usepackage{graphicx}
 \usepackage{wrapfig}
-\usepackage{lscape}
-\usepackage{bookmark}
-\usepackage{rotating}
-\usepackage{subcaption}
 \usepackage{float}
-\usepackage{eurosym}
 \usepackage[headheight=13pt,top=3cm, bottom=2cm, left=1cm, right=1cm]{geometry}
-\usepackage{pdfpages}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \usepackage{hyperref}
@@ -24,13 +18,6 @@
     filecolor=black,
     urlcolor=black,
 }
-\usepackage{array,multirow,makecell}
-\setcellgapes{3pt}
-\setlength{\parindent}{1.1cm}
-\makegapedcells
-\newcolumntype{L}[1]{>{\raggedright\arraybackslash}b{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}b{#1}}
-\newcolumntype{C}[1]{>{\centering\arraybackslash}b{#1}}
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{1pt}
 \fancyfoot[L]{ENSIAS}
@@ -119,8 +106,6 @@
 		conditions.
 	}
 
-
-
 	\newpage
 
 	\chapter*{\centering Résumé}
@@ -150,7 +135,6 @@
 	\textbf	{\\Mots clés :\\ Gestion, Suivi, Donnée, Contrats délégués,
 		Transport urbain, Centralisation, Application low-code.}
 
-
 	\newpage
 
 	\chapter*{\centering Abstract}
@@ -177,7 +161,6 @@
 		Urban transport, Centralization, Low-code application.}
 
 \end{doublespace}
-
 
 \newpage
 
@@ -231,7 +214,6 @@
 	solution simple pour la gestion et la représentation des données en
 	question.
 
-
 	\newpage
 
 	\chapter*{\centering Liste des abréviations}
@@ -242,8 +224,8 @@
 	\end{itemize}
 
 	\newpage
-	\pagenumbering{arabic} \setcounter{page}{1}
 
+	\pagenumbering{arabic} \setcounter{page}{1}
 	\chapter{Cadre générale du projet}
 	\fancyhead[R]{\textbf{Chapitre \thechapter: Cadre générale du projet}}
 	\fancyhead[L]{\hspace*{5cm}}
@@ -819,41 +801,41 @@
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|p{3cm}|X|p{1.5cm}|}
+			\begin{tabularx}{17.5cm}{|p{2.5cm}|X|p{2.5cm}|}
 				\hline
-				\textbf{Attribut} & \textbf{Signification} & \textbf{Exemple} \\
+				\textbf{Attribut} & \textbf{Signification}                                                                              & \textbf{Exemple} \\
 				\hline
-				numcontrat        & Numéro du Contrat      & 25462            \\
+				numcontrat        & Numéro du Contrat                                                                                   & 25462            \\
 				\hline
-				numavenant        &                        &                  \\
+				numavenant        & Numéro d'avenant                                                                                    & 14528            \\
 				\hline
-				numrevision       &                        &                  \\
+				numrevision       & Numéro de révision                                                                                  & 1552             \\
 				\hline
-				valeur delegant   &                        &                  \\
+				valeur\_delegant  & Somme invessti par le délégant                                                                      & 900000 Dhs       \\
 				\hline
-				abri delegant     &                        &                  \\
+				abri\_delegant    & Nombre des abris bus de délégant                                                                    & 6                \\
 				\hline
-				arret delegant    &                        &                  \\
+				arret\_delegant   & Nombre des arrêts de délégant                                                                       & 7                \\
 				\hline
-				bus delegant      &                        &                  \\
+				bus\_delegant     & Nombre des burs de délégant                                                                         & 50               \\
 				\hline
-				air delegant      &                        &                  \\
+				air\_delegant     & Nombre des aires de stationnement de délégant                                                       & 30               \\
 				\hline
-				air delegataire   &                        &                  \\
+				air\_delegataire  & Nombre des aires de stationnement de délégataire                                                    & 25               \\
 				\hline
-				valeur autre      &                        &                  \\
+				valeur\_autre     & Somme invessti par les autres partenaires (autre que le délégants et le délégataire)                & 800000 Dhs       \\
 				\hline
-				abri autre        &                        &                  \\
+				abri\_autre       & Nombre des abris bus des autres partenaires (autre que le délégants et le délégataire)              & 3                \\
 				\hline
-				arret autre       &                        &                  \\
+				arret\_autre      & Nombre des arrêts des autres partenaires (autre que le délégants et le délégataire)                 & 25               \\
 				\hline
-				bus autre         &                        &                  \\
+				bus\_autre        & Nombre des bus des autres partenaires (autre que le délégants et le délégataire)                    & 20               \\
 				\hline
-				air autre         &                        &                  \\
+				air\_autre        & Nombre des aires de stationnement des autres partenaires (autre que le délégants et le délégataire) & 15               \\
 				\hline
-				datedemiseajour   &                        &                  \\
+				datedemiseajour   & Date de mise à jour                                                                                 & 16/04/2021       \\
 				\hline
-				periode           & Période                & 2020/S1          \\
+				periode           & Année/semestre                                                                                      & 2020/S1          \\
 				\hline
 			\end{tabularx}
 			\caption{Table d'investissements réalisés}
@@ -862,59 +844,59 @@
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
+			\begin{tabularx}{17.5cm}{|X|X|p{2.5cm}|}
 				\hline
-				\textbf{Attribut}                      & \textbf{Signification} & \textbf{Exemple} \\
+				\textbf{Attribut}                          & \textbf{Signification}                     & \textbf{Exemple} \\
 				\hline
-				NumContrat                             & Numéro du Contrat      & 25462            \\
+				numcontrat                                 & Numéro du Contrat                          & 25462            \\
 				\hline
-				NumRevision                            &                        &                  \\
+				numavenant                                 & Numéro d'avenant                           & 14528            \\
 				\hline
-				Numavenant                             &                        &                  \\
+				numrevision                                & Numéro de révision                         & 1552             \\
 				\hline
-				abris bus nombre                       &                        &                  \\
+				abris\_bus\_nombre                         & Nombre des abris bus                       & 15               \\
 				\hline
-				abris bus age moyen                    &                        &                  \\
+				abris\_bus\_age moyen                      & Âge moyen de bus                           & 5 ans            \\
 				\hline
-				abris bus satisfaction                 &                        &                  \\
+				abris\_bus\_satisfaction                   & Satisfusance des abris bus                 & 76\%             \\
 				\hline
-				abris bus capacité totale              &                        &                  \\
+				abris\_bus\_capacité totale                & Capacité totale des abris bus              & 30 personnes     \\
 				\hline
-				arrêts nombre                          &                        &                  \\
+				arrêts\_nombre                             & Nombre des arrêts                          & 50               \\
 				\hline
-				arrêts age moyen                       &                        &                  \\
+				arrêts\_age moyen                          & Âge moyen des arrêts                       & 5 ans            \\
 				\hline
-				arrêts satisfaction                    &                        &                  \\
+				arrêts\_satisfaction                       & Satisfusance des arrêts                    & 80\%             \\
 				\hline
-				arrêts capacité totale                 &                        &                  \\
+				arrêts\_capacité\_totale                   & Capacité totale des arrêts                 & 15 personnes     \\
 				\hline
-				ateliers nombre                        &                        &                  \\
+				ateliers\_nombre                           & Nombre des ateliers                        & 3                \\
 				\hline
-				atelier age moyen                      &                        &                  \\
+				atelier\_age\_moyen                        & Âge moyen des ateliers                     & 15 ans           \\
 				\hline
-				ateliers satisfaction                  &                        &                  \\
+				ateliers\_satisfaction                     & Satisfusance des ateliers                  & 70\%             \\
 				\hline
-				ateliers capacité totale               &                        &                  \\
+				ateliers\_capacité\_totale                 & Capacité totale des ateliers               & 100 personnes    \\
 				\hline
-				aires de stationnement nombres         &                        &                  \\
+				aires\_de\_stationnement\_nombres          & Nombre des aires de stationnement          & 45               \\
 				\hline
-				aires de stationnement age moyen       &                        &                  \\
+				aires\_de\_stationnement\_age\_moyen       & Âge moyen des aires de stationnement       & 7 ans            \\
 				\hline
-				aires de stationnement satisfaction    &                        &                  \\
+				aires\_de\_stationnement\_satisfaction     & Satisfusance des aires de stationnement    & 77\%             \\
 				\hline
-				aires de stationnement capacité totale &                        &                  \\
+				aires\_de\_stationnement\_capacité\_totale & Capacité totale des aires de stationnement & 70 personnes     \\
 				\hline
-				guichet nombre                         &                        &                  \\
+				guichet\_nombre                            & Nombre des guichets                        & 50 guichets      \\
 				\hline
-				guichet age moyen                      &                        &                  \\
+				guichet\_age\_moyen                        & Âge moyen des guichets                     & 7 ans            \\
 				\hline
-				guichet capacité totale                &                        &                  \\
+				guichet\_capacité\_totale                  & Capacité totale des guichets               & 10 personnes     \\
 				\hline
-				guichet satisfaction                   &                        &                  \\
+				guichet\_satisfaction                      & Satisfusance des guichets                  & 63\%             \\
 				\hline
-				Période                                &                        &                  \\
+				datedemiseajour                            & Date de mise à jour                        & 16/04/2021       \\
 				\hline
-				date de mise a jour                    &                        &                  \\
+				periode                                    & Année/semestre                             & 2020/S1          \\
 				\hline
 			\end{tabularx}
 			\caption{Table des matériaux fixes}
@@ -923,43 +905,43 @@
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
+			\begin{tabularx}{17.5cm}{|p{6cm}|X|p{2.5cm}|}
 				\hline
-				\textbf{Attribut}             & \textbf{Signification} & \textbf{Exemple} \\
+				\textbf{Attribut}                 & \textbf{Signification}                           & \textbf{Exemple} \\
 				\hline
-				Numcontrat                    & Numéro du contrat      & 54225            \\
+				numcontrat                        & Numéro du Contrat                                & 25462            \\
 				\hline
-				Numrevision                   &                        &                  \\
+				numavenant                        & Numéro d'avenant                                 & 14528            \\
 				\hline
-				Numavenant                    &                        &                  \\
+				numrevision                       & Numéro de révision                               & 1552             \\
 				\hline
-				Bus standard nombre           &                        &                  \\
+				Bus\_standard\_nombre             & Nombre des bus standard                          & 50               \\
 				\hline
-				bus standard age moyen        &                        &                  \\
+				bus\_standard\_age\_moyen         & Âge moyen des bus standard                       & 7 ans            \\
 				\hline
-				bus standard km parcourus     &                        &                  \\
+				bus\_standard\_km\_parcourus      & Nombre des Km parcourus des bus standard         & 80 Km            \\
 				\hline
-				bus articulé nombre           &                        &                  \\
+				bus\_articulé\_nombre             & Nombre des bus articulés                         & 20               \\
 				\hline
-				bus articulé age moyen        &                        &                  \\
+				bus\_articulé\_age\_moyen         & Âge moyen des bus articulés                      & 7 ans            \\
 				\hline
-				bus articulés km parcourus    &                        &                  \\
+				bus\_articulés\_km\_parcourus     & Nombre des Km parcourus des bus articulés        & 10500 Km         \\
 				\hline
-				bus éléctrique nombre         &                        &                  \\
+				bus\_éléctrique\_nombre           & Nombre des bus éléctriques                       & 10               \\
 				\hline
-				bus éléctrique age moyen      &                        &                  \\
+				bus\_éléctrique\_age\_moyen       & Âge moyen des bus éléctriques                    & 10 ans           \\
 				\hline
-				bus éléctrique km parcourus   &                        &                  \\
+				bus\_éléctrique\_km\_parcourus    & Nombre des Km parcourus des bus éléctriques      & 80000 Km         \\
 				\hline
-				bus sites prores nombre       &                        &                  \\
+				bus\_sites\_prores\_nombre        & Nombre des bus des sites prores                  & 15               \\
 				\hline
-				bus sites prores age moyen    &                        &                  \\
+				bus\_sites\_prores\_age\_moyen    & Âge moyen des bus des sites prores               & 15 ans           \\
 				\hline
-				bus sites prores km parcourus &                        &                  \\
+				bus\_sites\_prores\_km\_parcourus & Nombre des Km parcourus des bus des sites prores & 70000 Km         \\
 				\hline
-				Période                       &                        &                  \\
+				datedemiseajour                   & Date de mise à jour                              & 16/04/2021       \\
 				\hline
-				Date de mise a jour           &                        &                  \\
+				periode                           & Année/semestre                                   & 2020/S1          \\
 				\hline
 			\end{tabularx}
 			\caption{Table des matériaux circulants}
@@ -968,58 +950,50 @@
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
+			\begin{tabularx}{17.5cm}{|p{4cm}|X|p{2.5cm}|}
 				\hline
-				\textbf{Attribut}                                                     & \textbf{Signification} & \textbf{Exemple} \\
+				\textbf{Attribut}          & \textbf{Signification}                                                                                      & \textbf{Exemple} \\
 				\hline
-				Numcontrat                                                            & Numéro du contrat      & 4545             \\
+				numcontrat                 & Numéro du Contrat                                                                                           & 25462            \\
 				\hline
-				Numavenant                                                            &                        &                  \\
+				numavenant                 & Numéro d'avenant                                                                                            & 14528            \\
 				\hline
-				Numrevision                                                           &                        &                  \\
+				numrevision                & Numéro de révision                                                                                          & 1552             \\
 				\hline
-				Plan de Maintenance Qualité  PQM                                      &                        &                  \\
+				PQM                        & Plan de Maintenance Qualité                                                                                 & oui              \\
 				\hline
-				Réclamation des usagers                                               &                        &                  \\
+				Réclamation                & Réclamations des usagers                                                                                    & 152              \\
 				\hline
-				Equipement des points d'arrêt                                         &                        &                  \\
+				Equipements\_points\_arrêt & Equipements des points d'arrêt                                                                              & Poteaux          \\
 				\hline
-				Système d'information de type SAEV  Systèmes d'Aide à l'Exploitation et
-				à l'Information Voyageurs                                             &                        &                  \\
+				SAEV                       & Système d'information de type Systèmes d'Aide à l'Exploitation et
+				à l'Information Voyageurs  & non                                                                                                                            \\
 				\hline
-				Système de géolocalisation                                            &                        &                  \\
+				SysGeo                     & Système de géolocalisation                                                                                  & oui              \\
 				\hline
-				Site internet et information disponible en temps réel Adresse         &                        &                  \\
+				AdresseSTR                 & Site internet et information disponible en temps réel (adresse)                                             & non              \\
 				\hline
-				Site internet et information disponible en temps réel Adressedescp    &                        &                  \\
+				AdressedescpSTR            & Site internet et information disponible  en temps réel (Descption d'adresse)                                & oui              \\
 				\hline
-				Site internet et information disponible en temps réel Informations
-				Statiques sur le réseau                                               &                        &                  \\
+				ReseauSTR                  & Site internet et information disponible  en temps réel (Informations Statiques sur le réseau)               & oui              \\
 				\hline
-				Site internet et information disponible en temps réel Informations
-				Statiques sur le réseaudescp                                          &                        &                  \\
+				ReseaudescpSTR             & Site internet et information disponible  en temps réel (Descption des informations Statiques sur le réseau) & non              \\
 				\hline
-				Site internet et information disponible en temps réel Horaire du
-				services                                                              &                        &                  \\
+				HoraireServiceSTR          & Site internet et information disponible  en temps réel (Horaire du services)                                & oui              \\
 				\hline
-				Site internet et information disponible en temps réel Horaire du
-				services descp                                                        &                        &                  \\
+				HoraireServicedescpSTR     & Site internet et information disponible  en temps réel (Descption d'horaire du services)                    & oui              \\
 				\hline
-				Site internet et information disponible en temps réel Information sur
-				les perturbations                                                     &                        &                  \\
+				PerturbationsSTR           & Site internet et information disponible  en temps réel (Informations sur les perturbations)                 & oui              \\
 				\hline
-				Site internet et information disponible en temps réel Information sur
-				les perturbationsdescp                                                &                        &                  \\
+				PerturbationsdescpSTR      & Site internet et information disponible  en temps réel (Descption des informations sur les perturbations)   & oui              \\
 				\hline
-				Site internet et information disponible en temps réel tarifs applique &                        &                  \\
+				TarifSTR                   & Site internet et information disponible  en temps réel (Tarifs appliqués)                                   & non              \\
 				\hline
-				Site internet et information disponible en temps réel tarifs
-				appliquedescp                                                         &                        &                  \\
+				TarifdescpSTR              & Site internet et information disponible  en temps réel (Description des tarifs appliqués)                   & oui              \\
 				\hline
-				Site internet et information disponible en temps réel vente en ligne  &                        &                  \\
+				VenteSTR                   & Site internet et information disponible  en temps réel(Vente en ligne)                                      & non              \\
 				\hline
-				Site internet et information disponible en temps réel vente en
-				lignedescp                                                            &                        &                  \\
+				VentedescpSTR              & Site internet et information disponible  en temps réel(Description des ventes en ligne)                     & oui              \\
 				\hline
 			\end{tabularx}
 			\caption{Table de la qualité des services}
@@ -1027,29 +1001,29 @@
 	\end{table}
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
+			\begin{tabularx}{17.5cm}{|p{4cm}|X|p{2.5cm}|}
 				\hline
-				\textbf{Attribut}                                                    & \textbf{Signification} & \textbf{Exemple} \\
+				\textbf{Attribut}                       & \textbf{Signification}                                                 & \textbf{Exemple} \\
 				\hline
-				Site internet et information disponible en temps réel correspondance &                        &                  \\
+				CorrespondanceSTR                       & Site internet et information disponible en temps réel (correspondance) & oui              \\
 				\hline
-				Site internet et information disponible en temps
-				réel correspondancedescp                                             &                        &                  \\
+				CorrespondancedescpSTR                  & Site internet et information disponible en temps
+				réel (Description de la correspondance) & oui                                                                                       \\
 				\hline
-				Site internet et information disponible en temps réel intermodalité  &                        &                  \\
+				IntermodalieSTR                         & Site internet et information disponible en temps réel intermodalité    & oui              \\
 				\hline
-				Site internet et information disponible en temps
-				réel intermodalitédescp                                              &                        &                  \\
+				IntermodaliedescpSTR                    & Site internet et information disponible en temps
+				réel (Description d'intermodalité)      & oui                                                                                       \\
 				\hline
-				wifi embarqué                                                        &                        &                  \\
+				wifi                                    & wifi embarqué                                                          & oui              \\
 				\hline
-				Vidéosurveillance embarquée                                          &                        &                  \\
+				VideoSurveillance                       & Vidéo surveillance embarquée                                           & oui              \\
 				\hline
-				Centre d'appel                                                       &                        &                  \\
+				CentreAppel                             & Centre d'appel                                                         & oui              \\
 				\hline
-				période                                                              &                        &                  \\
+				datedemiseajour                         & Date de mise à jour                                                    & 16/04/2021       \\
 				\hline
-				date de mise a jour                                                  &                        &                  \\
+				periode                                 & Année/semestre                                                         & 2020/S1          \\
 				\hline
 			\end{tabularx}
 			\caption{Suite de la table de la qualité des services}
@@ -1058,55 +1032,41 @@
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
+			\begin{tabularx}{17.5cm}{|p{4cm}|X|p{2cm}|}
 				\hline
-				\textbf{Attribut}                                                 & \textbf{Signification} & \textbf{Exemple} \\
+				\textbf{Attribut}    & \textbf{Signification}                           & \textbf{Exemple} \\
 				\hline
-				Numcontrat                                                        & Numéro du contrat      & 4542             \\
+				numcontrat           & Numéro du Contrat                                & 25462            \\
 				\hline
-				Numavenant                                                        &                        &                  \\
+				numavenant           & Numéro d'avenant                                 & 14528            \\
 				\hline
-				Numrevision                                                       &                        &                  \\
+				numrevision          & Numéro de révision                               & 1552             \\
 				\hline
-				Nombre moyen de voyageurs/jour  sur un semestre                   &                        &                  \\
+				NumVoyJrS            & Nombre moyen de voyageurs/jour  sur un semestre  & 15023            \\
 				\hline
-				Nombre moyen place vide /jour  sur un semestre                    &                        &                  \\
+				NumPVJrS             & Nombre moyen place vide /jour  sur un semestre   & 1252             \\
 				\hline
-				Total annuel des voyageurs  sur un semestre                       &                        &                  \\
+				VoyageurTotalS       & Total annuel des voyageurs  sur un semestre      & 1252535          \\
 				\hline
-				Tickets vendus/semestre totale                                    &                        &                  \\
+				TicketsVendusT       & Tickets vendus/semestre totale                   & 1250535          \\
 				\hline
-				Tickets vendus/semestre tarif scolaire                            &                        &                  \\
+				TicketsVendusSc      & Tickets vendus/semestre tarif scolaire           & 125325           \\
 				\hline
-				Tickets vendus/semestre tarif normal                              &                        &                  \\
+				TicketsVendusN       & Tickets vendus/semestre tarif normal             & 925634           \\
 				\hline
-				Tickets vendus/semestre tarif conventions                         &                        &                  \\
+				TicketsVendusC       & Tickets vendus/semestre tarif conventions        & 65828            \\
 				\hline
-				Km parcourus/semestre totale semestriel parcouru                  &                        &                  \\
+				KmParTS              & Km parcourus/semestre totale semestriel parcouru & 152360 Km        \\
 				\hline
-				Km parcourus/semestre moyenne par ligne                           &                        &                  \\
+				KmParMoyenS          & Km parcourus/semestre moyenne par ligne          & 1253 Km          \\
 				\hline
-				Km parcourus/semestre trajet le plus long                         &                        &                  \\
+				KmParMoyenSTrajL     & Km parcourus/semestre trajet le plus long        & 10535 Km         \\
 				\hline
-				Km parcourus/semestre trajet le plus court                        &                        &                  \\
+				KmParMoyenSTrajCourt & Km parcourus/semestre trajet le plus court       & 1253 Km          \\
 				\hline
-				Km parcourus/semestre temps max trajet                            &                        &                  \\
+				KmParMoyenSTempsMax  & Km parcourus/semestre temps max trajet           & 8526 Km          \\
 				\hline
-				Km parcourus/semestre temps min trajet                            &                        &                  \\
-				\hline
-				Fréquence moyenne de passage unité/heure                          &                        &                  \\
-				\hline
-				Vitesse commerciale moyenne Durée moyenne des trajets bus         &                        &                  \\
-				\hline
-				Ponctualité Ecart moyen entre horaire contractuel et horaire réel &                        &                  \\
-				\hline
-				Taux moyen de remplissage                                         &                        &                  \\
-				\hline
-				Taux de transport à vide                                          &                        &                  \\
-				\hline
-				Horaires du service departHeure                                   &                        &                  \\
-				\hline
-				Horaires du service departmin                                     &                        &                  \\
+				KmParMoyenSTempsMin  & Km parcourus/semestre temps min trajet           & 4253 Km          \\
 				\hline
 			\end{tabularx}
 			\caption{Table des aspects commerciaux}
@@ -1114,23 +1074,33 @@
 	\end{table}
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
+			\begin{tabularx}{17.5cm}{|p{4cm}|X|p{2cm}|}
 				\hline
-				\textbf{Attribut}                               & \textbf{Signification} & \textbf{Exemple} \\
+				\textbf{Attribut} & \textbf{Signification}                                            & \textbf{Exemple} \\
 				\hline
-				Horaires du service finheure                    &                        &                  \\
+				Frequence         & Fréquence moyenne de passage unité/heure                          & 20               \\
 				\hline
-				Horaires du service finmin                      &                        &                  \\
+				Vitesse           & Vitesse commerciale moyenne Durée moyenne des trajets bus         & 60 Km/h          \\
 				\hline
-				Pannes des bus sur la voie publique             &                        &                  \\
+				Ponctualite       & Ponctualité Ecart moyen entre horaire contractuel et horaire réel & 60\%             \\
 				\hline
-				Accidents de circulation des bus                &                        &                  \\
+				TauxRemplissage   & Taux moyen de remplissage                                         & 80\%             \\
 				\hline
-				Délai moyes d'évacuation des véhicules en panne &                        &                  \\
+				TauxTransVide     & Taux de transport à vide                                          & 15\%             \\
 				\hline
-				période                                         &                        &                  \\
+				Depart            & Horaires du départ du service                                     & 05:00            \\
 				\hline
-				date de mise a jour                             &                        &                  \\
+				HeureFin          & Horaires de fin du service                                        & 11:00            \\
+				\hline
+				Pannes            & Pannes des bus sur la voie publique                               & 200              \\
+				\hline
+				Accidents         & Accidents de circulation des bus                                  & 132              \\
+				\hline
+				DélaiEva          & Délai moyes d'évacuation des véhicules en panne                   & 25 min           \\
+				\hline
+				datedemiseajour   & Date de mise à jour                                               & 16/04/2021       \\
+				\hline
+				periode           & Année/semestre                                                    & 2020/S1          \\
 				\hline
 			\end{tabularx}
 			\caption{Suite de la table des aspects commerciaux}
@@ -1139,33 +1109,33 @@
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
+			\begin{tabularx}{17.5cm}{|p{4cm}|X|p{3cm}|}
 				\hline
-				\textbf{Attribut}                                              & \textbf{Signification} & \textbf{Exemple} \\
+				\textbf{Attribut}   & \textbf{Signification}                                      & \textbf{Exemple} \\
 				\hline
-				Numcontrat                                                     & Numéro du contrat      & 4525             \\
+				numcontrat          & Numéro du Contrat                                           & 25462            \\
 				\hline
-				numavenant                                                     &                        &                  \\
+				numavenant          & Numéro d'avenant                                            & 14528            \\
 				\hline
-				Numrevision                                                    &                        &                  \\
+				numrevision         & Numéro de révision                                          & 1552             \\
 				\hline
-				Consommation moyenne par km et par type de bus bus standard    &                        &                  \\
+				ConsommationMoyStd  & Consommation moyenne par km et par type de bus standard     & 15263 tonnes     \\
 				\hline
-				Consommation moyenne par km et par type de bus bus articulé    &                        &                  \\
+				ConsommationMoyArt  & Consommation moyenne par km et par type de bus articulé     & 15263 tonnes     \\
 				\hline
-				Consommation moyenne par km et par type de bus bus éléctrique  &                        &                  \\
+				ConsommationMoyElec & Consommation moyenne par km et par type de bus éléctrique   & 15263 tonnes     \\
 				\hline
-				Consommation moyenne par km et par type de bus bus sites pores &                        &                  \\
+				ConsommationMoySite & Consommation moyenne par km et par type de bus sites prores & 15263 tonnes     \\
 				\hline
-				Consommation carburant annuelle pour l'ensemble du parc        &                        &                  \\
+				ConsommationAnn     & Consommation carburant annuelle pour l'ensemble du parc     & 152630 tonnes    \\
 				\hline
-				Consommation totale en electricité annuelle                    &                        &                  \\
+				ConsommationAnnEle  & Consommation totale en electricité annuelle                 & 1526003 Kwh      \\
 				\hline
-				emission Carbone  Co2                                          &                        &                  \\
+				Emissions           & Emissions Carbone  Co2                                      & 15263 tonnes     \\
 				\hline
-				période                                                        &                        &                  \\
+				datedemiseajour     & Date de mise à jour                                         & 16/04/2021       \\
 				\hline
-				date de mise a jour                                            &                        &                  \\
+				periode             & Année/semestre                                              & 2020/S1          \\
 				\hline
 			\end{tabularx}
 			\caption{Table de l’efficacité énergétique}
@@ -1174,27 +1144,27 @@
 
 	\begin{table}[H]
 		\begin{center}
-			\begin{tabularx}{17.5cm}{|X|p{3cm}|p{1.5cm}|}
+			\begin{tabularx}{17.5cm}{|p{4cm}|X|p{2cm}|}
 				\hline
-				\textbf{Attribut}       & \textbf{Signification} & \textbf{Exemple} \\
+				\textbf{Attribut}      & \textbf{Signification}           & \textbf{Exemple} \\
 				\hline
-				Numcontrat              & Numéro du contrat      & 4525             \\
+				numcontrat             & Numéro du Contrat                & 25462            \\
 				\hline
-				Numavenant              &                        &                  \\
+				numavenant             & Numéro d'avenant                 & 14528            \\
 				\hline
-				numrevision             &                        &                  \\
+				numrevision            & Numéro de révision               & 1552             \\
 				\hline
-				Conducteurs             &                        &                  \\
+				Conducteurs            & Nombre des conducteurs           & 200              \\
 				\hline
-				controleur              &                        &                  \\
+				controleur             & Nombre des contrôleurs           & 70               \\
 				\hline
-				mécanicier              &                        &                  \\
+				mécanicier             & Nombre des mécaniciers           & 30               \\
 				\hline
-				personnel administratif &                        &                  \\
+				personnelAdministratif & Nomve du personnel administratif & 50               \\
 				\hline
-				période                 &                        &                  \\
+				datedemiseajour        & Date de mise à jour              & 16/04/2021       \\
 				\hline
-				date a jour             &                        &                  \\
+				periode                & Année/semestre                   & 2020/S1          \\
 				\hline
 			\end{tabularx}
 			\caption{Table d'effectif personnel}
@@ -1240,8 +1210,8 @@
 	\section{Étude structurale}
 	\section{Étude comportementale}
 	\section{Récapitulatif}
-	\chapter{Réalisation}
-	\fancyhead[R]{\textbf{Chapitre \thechapter: Réalisation}}
+	\chapter{Réalisation et mise en œuvre}
+	\fancyhead[R]{\textbf{Chapitre \thechapter: Réalisation et mise en œuvre}}
 	\fancyhead[L]{\hspace*{5cm}}
 \end{doublespace}
 
@@ -1250,10 +1220,13 @@
 \appendix
 \pagenumbering{alph} \setcounter{page}{1}
 \chapter{Références}
+
 \begin{itemize}
 	\item[•] \textbf{Rapport en \LaTeX:} \url{https://github.com/abdorah/stage2021}
 \end{itemize}
+
 \chapter{Bibliographie}
+
 \section{Cours}
 \section{Sites Web}
 \section{Documentations}
