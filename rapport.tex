@@ -47,8 +47,7 @@
 		\end{center}
 		\vspace*{0.2cm}
 		\noindent \hspace{ 0.3 cm }\Huge \textbf{Création d'une
-			plateforme Web pour la gestion et le suivi des contrats du transport
-			délégués}
+			plateforme Web pour la gestion et le suivi des contrats de gestion déléguée du transport urbain par autobus}
 		\begin{center}
 			\rule{0.9\linewidth}{1pt}
 		\end{center}
@@ -99,8 +98,8 @@
 		mes collègues, pour de telles expériences afin de bien s’intégrer dans
 		le cadre réelle du marché de travail.
 		Toute ma gratitude et profonde reconnaissance s’adressent à à tous mes
-		encadrants de stages: Mme.\textbf{***f***} ****,
-		M..\textbf{***m***} ****   . Je vous remercie énormément pour m'avoir
+		encadrants de stages: M.\textbf{LABIZ} Ibrahim,  Mme.\textbf{TAHLAOUI} Insaf, M.\textbf{LKHADARI} Badreddine,
+		M.\textbf{AKKA} Habib, M.\textbf{BABAHABIB} My Hachem, et à toute personne qui a contribué dans la rélisation de ce projet. Je vous remercie énormément pour m'avoir
 		garanti un encadrement de qualité pour bien mener
 		et assurer la réalisation de ce travail dans les meilleures des
 		conditions.
@@ -116,11 +115,12 @@
 	l'université internationale de Rabat \textbf{UIR}. Ce dernier a duré les deux
 	mois juillet et août de l'année 2021. L’objectif principal de ce travail
 	consiste à développer une plateforme Web pour la gestion et le suivi des
-	contrats du transport délégués. D'ailleurs, le travail effectué dans le cadre
-	de ce projet m'a représenté la bonne chance pour appliquer mes savoirs et
-	savoirs-faire acquis durant cette année. En ce sens, la réalisation du projet a
-	passé en trois étapes principal: l'élaboration d'une analyse détaillée des
-	besoins du client, conception des différentes composantes de l'application, et
+	contrats de gestion déléguée du transport urbain par autobus. D'ailleurs,
+	le travail effectué dans le cadre de ce projet m'a représenté
+	la bonne chance pour appliquer mes savoirs et savoirs-faire acquis durant
+	cette année. En ce sens, la réalisation du projet a passé en trois étapes principales:
+	l'élaboration d'une analyse détaillée desbesoins du client,
+	conception des différentes composantes de l'application, et
 	enfin l'implémentation des objectifs soulignés. Par conséquent, j'ai eu la
 	chance d'utiliser plusieurs technologies, outils et concepts qui m'ont aidé à
 	développer cette solution.
@@ -219,11 +219,12 @@
 	\chapter*{\centering Liste des abréviations}
 	\addcontentsline{toc}{chapter}{Liste des abréviations}
 	\begin{itemize}
+		\item[•] \textbf{DGCT:} La direction générale des collectivités territoriales.
 		\item[•] \textbf{CDC:} Cahier des charges.
 		\item[•] \textbf{MCD:} Modèle conceptuel des données.
 		\item[•] \textbf{DCU:} Diagramme des cas d'utilisation.
-		\item[•] \textbf{MCT:} Modèle conceptuel des traitements. 
-		\item[•] \textbf{MCT:} Langage de modélisation unifié. 
+		\item[•] \textbf{MCT:} Modèle conceptuel des traitements.
+		\item[•] \textbf{MCT:} Langage de modélisation unifié.
 	\end{itemize}
 
 	\newpage
@@ -264,9 +265,8 @@
 
 	\textbf{DYN IT MAROC} est le résultat de l’expérience de plusieurs
 	Consultants en IT et Education.
-	Nous conseillons et proposons des services en Ingénierie Informatique.
-	Notre mission est de
-	vous faire collaborer efficacement. Elle s'engage à aider leurs clients
+	Elle propose des services en Ingénierie Informatique.
+	Sa mission est de vous faire collaborer efficacement. Elle s'engage à aider leurs clients
 	en fournissant des solutions de collaboration flexibles, évolutives et
 	surtout abordables.
 	Elle offrent des services de consultation et de formation en technologies
@@ -343,8 +343,7 @@
 	solution proposée est composée de deux partie: une première partie qui
 	concerne la
 	saisi et l'enregistrement des données sous la forme d'une plateforme web
-	liée à une
-	base de donné, et une deuxième partie qui concerne l'analyse des données.
+	liée à une base de données, et une deuxième partie qui concerne l'analyse des données.
 	Bref, je cherche une solution pour:
 	\begin{itemize}
 		\item[•] Centraliser l’information contenue dans les contrats de gestion
@@ -383,11 +382,11 @@
 	elle demeure une solution optimisant en terme de temps et de
 	productivité. Surtout,
 	dans un tel cas où les informations sont, à la fois, cruciales et
-	nombreuses. Ainsi, la solution proposée premièrement par la \textbf{DGST} est
+	nombreuses. Ainsi, la solution proposée premièrement par la \textbf{DGCT} est
 	d'avoir une plateforme Web pour faciliter la collecte,
 	le traitement, la présentation, et la centralisation de l'information.
 	Sur la même longueur d'onde, j'ai
-	travaillé sur la solution proposée avec une équipe de la \textbf{DGST}
+	travaillé sur la solution proposée avec une équipe de la \textbf{DGCT}
 	pour apporter les bonnes
 	fonctionnalités répondantes aux besoins de cette dernière.
 	\subsection{Description générale du projet}
@@ -408,7 +407,7 @@
 	À titre d'exemple on peut considérer l'application \textbf{\large Ecan}:
 
 	Généralement, les applications similaires sont des applications qui
-	aide à la gestion de donnée et des ressources, et la prise des décisions.
+	aide à la gestion des données et des ressources, et la prise des décisions.
 	L’application \emph{Environnement Canterbury (ECan)} fait partie du
 	gouvernement local de la région de Canterbury en Nouvelle-Zélande. Ils ont
 	utilisé la plate-forme \emph{Power
@@ -453,7 +452,7 @@
 		      une section où il pourra gérer les délégants et les délégataires.
 		\item[•] Gestion des contrats: Il doit avoir également la possibilité de gérer les contrats signés. En addition, il peut suivre les avenants et les révisions de chaque contrats. Ainsi que le status de chaque avenant ou révision.
 		\item[•] Gestion des Avancements: L'application doit permettre de gérer les avancements semestriels des contrats. Aussi, consulter et suivre les changements apportés à chaque période.
-		\item[•] Présentation des tableaux de bord: L'application doit présenter des données historisées de chaque contrats permettant de bien estimer la qualité de service en question et prendre les bonnes décisions.
+		\item[•] Présentation des tableaux de bord: L'application doit présenter des données historisées de chaque contrat permettant de bien estimer la qualité de service en question et prendre les bonnes décisions.
 		\item[•] Sauvegarde des fichiers sur un serveur WEB, et de sauvegarder en base de données le chemin de celui-ci. Généralement, cette solution est assez efficace, assez simple à mettre en œuvre.
 	\end{itemize}
 	\subsection{Les besoins non fonctionnels}
@@ -532,7 +531,7 @@
 	finaux puissent créer leurs propres rapports et
 	tableaux de bord. Il fait partie de la plate-
 	forme Microsoft Power.\\
-	Suite à cette proposition le consultant technique a approuver ces choix. Ainsi la décision est prise d'utiliser ces technologies Microsoft afin de réaliser une application Low-Code pour la gestion des contrats de transport délégués.
+	Suite à cette proposition le consultant technique a approuver ces choix. Ainsi la décision est prise d'utiliser ces technologies Microsoft afin de réaliser une application Low-Code pour la gestion des contrats de gestion déléguée du transport urbain par autobus.
 	\section{Planification et démarche de travail}
 	\subsection{Plan de travail prévu}
 	Pour la bonne organisation des étapes du projet, j'ai proposé premièrement le plan suivant pour la réalisation de la plateforme demandée:
@@ -566,8 +565,8 @@
 	\subsection{Les acteurs du projet}
 	\begin{itemize}
 		\item[•] \textbf{L’équipe du travail:} La tâche de la conception et de développement de l’application est assigné à moi.
-		\item[•] \textbf{Le product owner:} Qui est ici la \textbf{DGST} représenté par monsieur Labiz Ibrahim. Il tient le rôle de définir les fonctionnalités et de s’assurer du bon fonctionnement du projet.
-		\item[•] \textbf{Le SCRUM master:} Mon encadrante, Mme. Insaf Talhaoui a tenu ce rôle, en veillant sur la réalisation du projet.
+		\item[•] \textbf{Le product owner:} Qui est ici la \textbf{DGCT} représenté par M.\textbf{LABIZ} Ibrahim. Il tient le rôle de définir les fonctionnalités et de s’assurer du bon fonctionnement du projet.
+		\item[•] \textbf{Le SCRUM master:} Mon encadrante, Mme.\textbf{TAHLAOUI} Insaf a tenu ce rôle, en veillant sur la réalisation du projet.
 	\end{itemize}
 	\subsection{Les sprints du projet}
 	Pour le bon déroulement du projet, le travail sera découpé en sprint. Ces sprints sont établi à l’aide du product backLog tout en respectant la priorité des différents modules. À la fin de chaque sprint, on aura un livrable qui sera examiné par le Product Owner afin de planifier les modifications et les évolutions à effectuer dans le sprint suivant. La planification du projet selon les sprints et comme suit :
@@ -1193,7 +1192,7 @@
 	\subsection{Gestion et suivi des contrats}
 
 	La figure suivante est le DCU de gestion et le suivi d'un contrat. Ce dernier s'intêgre
-	dans le cadre d'UML. Il représente les possibilités d'interaction entre le système et les acteurs 
+	dans le cadre d'UML. Il représente les possibilités d'interaction entre le système et les acteurs
 	(intervenants extérieurs au système), c'est-à-dire de toutes les fonctionnalités que doit fournir le système.
 	La figure suivante contient touts les cas d'interaction entre l'administrateur et le système concernant un contrat,
 	à savoir chercher et consulter un contrat, chercher et consulter un avencement semestriel,
@@ -1205,7 +1204,7 @@
 		\end{center}
 	\end{figure}
 
-	\subsection{Gestion et délégants}
+	\subsection{Gestion des délégants}
 
 	La figure suivante est le DCU de gestion des délégants.
 	Elle contient touts les cas d'interaction entre l'administrateur et le système concernant un délégant,
@@ -1217,7 +1216,7 @@
 		\end{center}
 	\end{figure}
 
-	\subsection{Gestion et délégataires}
+	\subsection{Gestion des délégataires}
 
 	La figure suivante est le DCU de gestion des délégataires.
 	Elle contient touts les cas d'interaction entre l'administrateur et le système concernant un délégataire,
@@ -1234,7 +1233,7 @@
 
 	Dans le cadre de formalisme adopté par la méthode Merise, le MCT permet de représenter l’activité du
 	système d’information d’une manière dynamique.
-	Le shéma suivant représente le MCT de gestion et suivi des contrats. Parmis les traitements représentés
+	Le schéma suivant représente le MCT de gestion et suivi des contrats. Parmis les traitements représentés
 	on trouve la recherche et la consultation d'un contrat, d'un avencement semestriel,
 	l'ajout d'un avenant, etc\dots
 
@@ -1252,9 +1251,9 @@
 		\end{center}
 	\end{figure}
 
-	\subsection{Gestion et délégants}
+	\subsection{Gestion des délégants}
 
-	Le shéma suivant représente le MCT de gestion des délégants. Parmis les traitements représentés
+	Le schéma suivant représente le MCT de gestion des délégants. Parmis les traitements représentés
 	on trouve la consultation de la liste des délégants, la recherche et la modification d'un délégant,
 	et l'ajout d'un délégant.
 	\begin{figure}[H]
@@ -1264,9 +1263,9 @@
 		\end{center}
 	\end{figure}
 
-	\subsection{Gestion et délégataires}
+	\subsection{Gestion des délégataires}
 
-	Le shéma suivant représente le MCT de gestion des délégataires. Parmis les traitements représentés
+	Le schéma suivant représente le MCT de gestion des délégataires. Parmis les traitements représentés
 	on trouve la consultation de la liste des délégataires, la recherche et la modification d'un délégataire,
 	et l'ajout d'un délégataire.
 	\begin{figure}[H]
@@ -1281,16 +1280,155 @@
 	\chapter{Réalisation et mise en œuvre}
 	\fancyhead[R]{\textbf{Chapitre \thechapter: Réalisation et mise en œuvre}}
 	\fancyhead[L]{\hspace*{5cm}}
+	Cette partie dénombre la présentation des Scénarios applicatifs de l’application.Nous allons présenter dans  ce  qui  suit,  les  imprimes écran des principales interfaces réalisées dans notre plateforme web.
 \end{doublespace}
-
+\section{Page d'accueil}
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[scale=0.40]{images/acceuil.jpg}}
+		\caption{Page d'accueil}
+	\end{center}
+\end{figure}
+La page d'accueil est la racine de laquelle l'utilisateur peut naviguer l'application.
+\section{Pages Contrats}
+\subsection{Liste des contrats}
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[scale=0.40]{images/contrat.jpg}}
+		\caption{Liste des contrats}
+	\end{center}
+\end{figure}
+Cette page nous affiche tous les contras et leurs avenants et révisions , comme nous pouvons trouver un contrat rapidement par son nom en le tapant dans la barre de recherche.
+\subsection{Consulter Contrat}
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[scale=0.40]{images/aff contrat1.jpg}}
+		\caption{Consulter contrat}
+	\end{center}
+\end{figure}
+Une fois il clique sur un contrat, il est redirigé vers cette page où il trouvera toutes les informations concernant ce contrat.
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[scale=0.40]{images/affcontrat Perimetre.jpg}}
+		\caption{Afficher périmètre}
+	\end{center}
+\end{figure}
+\subsection{Ajouter Contrat}
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[scale=0.40]{images/Nv contrat 1.jpg}}
+		\caption{Ajouter contrat}
+	\end{center}
+\end{figure}
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[scale=0.40]{images/Nv contrat 3.jpg}}
+		\caption{Suite 1 de la figure ajouter contrat}
+	\end{center}
+\end{figure}
+Pour ajouter un contrat, il faut renseigner les champs affichées ci-dessus.
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[scale=0.40]{images/patch contrat.jpg}}
+		\caption{Suite 2 de la figure ajouter contrat}
+	\end{center}
+\end{figure}
+Après avoir rempli les champs et valider l'ajout, le contrat est ajouté à la base de données grâce à la fonction ci-dessus.
+\subsection{Ajouter avenant}
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[scale=0.40]{images/Nv avenant 1.jpg}}
+		\caption{Ajouter avenant}
+	\end{center}
+\end{figure}
+Un contrat ne peut pas être modifier mais on peut générer une nouvelle version de ce dernier en ajoutant un avenant ou une révision.
+\section{Pages Avancements}
+\subsection{Catégories des avancements}
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[scale=0.40]{images/Avancement2.jpg}}
+		\caption{Catégories des avancements}
+	\end{center}
+\end{figure}
+Après avoir sélectionné un contrat, une liste de catégories des avancements s'affiche.
+\subsection{Afficher un avancement}
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[scale=0.40]{images/Qualité de service.jpg}}
+		\caption{Afficher un avancement}
+	\end{center}
+\end{figure}
+Après avoir choisi une catégorie -dans ce cas (Qualité de service) - une listes des avancements s'affiche selon la période sélectionnée.
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[scale=0.40]{images/aff qualite service 1.jpg}}
+		\caption{Suite 1 de la figure afficher un avancement}
+	\end{center}
+\end{figure}
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[scale=0.40]{images/aff qualite de service 2.jpg}}
+		\caption{Suite 2 de la figure afficher un avancement}
+	\end{center}
+\end{figure}
+Après avoir choisi la période voulu, l'état d'avancement s'affiche.
+\subsection{Mise à jour d'avancement}
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[scale=0.40]{images/mise a jour materiel fixe.jpg}}
+		\caption{Mise à jour d'un avancement}
+	\end{center}
+\end{figure}
+Pour effectuer un mise à jour d'un avancement, on clique sur le bouton 'mise à jour' puis cette page s'affiche qui contient préalablement les données déjà enregistrées, il suffit de modifier les champs voulus.
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[scale=0.40]{images/patch avancement.jpg}}
+		\caption{Suite 1 de la figure mise à jour d'un avancement}
+	\end{center}
+\end{figure}
+Après avoir modifié les champs et valider la mise à jour, l'avancement est modifié et enregistré dans la base de données grâce à la fonction ci-dessus.
+\subsection{Ajouter un avancement}
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[scale=0.40]{images/Nv avancement effectif rh.jpg}}
+		\caption{Ajouter un avancement}
+	\end{center}
+\end{figure}
+Pour ajouter un avancement, on clique sur le bouton 'Ajouter avancement' puis cette page s'affiche qui contient préalablement des données déjà enregistrées selon la période référentiel qu'on a choisi, il suffit de modifier les champs voulus.
+\section{Pages Délégants}
+\subsection{Liste des délégants}
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[scale=0.40]{images/aff delegant.jpg}}
+		\caption{Liste des délégants}
+	\end{center}
+\end{figure}
+Cette page nous affiche tous les délégants , comme nous pouvons trouver un délégant rapidement par son nom en le tapant dans la barre de recherche.
+\subsection{Modifier un délégant}
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[scale=0.40]{images/modifier delegant.jpg}}
+		\caption{Modifier un délégant}
+	\end{center}
+\end{figure}
+Une fois on clique sur l'icône modifier on se redirige vers cette page pour modifier le nom du délégant.
+\subsection{Ajouter un délégant}
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[scale=0.40]{images/ajouter delegant.jpg}}
+		\caption{Ajouter un délégant}
+	\end{center}
+\end{figure}
+Après avoir cliqué sur le bouton 'ajouter un délégant' cette pop-up s'affiche, on tape le nom du délégant puis on confirme l'ajout.
 \newpage
+
 
 \appendix
 \pagenumbering{alph} \setcounter{page}{1}
 \chapter{Références}
 
 \begin{itemize}
-	\item[•] %\textbf{Rapport en \LaTeX:} \url{https://github.com/abdorah/stage2021}
+	\item[•] %\textbf{Rapport en \LaTeX:} \url{https://github.com/abdorah/stage2021/blob/master/rapport.tex}
 \end{itemize}
 
 \chapter{Bibliographie}
