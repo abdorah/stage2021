@@ -222,6 +222,8 @@
 		\item[•] \textbf{CDC:} Cahier des charges.
 		\item[•] \textbf{MCD:} Modèle conceptuel des données.
 		\item[•] \textbf{DCU:} Diagramme des cas d'utilisation.
+		\item[•] \textbf{MCT:} Modèle conceptuel des traitements. 
+		\item[•] \textbf{MCT:} Langage de modélisation unifié. 
 	\end{itemize}
 
 	\newpage
@@ -1173,7 +1175,8 @@
 	\end{table}
 
 	\subsection{Le modèle conceptuel des données}
-	Le modèle conceptuel des données est une représentation statique du système d’information.
+
+	Le MCD est une représentation statique du système d’information.
 	Il a pour but d’écrire de façon formelle les données qui seront utilisées par le système d’information.
 	Il s’agit donc d’une représentation des données, facilement compréhensible.
 	Le formalisme adopté par la méthode Merise pour réaliser cette description est basé sur les concepts « entités association ».
@@ -1189,8 +1192,10 @@
 	\section{Diagramme des cas d'utilisation}
 	\subsection{Gestion et suivi des contrats}
 
-	La figure suivante est le diagramme de cas d’utilisation de gestion et le suivi d'un contrat.
-	Elle contient touts les cas d'interaction entre l'administrateur et le système concernant un contrat,
+	La figure suivante est le DCU de gestion et le suivi d'un contrat. Ce dernier s'intêgre
+	dans le cadre d'UML. Il représente les possibilités d'interaction entre le système et les acteurs 
+	(intervenants extérieurs au système), c'est-à-dire de toutes les fonctionnalités que doit fournir le système.
+	La figure suivante contient touts les cas d'interaction entre l'administrateur et le système concernant un contrat,
 	à savoir chercher et consulter un contrat, chercher et consulter un avencement semestriel,
 	ajouter un avenant, etc\dots
 	\begin{figure}[H]
@@ -1202,7 +1207,7 @@
 
 	\subsection{Gestion et délégants}
 
-	La figure suivante est le diagramme de cas d’utilisation de gestion des délégants.
+	La figure suivante est le DCU de gestion des délégants.
 	Elle contient touts les cas d'interaction entre l'administrateur et le système concernant un délégant,
 	à savoir consulter la liste des délégants, chercher et modifier un délégant, et ajouter un délégant.
 	\begin{figure}[H]
@@ -1214,7 +1219,7 @@
 
 	\subsection{Gestion et délégataires}
 
-	La figure suivante est le diagramme de cas d’utilisation de gestion des délégataires.
+	La figure suivante est le DCU de gestion des délégataires.
 	Elle contient touts les cas d'interaction entre l'administrateur et le système concernant un délégataire,
 	à savoir consulter la liste des délégataires, chercher et modifier un délégataire, et ajouter un délégataire.
 	\begin{figure}[H]
@@ -1224,7 +1229,52 @@
 		\end{center}
 	\end{figure}
 
-	\section{Diagramme des cas d'utilisation}
+	\section{Modèle conceptuel des traitements}
+	\subsection{Gestion et suivi des contrats}
+
+	Dans le cadre de formalisme adopté par la méthode Merise, le MCT permet de représenter l’activité du
+	système d’information d’une manière dynamique.
+	Le shéma suivant représente le MCT de gestion et suivi des contrats. Parmis les traitements représentés
+	on trouve la recherche et la consultation d'un contrat, d'un avencement semestriel,
+	l'ajout d'un avenant, etc\dots
+
+	\begin{figure}[H]
+		\begin{center}
+			\fbox{\includegraphics[scale=0.3]{images/MCT-Gestion-Suivi-1.png}}
+			\caption{MCT:Gestion et suivi des contrats (partie contrat)}
+		\end{center}
+	\end{figure}
+
+	\begin{figure}[H]
+		\begin{center}
+			\fbox{\includegraphics[scale=0.6]{images/MCT-Gestion-Suivi-2.png}}
+			\caption{MCT:Gestion et suivi des contrats (partie avencement)}
+		\end{center}
+	\end{figure}
+
+	\subsection{Gestion et délégants}
+
+	Le shéma suivant représente le MCT de gestion des délégants. Parmis les traitements représentés
+	on trouve la consultation de la liste des délégants, la recherche et la modification d'un délégant,
+	et l'ajout d'un délégant.
+	\begin{figure}[H]
+		\begin{center}
+			\fbox{\includegraphics[scale=0.5]{images/MCT-Delegant.png}}
+			\caption{MCT:Gestion des délégants}
+		\end{center}
+	\end{figure}
+
+	\subsection{Gestion et délégataires}
+
+	Le shéma suivant représente le MCT de gestion des délégataires. Parmis les traitements représentés
+	on trouve la consultation de la liste des délégataires, la recherche et la modification d'un délégataire,
+	et l'ajout d'un délégataire.
+	\begin{figure}[H]
+		\begin{center}
+			\fbox{\includegraphics[scale=0.5]{images/MCT-Delegataire.png}}
+			\caption{MCT:Gestion des délégataires}
+		\end{center}
+	\end{figure}
 
 	\section{Étude structurale}
 	\section{Récapitulatif}
