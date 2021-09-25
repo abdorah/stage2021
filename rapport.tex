@@ -221,6 +221,7 @@
 	\begin{itemize}
 		\item[•] \textbf{CDC:} Cahier des charges.
 		\item[•] \textbf{MCD:} Modèle conceptuel des données.
+		\item[•] \textbf{DCU:} Diagramme des cas d'utilisation.
 	\end{itemize}
 
 	\newpage
@@ -796,7 +797,7 @@
 	\newpage
 	\subsubsection{Les données des avancements}
 
-	Cette catégorie groupe les données d'effectif personnel, des investissements, des matériaux roulants et fixes, etc...
+	Cette catégorie groupe les données d'effectif personnel, des investissements, des matériaux roulants et fixes, etc\dots
 
 
 	\begin{table}[H]
@@ -952,48 +953,48 @@
 		\begin{center}
 			\begin{tabularx}{17.5cm}{|p{4cm}|X|p{2.5cm}|}
 				\hline
-				\textbf{Attribut}          & \textbf{Signification}                                                                                        & \textbf{Exemple} \\
+				\textbf{Attribut}         & \textbf{Signification}                                                                                        & \textbf{Exemple} \\
 				\hline
-				numcontrat                 & Numéro du Contrat                                                                                             & 25462            \\
+				numcontrat                & Numéro du Contrat                                                                                             & 25462            \\
 				\hline
-				numavenant                 & Numéro d'avenant                                                                                              & 14528            \\
+				numavenant                & Numéro d'avenant                                                                                              & 14528            \\
 				\hline
-				numrevision                & Numéro de révision                                                                                            & 1552             \\
+				numrevision               & Numéro de révision                                                                                            & 1552             \\
 				\hline
-				PQM                        & Plan de Maintenance Qualité                                                                                   & oui              \\
+				PQM                       & Plan de Maintenance Qualité                                                                                   & oui              \\
 				\hline
-				Reclamation                & Réclamations des usagers                                                                                      & 152              \\
+				Reclamation               & Réclamations des usagers                                                                                      & 152              \\
 				\hline
-				EquipementsPointsArret & Équipements des points d'arrêt                                                                                & Poteaux          \\
+				EquipementsPointsArret    & Équipements des points d'arrêt                                                                                & Poteaux          \\
 				\hline
-				SAEV                       & Système d'information de type Systèmes d'Aide à l'Exploitation et
-				à l'Information Voyageurs  & non                                                                                                                              \\
+				SAEV                      & Système d'information de type Systèmes d'Aide à l'Exploitation et
+				à l'Information Voyageurs & non                                                                                                                              \\
 				\hline
-				SysGeo                     & Système de géolocalisation                                                                                    & oui              \\
+				SysGeo                    & Système de géolocalisation                                                                                    & oui              \\
 				\hline
-				AdresseSTR                 & Site internet et information disponible en temps réel (adresse)                                               & non              \\
+				AdresseSTR                & Site internet et information disponible en temps réel (adresse)                                               & non              \\
 				\hline
-				AdressedescpSTR            & Site internet et information disponible  en temps réel (Description d'adresse)                                & oui              \\
+				AdressedescpSTR           & Site internet et information disponible  en temps réel (Description d'adresse)                                & oui              \\
 				\hline
-				ReseauSTR                  & Site internet et information disponible  en temps réel (Informations Statiques sur le réseau)                 & oui              \\
+				ReseauSTR                 & Site internet et information disponible  en temps réel (Informations Statiques sur le réseau)                 & oui              \\
 				\hline
-				ReseaudescpSTR             & Site internet et information disponible  en temps réel (Description des informations Statiques sur le réseau) & non              \\
+				ReseaudescpSTR            & Site internet et information disponible  en temps réel (Description des informations Statiques sur le réseau) & non              \\
 				\hline
-				HoraireServiceSTR          & Site internet et information disponible  en temps réel (Horaire du services)                                  & oui              \\
+				HoraireServiceSTR         & Site internet et information disponible  en temps réel (Horaire du services)                                  & oui              \\
 				\hline
-				HoraireServicedescpSTR     & Site internet et information disponible  en temps réel (Description d'horaire du services)                    & oui              \\
+				HoraireServicedescpSTR    & Site internet et information disponible  en temps réel (Description d'horaire du services)                    & oui              \\
 				\hline
-				PerturbationsSTR           & Site internet et information disponible  en temps réel (Informations sur les perturbations)                   & oui              \\
+				PerturbationsSTR          & Site internet et information disponible  en temps réel (Informations sur les perturbations)                   & oui              \\
 				\hline
-				PerturbationsdescpSTR      & Site internet et information disponible  en temps réel (Description des informations sur les perturbations)   & oui              \\
+				PerturbationsdescpSTR     & Site internet et information disponible  en temps réel (Description des informations sur les perturbations)   & oui              \\
 				\hline
-				TarifSTR                   & Site internet et information disponible  en temps réel (Tarifs appliqués)                                     & non              \\
+				TarifSTR                  & Site internet et information disponible  en temps réel (Tarifs appliqués)                                     & non              \\
 				\hline
-				TarifdescpSTR              & Site internet et information disponible  en temps réel (Description des tarifs appliqués)                     & oui              \\
+				TarifdescpSTR             & Site internet et information disponible  en temps réel (Description des tarifs appliqués)                     & oui              \\
 				\hline
-				VenteSTR                   & Site internet et information disponible  en temps réel(Vente en ligne)                                        & non              \\
+				VenteSTR                  & Site internet et information disponible  en temps réel(Vente en ligne)                                        & non              \\
 				\hline
-				VentedescpSTR              & Site internet et information disponible  en temps réel(Description des ventes en ligne)                       & oui              \\
+				VentedescpSTR             & Site internet et information disponible  en temps réel(Description des ventes en ligne)                       & oui              \\
 				\hline
 			\end{tabularx}
 			\caption{Table de la qualité des services}
@@ -1171,22 +1172,61 @@
 		\end{center}
 	\end{table}
 
-
 	\subsection{Le modèle conceptuel des données}
 	Le modèle conceptuel des données est une représentation statique du système d’information.
 	Il a pour but d’écrire de façon formelle les données qui seront utilisées par le système d’information.
 	Il s’agit donc d’une représentation des données, facilement compréhensible.
 	Le formalisme adopté par la méthode Merise pour réaliser cette description est basé sur les concepts « entités association ».
 	D’après ce qui précède, on obtient le MCD est décomposé en trois parties, comme suivant:
-		\begin{figure}[H]
-			\begin{center}
-				\fbox{\includegraphics[scale=0.6]{images/MCD.png}}
-				\caption{Le modèle conceptuel des données}
-			\end{center}
-		\end{figure}
-	Suite à ce qui précède, j'ai proposé le schéma relationnel de la base de données suivant:
+	\begin{figure}[H]
+		\begin{center}
+			\fbox{\includegraphics[scale=0.6]{images/MCD.png}}
+			\caption{Le modèle conceptuel des données}
+		\end{center}
+	\end{figure}
+	Suite à ce qui précède, j'ai proposé le schéma relationnel de la base de données, qui a été la base de la construction de cette dernière.
+
+	\section{Diagramme des cas d'utilisation}
+	\subsection{Gestion et suivi des contrats}
+
+	La figure suivante est le diagramme de cas d’utilisation de gestion et le suivi d'un contrat.
+	Elle contient touts les cas d'interaction entre l'administrateur et le système concernant un contrat,
+	à savoir chercher et consulter un contrat, chercher et consulter un avencement semestriel,
+	ajouter un avenant, etc\dots
+	\begin{figure}[H]
+		\begin{center}
+			\fbox{\includegraphics[scale=0.42]{images/UseCasesGestion-Suivi.png}}
+			\caption{DCU:Gestion et suivi des contrats}
+		\end{center}
+	\end{figure}
+
+	\subsection{Gestion et délégants}
+
+	La figure suivante est le diagramme de cas d’utilisation de gestion des délégants.
+	Elle contient touts les cas d'interaction entre l'administrateur et le système concernant un délégant,
+	à savoir consulter la liste des délégants, chercher et modifier un délégant, et ajouter un délégant.
+	\begin{figure}[H]
+		\begin{center}
+			\fbox{\includegraphics[scale=0.6]{images/UseCasesDelegants.png}}
+			\caption{DCU:Gestion des délégants}
+		\end{center}
+	\end{figure}
+
+	\subsection{Gestion et délégataires}
+
+	La figure suivante est le diagramme de cas d’utilisation de gestion des délégataires.
+	Elle contient touts les cas d'interaction entre l'administrateur et le système concernant un délégataire,
+	à savoir consulter la liste des délégataires, chercher et modifier un délégataire, et ajouter un délégataire.
+	\begin{figure}[H]
+		\begin{center}
+			\fbox{\includegraphics[scale=0.6]{images/UseCasesDelegatiares.png}}
+			\caption{DCU:Gestion des délégataires}
+		\end{center}
+	\end{figure}
+
+	\section{Diagramme des cas d'utilisation}
+
 	\section{Étude structurale}
-	\section{Étude comportementale}
 	\section{Récapitulatif}
 	\chapter{Réalisation et mise en œuvre}
 	\fancyhead[R]{\textbf{Chapitre \thechapter: Réalisation et mise en œuvre}}
