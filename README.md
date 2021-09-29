@@ -6,17 +6,17 @@
 
 First of all, this is a report a4paper type document. It has 13pt headhieght, 3cm top margin and 2cm bottom and 1cm on left and right. The packages used in this project are:
 
-* fontenc: encoding package. I used T1 standard text encoding, which encodes fonts that can render most European languages.
-* biolinum: in this project I used biolinum font package. You can find more infos about it [here](https://tug.org/FontCatalogue/biolinum/).
-* babel: this package manages culturally-determined typographical (and other) rules for a wide range of languages. I used french in my document.
-* setspace: this package containes many spacing commands which were required inn my document.
-* tabularx: I used tabularx to create tables and mange them easily.
-* graphicx: the use of graphicx allowed me to include images in my document.
-* wrapfig: I used wrapfig to wrap the used images into rectangle.
-* float: It is used with the graphicx package to decclare floating space for my images.
-* geometry: I used this package to define the margins of pages.
-* fancyhdr: It allowed me to make fancy style for my headers and footers.
-* hyperref: I used this package to create links and also to style my table of contents.
+- fontenc: encoding package. I used T1 standard text encoding, which encodes fonts that can render most European languages.
+- biolinum: in this project I used biolinum font package. You can find more infos about it [here](https://tug.org/FontCatalogue/biolinum/).
+- babel: this package manages culturally-determined typographical (and other) rules for a wide range of languages. I used french in my document.
+- setspace: this package containes many spacing commands which were required inn my document.
+- tabularx: I used tabularx to create tables and mange them easily.
+- graphicx: the use of graphicx allowed me to include images in my document.
+- wrapfig: I used wrapfig to wrap the used images into rectangle.
+- float: It is used with the graphicx package to decclare floating space for my images.
+- geometry: I used this package to define the margins of pages.
+- fancyhdr: It allowed me to make fancy style for my headers and footers.
+- hyperref: I used this package to create links and also to style my table of contents.
 
 Along side the previous packages I renewed the command of `\headrulewidth` and `\footrulewidth`, to set them to 1pt. As well as I included **ENSIAS, number of page, and Année universitaire: 2020/2021** in my footer.
 
@@ -52,41 +52,56 @@ Brief:,
 
 ## Keep-in-mind commands
 
-* To declare the start and the end of the document:
+- To declare the start and the end of the document:
+
 ```latex
 \begin{document}
 \end{document}
 ```
-* To declare the start and the end of the title page:
+
+- To declare the start and the end of the title page:
+
 ```latex
 \begin{titlepage}
 \end{titlepage}
 ```
-* To declare the start and the end of the centered element:
+
+- To declare the start and the end of the centered element:
+
 ```latex
 \begin{center}
 \end{center}
 ```
-* To declare the type of the page numbering:
+
+- To declare the type of the page numbering:
+
 ```latex
 \pagenumbering{roman} \setcounter{page}{1}  % i ii iii iv ...
 \pagenumbering{arabic} \setcounter{page}{1} % 1 2 3 4 5 ...
 \pagenumbering{alph} \setcounter{page}{1}   % a b c d f e ...
 ```
-* To declare the start and the end of the double space text form:
+
+- To declare the start and the end of the double space text form:
+
 ```latex
 \begin{doublespace}
 \end{doublespace}
 ```
-* To declare the start and the end of *italic text*:
+
+- To declare the start and the end of _italic text_:
+
 ```latex
 \textit{}
 ```
-* To add this chapter to content table and give it the title "Title":
+
+- To add this chapter to content table and give it the title "Title":
+
 ```latex
 \addcontentsline{toc}{chapter}{Title}
 ```
-* To declare the table of content, figures, and tables:
+
+- To declare the table of content, figures, and tables:
+
 ```latex
 \newpage
 
@@ -103,20 +118,26 @@ Brief:,
 
 \newpage
 ```
-* To declare the start and the end of list of items:
+
+- To declare the start and the end of list of items:
+
 ```latex
 \begin{itemize}
-	\item[•] 
+	\item[•]
 \end{itemize}
 ```
-* To declare chapter, section, subsection, subsubsection with the title Title:
+
+- To declare chapter, section, subsection, subsubsection with the title Title:
+
 ```latex
 \chapter{Title}
 \section{Title}
 \subsection{Title}
 \subsubsection{Title}
 ```
-* To declare a centered figure, wraped in a box, with the scale 0.5, and the title Title:
+
+- To declare a centered figure, wraped in a box, with the scale 0.5, and the title Title:
+
 ```latex
 \begin{figure}[H] % declare figure
 	\begin{center} % center it
@@ -125,7 +146,9 @@ Brief:,
 	\end{center}
 \end{figure}
 ```
-* To declare a table with title Title, the width 17.5cm:
+
+- To declare a table with title Title, the width 17.5cm:
+
 ```latex
 	\begin{table}[H]
 		\begin{center}
@@ -140,7 +163,9 @@ Brief:,
 		\end{center}
 	\end{table}
 ```
-* To declare the appendix section:
+
+- To declare the appendix section:
+
 ```latex
 \appendix
 ```
