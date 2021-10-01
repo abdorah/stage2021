@@ -169,3 +169,11 @@ Brief:,
 ```latex
 \appendix
 ```
+
+## Settings
+
+In this project I used [Setzer](https://www.cvfosammmm.org/setzer/) Latex editor with the following settings:
+
+![settings](settings.png)
+
+As I mentioned in the introduction, you can just use [overleaf](https://www.overleaf.com/).
