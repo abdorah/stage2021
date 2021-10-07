@@ -112,27 +112,25 @@
 
 	Ce document représente une étude synthétique du travail réalisé dans le
 	cadre de mon stage d'été de deuxième année. J'ai effectué mon stage au sein de
-	l'université internationale de Rabat \textbf{UIR}. Ce dernier a duré les deux
-	mois juillet et août de l'année 2021. L’objectif principal de ce travail
+	l'université internationale de Rabat \textbf{UIR}  et de la Direction Générale des Collectivités Territoriales (Direction de la Mobilité Urbaine et du Transport) relevant du Ministère de l’Intérieur. Ce stage a duré les deux
+	mois de juillet et d'août de l'année 2021. L’objectif principal de ce travail
 	consiste à développer une plateforme Web pour la gestion et le suivi des
-	contrats de gestion déléguée du transport urbain par autobus. D'ailleurs,
-	le travail effectué dans le cadre de ce projet m'a représenté
-	la bonne chance pour appliquer mes savoirs et savoirs-faire acquis durant
-	cette année. En ce sens, la réalisation du projet a passé en trois étapes principales:
-	l'élaboration d'une analyse détaillée des besoins du client,
-	conception des différentes composantes de l'application, et
-	enfin l'implémentation des objectifs soulignés. Par conséquent, j'ai eu la
-	chance d'utiliser plusieurs technologies, outils et concepts qui m'ont aidé à
-	développer cette solution.
+	contrats de gestion déléguée du transport urbain par autobus. La réalisation du projet a été effectuée en trois étapes principales:
+	\begin{itemize}
+	\item[•] analyse détaillée des besoins du client;
+	\item[•] conception des différentes composantes de l'application;
+	\item[•] enfin l'implémentation des objectifs soulignés.
+\end{itemize}
+J'ai donc eu la chance d'utiliser plusieurs technologies, outils et concepts qui m'ont aidé à développer cette solution, dont plusieurs cours que j'ai appris au cours de l'année précédente, et certains outils que j'ai eu la chance de découvrir tout au long du stage (vous trouverez dans les annexes de ce document).
 
-	Le reste de ce rapport est organisé comme suit : le chapitre I est dédié à
+	Le présent rapport est organisé comme suit : le chapitre I est dédié à
 	la présentation de
 	l’organisme d’accueil et du client. Quant au chapitre II, il traite
-	l’analyse du problème ainsi que la spécification des besoins. Ensuite le
-	chapitre III présente l´étude conceptuelle. Enfin le chapitre IV traite la
+	l’analyse du problème ainsi que la spécification des besoins. Le
+	chapitre III présente l´étude conceptuelle, et enfin le chapitre IV traite la
 	partie réalisation.
 
-	\textbf	{\\Mots clés :\\ Gestion, Suivi, Donnée, Contrats délégués,
+	\textbf	{\\Mots clés :\\ Gestion, Suivi, Donnée, Autobus, Gestion  délégués,
 		Transport urbain, Centralisation, Application low-code.}
 
 	\newpage
@@ -140,25 +138,26 @@
 	\chapter*{\centering Abstract}
 	\addcontentsline{toc}{chapter}{Abstract}
 
-	This document represents a synthetic study of the work carried out as part
-	of my second-year summer internship.
-	I did my intern-ship at the international university of Rabat \textbf{UIR}.
-	The latter lasted the two months
-	July and August of the year 2021. It aims to develop a web platform for the
-	management and monitoring of
-	delegated transport contracts. Moreover, the work carried out in this
-	project represented good opportunity
-	for me to apply and sharpen my skills and my knowledge acquired during this
-	year. Thus, the realization
-	of the project has gone through three main stages: the extraction of a
-	detailed analysis of the client's
-	needs, the design of the application's different components, and finally
-	the implementation of the outlined objectives.
-	Therefore, I had the chance to use several technologies, tools, and
-	concepts that helped me develop this solution.
+This document represents a synthetic study of the work carried out in part of my second-year summer internship. I did my internship within
+the international university of Rabat \ textbf {UIR} and the Directorate General of Territorial Communities (Directorate of Urban Mobility and Transport) under the Ministry of the Interior. This internship lasted both
+the months of July and August of the year 2021. The main objective of this work
+consists of developing a web platform for the management and monitoring of
+contracts for the delegated management of urban bus transport. The project was carried out in three main stages:
+\begin{itemize}
+\item[•] detailed analysis of customer needs;
+\item[•] design of the different components of the application;
+\item[•] finally the implementation of the underlined objectives.
+\end{itemize}
+So I had the chance to use several technologies, tools, and concepts that helped me develop this solution, including several courses that I learned during the previous year, and some tools that I had the chance to discover throughout the internship (you will find in the appendices of this document).
 
-	\textbf{\\Keywords:\\Management, Monitoring, Data, Delegated contracts,
-		Urban transport, Centralization, Low-code application.}
+This report is organized as follows: Chapter I is dedicated to
+the presentation of
+the host organization and the client. Chapter II deals with
+the analysis of the problem as well as the specification of the needs. 
+Chapter III presents the conceptual study, and finally chapter IV deals with the
+realization part.
+
+	\textbf{\\Keywords:\\Management, Monitoring, Data, Bus, Delegated monitoring, contracts, Urban transport, Centralization, Low-code application.}
 
 \end{doublespace}
 
@@ -181,38 +180,10 @@
 	\chapter*{\centering Introduction générale}
 	\addcontentsline{toc}{chapter}{Introduction générale}
 
-	Dans le cadre de la modernisation de la gestion des secteurs publics
-	collectifs
-	marocains, l’état a créé des contrats de gestion déléguées. Parmi ces
-	dernières, les
-	contrats de gestion de transport urbain. Placer le citoyen au cœur des
-	politiques et
-	services publics en constitue un objectif fondamentale. En conséquence, le
-	contrat
-	vise à assurer des services publics de qualité, accessibles à tous les
-	citoyens sans discrimination, à des coûts maitrisés tenant compte du
-	pouvoir
-	d’achat. D'où  l'importance de la bonne gestion et le suivi de ces
-	contrats, pour garder
-	les droits et les attentes de la population.
-	Par ailleurs, l’état a pris ce sens pour réaliser ses objectifs d’ouverture
-	sur l’économie
-	mondiale, le soutien des entreprises publiques, et l’amélioration de ses
-	services.
-	En parallèle avec ceci, l’état a essayé de gagner les défis de la
-	régionalisation.
-	Par conséquent, la gestion et le suivis des contrats de transport a devenu
-	une tâche
-	fondamentale. Or, effectuer cette tâche en utilisant la méthode classique,
-	par plusieurs documents,
-	ne représente plus une bonne solution, vue le nombre de lecture et de
-	vérification
-	des données importantes dans les documents nombreux. En plus, cela ne
-	permet pas d’en
-	tirer profits pour prendre les bons décisions facilement. Ainsi, je propose
-	une
-	solution simple pour la gestion et la représentation des données en
-	question.
+	Dans le cadre d’un processus de modernisation de la gestion des services publics marchands, l’état avait, depuis l’année 2006, promulgué la loi 54-05 relative à la gestion déléguée.  Cette loi visait à introduire le secteur privé dans la gestion des services publics locaux habituellement gérées par les communes et les établissement publics. Le transport urbain par autobus étant un service public local marchand fut parmi les premier à être géré en gestion déléguée. En effet, avant même la promulgation de la loi 54-06, des sociétés privées avaient signé des conventions de cogestion avec les communes pour la gestion service public de transport urbain par autobus (Marrakech en 2001, Meknès en 2005, etc.).
+l’objectif fondamental de l’introduction du privé dans le secteur est de drainer des investissements supplémentaires  et moderniser la gestion étant donné que le système classique de régie communale ou autonome a atteint ses limites.
+Actuellement, on récence une quarantaine de contrats de gestion dans le secteur couvrant pratiquement les métropoles et les villes moyennes du Royaume. Le milieu rural est également desservi par l’élargissement de certains périmètres de gestion à la périphérie des villes lorsque des communes rurale en formule le besoin. Le suivi par les commune appelées autorités délégantes en contrat. Cette prérogative est essentielle dans la mesure où elle permet de préserver l’équilibre économique du service et du pouvoir d’achat des usagers. Seulement, pour pouvoir assurer cette tache en temps réelle, les indicateurs contractuels rapportés par les délégataires (société privées chargées de la gestion) devront être vérifiés par autorité délégante et comparés au standards en vigueur.  C’est ainsi que le développement d’une plateforme objet du présent travail constitue un besoin pertinent et opportun pour mieux mener le suivi en question. Ces indicateurs seront traités au niveau de cet outil, traités automatiquement en vue de dégager des ratios utilisables par ailleurs à des fins de benchmarking. 
+ Le présent rapport est organisé comme suit : le chapitre I est dédié à la présentation de l’organisme d’accueil et du client. Le chapitre II traite l’analyse du problème ainsi que la spécification des besoins. Le chapitre III présente l´étude conceptuelle et enfin le chapitre IV traite la partie réalisation.
 
 	\newpage
 
@@ -279,15 +250,8 @@
 	\end{figure}
 	\section{Présentation du Client}
 
-	La Direction Générale des Collectivités Territoriales \textbf{DGCT} est
-	chargée de la préparation des décisions du ministre de l’Intérieur,
-	dans le cadre des attributions qui lui sont conférées en vertu des textes
-	législatifs et réglementaires relatifs aux collectivités
-	territoriales, et du suivi de leur exécution. Elle assure également l’appui
-	et l'accompagnement juridique, technique et financier
-	des collectivités territoriales, des instances qui en relèvent, des
-	établissements de coopération intercommunale et des groupements
-	des collectivités territoriales. Elle est chargée également, en
+	La Direction Générale des Collectivités Territoriales \textbf{DGCT} est chargée de l’accompagnement des collectivités locales et des instances qui en relèvent dans l’exécution des missions de développement local qui lui  sont conférées en vertu des textes législatifs et réglementaires relatifs aux collectivités
+	territoriales. Cet accompagnement est d’ordre juridique, technique et financier. \textbf{DGCT} est chargée également, en
 	coordination avec les départements et organismes concernés, de
 	concourir au développement territorial. Bref, ses missions sont en gros:
 	\begin{itemize}
@@ -309,24 +273,11 @@
 	\newpage
 	\section{Problématique}
 
-	Dans le cadre de la bon gestion de territoire et des aménagements publics,
-	plusieurs
-	contrats de gestion déléguée du transport urbain sont signés. Ces derniers
-	comportent
-	plusieurs actes qui forment un ensemble de règles à respecter entre un
-	délégant qui
-	sont une ou plusieurs communes et un délégataire qui est une société. En
-	addition,
-	des pénalités sont imposées en cas de non respect des règles posées dans le
-	contrat.
-	Par conséquent, le suivi de la réalisation et du respect de ses actes est
-	un devoir
-	juridique. D’où l'importance d'avoir une solution pertinente pour veiller
-	sur le
-	respect des conditions prédéfinis.
-	\\\textbf{Alors, comment peut on améliore les opérations de suivis et de
-		traitements des données en questions?}
-	\section{Solution et Objectifs du projet}
+On recense environ 40 conventions de cogestion et de contrats de gestion déléguée du transport urbain par autobus. Ces contrats fixent les droits et les obligations des parties prenantes en vue de garantir un service optimum à l’usager. Le volet du suivi revient de fait au communes délégantes en raison de leur responsabilité vis-à-vis des usagers électeurs. 
+
+Pour assurer le suivi, les délégataires en tant qu’opérateurs du service, devront transmettre à l’autorité délégante, de manière périodique, des données se rapportant aux aspects technique, commercial, financier, social et environnemental relatant les résultats de la gestion. Au vu de leur diversité et de leur quantité, le traitement et l’analyse de ces données nécessitent l’utilisation d’outils informatiques permettant la fiabilité au niveau des moyens et l’efficacité au niveau des conclusions auxquelles elles débouchent. A travers le développement d’une application informatique de traitement et de consolidation des données en question, j’espère contribuer à mettre à la disposition de la \textbf{DGCT} un outil en mesure de surmonter cette problématique et approcher les objectifs escomptés.
+
+\section{Solution et Objectifs du projet}
 
 	La première étape de la conduite de projet est sans doute la plus évidente,
 	mais peut-être
@@ -377,7 +328,7 @@
 	durant la prochaine phase.
 	\section{Périmètre du projet}
 	\subsection{Introduction à l'analyse}
-	Certes, la gestion et le suivis des données en utilisant des solutions
+	Certes, la gestion des données en utilisant des solutions
 	Web ne date pas d'hier. Mais,
 	elle demeure une solution optimisant en terme de temps et de
 	productivité. Surtout,
@@ -450,15 +401,14 @@
 	\begin{itemize}
 		\item[•] Gestion des délégants et des délégataires: L'administrateur doit avoir
 		      une section où il pourra gérer les délégants et les délégataires.
-		\item[•] Gestion des contrats: Il doit avoir également la possibilité de gérer les contrats signés. En addition, il peut suivre les avenants et les révisions de chaque contrats. Ainsi que le status de chaque avenant ou révision.
+		\item[•] Gestion des contrats: Il doit avoir également la possibilité de gérer les contrats signés. En addition, il peut suivre les avenants et les révisions de chaque contrat. Ainsi que le statuts de chaque avenant ou révision.
 		\item[•] Gestion des Avancements: L'application doit permettre de gérer les avancements semestriels des contrats. Aussi, consulter et suivre les changements apportés à chaque période.
-		\item[•] Présentation des tableaux de bord: L'application doit présenter des données historisées de chaque contrat permettant de bien estimer la qualité de service en question et prendre les bonnes décisions.
+		\item[•] Présentation des tableaux de bord: L'application doit présenter des données historiées de chaque contrat permettant de bien estimer la qualité de service en question et prendre les bonnes décisions.
 		\item[•] Sauvegarde des fichiers sur un serveur WEB, et de sauvegarder en base de données le chemin de celui-ci. Généralement, cette solution est assez efficace, assez simple à mettre en œuvre.
 	\end{itemize}
 	\subsection{Les besoins non fonctionnels}
 	Les besoins fonctionnels sont basiques pour un fonctionnement
-	correcte et une réponse fiable aux besoins des utilisateurs, mais il y a des
-	autres besoins qui tendent à améliorer la performance et la qualité de
+	correcte et une réponse fiable aux besoins des utilisateurs, mais il y a d'autres besoins qui tendent à améliorer la performance et la qualité de
 	l'application pour une utilisation plus adéquate.
 	\begin{itemize}
 		\item[•] Fiabilité de la plateforme: L’application doit
@@ -1507,20 +1457,15 @@
 
 	L’objectif de ce rapport et de présenter d’une manière claire le fonctionnement de l'application
 	réalisée au cours de mon stage d’été. En premier lieu j'ai commencé par
-	une étude des de l’existant avec une critique afin d'éviter les erreurs au cours du
+	une étude de l’existant avec une critique afin d'éviter les erreurs au cours du
 	projet.
 
 	Cette étude m'a permis de concevoir les besoins fonctionnels et non fonctionnels, puis passer
-	à l’étape de conception, qui, dans laquelle j'ai schématiser mon travail sous forme des
-	diagrammes qu'ont facilité la compréhension et qu'ont mieux décrit l'application.
+	à l’étape de conception, qui, dans laquelle j'ai schématisé mon travail sous forme des diagrammes pour faciliter la compréhension et mieux décrire l'application.
+    Enfin j'ai réalisé l'application tout en respectant les exigences soulignées lors de
+	la conception. Certes, deux mois ne sont pas suffisants pour compléter un grand projet comme ceci, pourtant la partie la plus difficile et la plus complexe a été réalisée et a été appréciée par mon encadrant.
 
-	Enfin j'ai réalisé l'application tout en respectant les exigences soulignées lors de
-	la conception. Certes, deux mois ne sont pas suffisants pour compléter un grand projet comme ceci,
-	pourtant la partie la plus difficile et la plus complexe a été réaliser et  a tenu l'appréciation de mon
-	encadrant.
-
-	En effet, la partie reporting, que j'ai n'est pas pu terminé, a fini par la création d'un
-	modèle pour le traitement des données dans PowerBI:
+    En effet, la partie reporting, que j’ai n’est pas pu terminé, a fini par la création du modèle pour le traitement des données dans PowerBI suivant:
 	\begin{figure}[H]
 		\begin{center}
 			\fbox{\includegraphics[scale=0.40]{images/PowerBi.jpeg}}
@@ -1529,10 +1474,8 @@
 	\end{figure}
 
 	Au terme de ce travail, je peux affirmer que ce stage a été plein d’intérêt et d'apprentissage. D'ailleurs, j'ai pu travailler sur des nouveaux logiciels.
-	En addition, j'ai pu vraiment découvrir le déroulement de la vie professionnelle à travers des réunions
-	avec mon encadrant et les autres membres de l’entreprise.
-	J'ai appris comment une équipe travaille pour réussir un projet. Ceci m'a donner une
-	idée sur les situations que je vais confronter au futur proche en tant qu'ingénieur en génie logiciel.
+	En addition, j'ai pu vraiment découvrir le déroulement de la vie professionnelle à travers des réunions avec mon encadrant et les autres membres de l’entreprise.
+	J'ai appris comment une équipe travaille pour réussir un projet. Ceci m'a donné une idée sur les situations que je vais confronter au futur proche en tant qu'ingénieur en génie logiciel.
 
 	\newpage
 
