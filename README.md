@@ -17,6 +17,7 @@ First of all, this is a report a4paper type document. It has 13pt headhieght, 3c
 - geometry: I used this package to define the margins of pages.
 - fancyhdr: It allowed me to make fancy style for my headers and footers.
 - hyperref: I used this package to create links and also to style my table of contents.
+- subfile: I used this package to divide the report into multipl subfiles.
 
 Along side the previous packages I renewed the command of `\headrulewidth` and `\footrulewidth`, to set them to 1pt. As well as I included **ENSIAS, number of page, and Année universitaire: 2020/2021** in my footer.
 
@@ -30,6 +31,7 @@ Brief:,
 \usepackage{setspace}
 \usepackage{tabularx}
 \usepackage{graphicx}
+\graphicspath{{images/}}
 \usepackage{wrapfig}
 \usepackage{float}
 \usepackage[headheight=13pt,top=3cm, bottom=2cm, left=1cm, right=1cm]{geometry}
@@ -48,6 +50,9 @@ Brief:,
 \fancyfoot[L]{ENSIAS}
 \fancyfoot[C]{\textbf{\thepage}}
 \fancyfoot[R]{Année universitaire: 2020/2021}
+\author{Kotbi Abderrahamane}
+\date{Thursday, July 1st 2021}
+\usepackage{subfiles}
 ```
 
 ## Keep-in-mind commands
@@ -57,6 +62,18 @@ Brief:,
 ```latex
 \begin{document}
 \end{document}
+```
+
+- To declare new subfile:
+
+```latex
+\subfile{sections/filename.tex}
+```
+
+- To declare root images directory:
+
+```latex
+\graphicspath{{images/}}
 ```
 
 - To declare the start and the end of the title page:
